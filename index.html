@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F76CollectionLogger</title>
+    <meta
+      name="description"
+      content="A Fallout 76 collection logger with local file save and load support, responsive review tools, and sourcing links."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar panel">
+        <div class="panel-head">
+          <p class="eyebrow">Fallout 76</p>
+          <h1>F76 Collection Logger</h1>
+          <p class="panel-copy" id="scopeText"></p>
+        </div>
+
+        <section class="panel-section">
+          <div class="section-head">
+            <h2>Collection</h2>
+          </div>
+          <div class="progress-block">
+            <div class="progress-meta">
+              <span id="overallProgressLabel">0 / 0</span>
+              <span id="overallProgressPercent">0%</span>
+            </div>
+            <div class="progress-rail">
+              <div class="progress-fill" id="overallProgressBar"></div>
+            </div>
+          </div>
+          <div class="summary-list" id="sidebarStats"></div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-head">
+            <h2>Categories</h2>
+          </div>
+          <div class="category-list" id="categoryList"></div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-head">
+            <h2>Log Files</h2>
+          </div>
+          <div class="action-grid">
+            <button class="action-button" id="exportButton" type="button">Save Log</button>
+            <button class="action-button" id="importButton" type="button">Load Log</button>
+            <button class="action-button danger" id="resetButton" type="button">New Log</button>
+          </div>
+          <p class="panel-copy log-status" id="logStatus" aria-live="polite"></p>
+          <input id="importInput" type="file" accept="application/json" hidden>
+        </section>
+
+        <section class="panel-section source-section">
+          <div class="section-head">
+            <h2>Primary Sources</h2>
+          </div>
+          <div class="source-list" id="sourceList"></div>
+        </section>
+      </aside>
+
+      <main class="main-column">
+        <section class="panel hero-panel">
+          <div class="toolbar-head">
+            <div>
+              <p class="eyebrow">Collector View</p>
+              <h2>Track what you own, then drill into where the rest comes from.</h2>
+            </div>
+            <div class="toolbar-actions">
+              <button class="action-button compact" id="clearFiltersButton" type="button">Clear Filters</button>
+            </div>
+          </div>
+
+          <div class="hero-stats" id="heroStats"></div>
+
+          <div class="review-strip">
+            <div class="review-copy" id="reviewCopy"></div>
+            <div class="review-actions">
+              <button class="action-button compact" id="reviewOutfitsButton" type="button">Review Outfits</button>
+              <button class="action-button compact" id="reviewMissingOutfitsButton" type="button">Missing Outfits</button>
+              <button class="action-button compact" id="nextMissingButton" type="button">Next Missing</button>
+            </div>
+          </div>
+
+          <div class="filters-grid">
+            <label class="control-block">
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="Search names, categories, effects, notes">
+            </label>
+
+            <label class="control-block">
+              <span>Category</span>
+              <select id="categorySelect"></select>
+            </label>
+
+            <label class="control-block">
+              <span>Display</span>
+              <select id="displaySelect"></select>
+            </label>
+
+            <label class="control-block">
+              <span>Tier</span>
+              <select id="tierSelect"></select>
+            </label>
+
+            <label class="control-block">
+              <span>Status</span>
+              <select id="statusSelect">
+                <option value="all">All Items</option>
+                <option value="missing">Missing Only</option>
+                <option value="collected">Collected Only</option>
+              </select>
+            </label>
+
+            <label class="control-block">
+              <span>Sort</span>
+              <select id="sortSelect">
+                <option value="category">Category</option>
+                <option value="name">Name</option>
+                <option value="tier">Tier</option>
+                <option value="display">Display Type</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="active-filters" id="activeFilters"></div>
+        </section>
+
+        <section class="panel collection-panel">
+          <div class="section-head">
+            <h2>Tracked Items</h2>
+            <p id="visibleCountLabel">0 results</p>
+          </div>
+          <div class="collection-grid" id="collectionGrid"></div>
+        </section>
+      </main>
+
+      <aside class="detail-column panel" id="detailPanel"></aside>
+    </div>
+    <script src="data/collectibles.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
