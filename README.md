@@ -29,7 +29,9 @@ Static Fallout 76 collection logger for CAMP-displayable collectibles, chase app
 3. Mark items as collected, or use `Collect + Next` in the detail panel to sweep through a review run.
 4. Use the detail panel to jump to source pages for acquisition notes.
 
-Progress is not stored in cookies, cache, or browser local storage. Save a JSON log file locally with `Save Log`, then load it back with `Load Log` whenever you want to continue.
+Progress is not stored in cookies, cache, or `localStorage`. Save a JSON log file locally with `Save Log`, then load it back with `Load Log` whenever you want to continue.
+
+The site now auto-saves the active log locally with IndexedDB and auto-loads it the next time the same browser opens the tracker. `Save Log` is still the portable backup/export option for moving progress to another device or browser.
 
 ## Refresh the data
 

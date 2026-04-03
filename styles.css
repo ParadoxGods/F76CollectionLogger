@@ -275,6 +275,14 @@ h2 {
   color: #cfe2ca;
 }
 
+.log-status[data-state="saving"] {
+  color: #c8d6e2;
+}
+
+.log-status[data-state="warning"] {
+  color: #e7c9a8;
+}
+
 .action-button {
   display: inline-flex;
   align-items: center;

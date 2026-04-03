@@ -3,11 +3,19 @@
   const FALLBACK_SELECTION = data.items[0]?.id || "";
   const OUTFIT_CATEGORY = "Outfits";
   const OUTFIT_DISPLAY_TYPE = "Mannequin";
+  const AUTO_SAVE_DB_NAME = "f76-collection-logger";
+  const AUTO_SAVE_STORE = "logs";
+  const AUTO_SAVE_KEY = "current-log";
   const sessionState = {
-    dirty: false,
     fileHandle: null,
     fileName: "",
-    lastSavedAt: ""
+    fileAction: "",
+    fileActionAt: "",
+    autoSaveAt: "",
+    autoSaveError: "",
+    autoSavePending: false,
+    autoSaveDbPromise: null,
+    autoSavePromise: Promise.resolve()
   };
 
   const tierOrder = {
@@ -72,9 +80,12 @@
     importInput: document.getElementById("importInput")
   };
 
-  initialize();
+  initialize().catch(() => {
+    renderLogStatus();
+    render();
+  });
 
-  function initialize() {
+  async function initialize() {
     refs.scopeText.textContent = data.scope;
     populateSelect(refs.categorySelect, "All Categories", data.categories.map((entry) => entry.label));
     populateSelect(refs.displaySelect, "All Display Types", uniqueValues(data.items.map((item) => item.displayType)));
@@ -83,6 +94,8 @@
     renderLogStatus();
     bindEvents();
     render();
+    requestPersistentStorage();
+    await restoreAutoSave();
   }
 
   function bindEvents() {
@@ -173,7 +186,6 @@
     refs.importButton.addEventListener("click", () => refs.importInput.click());
     refs.importInput.addEventListener("change", importProgress);
     refs.resetButton.addEventListener("click", resetProgress);
-    window.addEventListener("beforeunload", handleBeforeUnload);
   }
 
   function render() {
@@ -658,12 +670,132 @@
   }
 
   function saveProgress() {
-    sessionState.dirty = true;
+    persistAutoSave();
     renderLogStatus();
   }
 
   function countCollected(items) {
     return items.reduce((total, item) => total + (state.collected[item.id] ? 1 : 0), 0);
+  }
+
+  function supportsAutoSave() {
+    return typeof window.indexedDB !== "undefined";
+  }
+
+  function requestPersistentStorage() {
+    if (!navigator.storage?.persist) {
+      return;
+    }
+    navigator.storage.persist().catch(() => {});
+  }
+
+  function buildProgressSnapshot() {
+    return {
+      savedAt: new Date().toISOString(),
+      title: data.title,
+      collected: { ...state.collected }
+    };
+  }
+
+  function mergeCollected(incoming) {
+    const nextCollected = Object.fromEntries(data.items.map((item) => [item.id, false]));
+    for (const item of data.items) {
+      if (typeof incoming?.[item.id] === "boolean") {
+        nextCollected[item.id] = incoming[item.id];
+      }
+    }
+    return nextCollected;
+  }
+
+  async function restoreAutoSave() {
+    if (!supportsAutoSave()) {
+      renderLogStatus();
+      return;
+    }
+
+    try {
+      const snapshot = await readAutoSave();
+      if (!snapshot?.collected) {
+        renderLogStatus();
+        return;
+      }
+      state.collected = mergeCollected(snapshot.collected);
+      sessionState.autoSaveAt = snapshot.savedAt || snapshot.exportedAt || "";
+      renderLogStatus();
+      render();
+    } catch (error) {
+      sessionState.autoSaveError = "Local auto-load failed. Use Load Log to import a saved JSON backup.";
+      renderLogStatus();
+    }
+  }
+
+  function persistAutoSave() {
+    if (!supportsAutoSave()) {
+      return;
+    }
+
+    const snapshot = buildProgressSnapshot();
+    sessionState.autoSavePending = true;
+    sessionState.autoSaveError = "";
+
+    sessionState.autoSavePromise = sessionState.autoSavePromise
+      .catch(() => {})
+      .then(() => writeAutoSave(snapshot))
+      .then(() => {
+        sessionState.autoSavePending = false;
+        sessionState.autoSaveAt = snapshot.savedAt;
+        renderLogStatus();
+      })
+      .catch(() => {
+        sessionState.autoSavePending = false;
+        sessionState.autoSaveError = "Local auto-save failed. Use Save Log to export a backup JSON file.";
+        renderLogStatus();
+      });
+  }
+
+  function openAutoSaveDb() {
+    if (!supportsAutoSave()) {
+      return Promise.reject(new Error("IndexedDB unavailable."));
+    }
+
+    if (!sessionState.autoSaveDbPromise) {
+      sessionState.autoSaveDbPromise = new Promise((resolve, reject) => {
+        const request = window.indexedDB.open(AUTO_SAVE_DB_NAME, 1);
+
+        request.onupgradeneeded = () => {
+          const db = request.result;
+          if (!db.objectStoreNames.contains(AUTO_SAVE_STORE)) {
+            db.createObjectStore(AUTO_SAVE_STORE);
+          }
+        };
+
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error || new Error("Unable to open auto-save database."));
+      });
+    }
+
+    return sessionState.autoSaveDbPromise;
+  }
+
+  async function runAutoSaveRequest(mode, handler) {
+    const db = await openAutoSaveDb();
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(AUTO_SAVE_STORE, mode);
+      const store = transaction.objectStore(AUTO_SAVE_STORE);
+      const request = handler(store);
+
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error || new Error("Auto-save request failed."));
+      transaction.onabort = () => reject(transaction.error || new Error("Auto-save transaction aborted."));
+    });
+  }
+
+  function readAutoSave() {
+    return runAutoSaveRequest("readonly", (store) => store.get(AUTO_SAVE_KEY));
+  }
+
+  function writeAutoSave(snapshot) {
+    return runAutoSaveRequest("readwrite", (store) => store.put(snapshot, AUTO_SAVE_KEY));
   }
 
   async function exportProgress() {
@@ -693,7 +825,7 @@
         await writable.write(content);
         await writable.close();
         sessionState.fileHandle = handle;
-        markProgressSaved(handle.name || suggestedName);
+        markFileAction("saved", handle.name || suggestedName);
         return;
       }
 
@@ -704,7 +836,7 @@
       link.download = suggestedName;
       link.click();
       URL.revokeObjectURL(url);
-      markProgressSaved(suggestedName);
+      markFileAction("saved", suggestedName);
     } catch (error) {
       if (error?.name === "AbortError") {
         return;
@@ -730,7 +862,8 @@
       }
       state.collected = nextCollected;
       sessionState.fileHandle = null;
-      markProgressSaved(file.name);
+      markFileAction("loaded", file.name);
+      saveProgress();
       render();
     } catch (error) {
       window.alert("Load failed. Use a JSON log generated by this collection logger.");
@@ -746,15 +879,16 @@
     state.collected = Object.fromEntries(data.items.map((item) => [item.id, false]));
     sessionState.fileHandle = null;
     sessionState.fileName = "";
-    sessionState.lastSavedAt = "";
+    sessionState.fileAction = "";
+    sessionState.fileActionAt = "";
     saveProgress();
     render();
   }
 
-  function markProgressSaved(fileName) {
-    sessionState.dirty = false;
+  function markFileAction(action, fileName) {
     sessionState.fileName = fileName;
-    sessionState.lastSavedAt = new Date().toISOString();
+    sessionState.fileAction = action;
+    sessionState.fileActionAt = new Date().toISOString();
     renderLogStatus();
   }
 
@@ -762,37 +896,38 @@
     if (!refs.logStatus) {
       return;
     }
-
-    if (sessionState.dirty && sessionState.fileName) {
-      refs.logStatus.textContent = `Unsaved changes in ${sessionState.fileName}. Save the log file to keep this progress on your device.`;
-      refs.logStatus.dataset.state = "dirty";
-      return;
-    }
-
-    if (sessionState.dirty) {
+    if (!supportsAutoSave()) {
       refs.logStatus.textContent =
-        "Progress is only in this tab until you save a log file. No cookies, cache, or local storage are used.";
-      refs.logStatus.dataset.state = "dirty";
+        "This browser cannot auto-save locally. Use Save Log and Load Log to keep progress on this device.";
+      refs.logStatus.dataset.state = "warning";
       return;
     }
 
-    if (sessionState.fileName) {
-      refs.logStatus.textContent = `Loaded ${sessionState.fileName}. Last saved ${formatTimestamp(sessionState.lastSavedAt)}.`;
-      refs.logStatus.dataset.state = "saved";
+    if (sessionState.autoSaveError) {
+      refs.logStatus.textContent = sessionState.autoSaveError;
+      refs.logStatus.dataset.state = "warning";
       return;
     }
 
-    refs.logStatus.textContent =
-      "No browser storage is used. Save a JSON log file locally, then load it back whenever you want to continue.";
-    refs.logStatus.dataset.state = "idle";
-  }
-
-  function handleBeforeUnload(event) {
-    if (!sessionState.dirty) {
+    if (sessionState.autoSavePending) {
+      refs.logStatus.textContent = "Saving locally on this device. Save Log still exports a backup JSON file.";
+      refs.logStatus.dataset.state = "saving";
       return;
     }
-    event.preventDefault();
-    event.returnValue = "";
+
+    const baseMessage = sessionState.autoSaveAt
+      ? `Auto-saved locally ${formatTimestamp(sessionState.autoSaveAt)}. This browser will load that log automatically next time.`
+      : "Progress auto-saves locally with IndexedDB, not cookies or cache. This browser will load that log automatically next time.";
+
+    const fileMessage =
+      sessionState.fileName && sessionState.fileAction
+        ? sessionState.fileAction === "saved"
+          ? ` Last exported to ${sessionState.fileName} ${formatTimestamp(sessionState.fileActionAt)}.`
+          : ` Last loaded from ${sessionState.fileName} ${formatTimestamp(sessionState.fileActionAt)}.`
+        : "";
+
+    refs.logStatus.textContent = `${baseMessage}${fileMessage} Use Save Log to export a portable backup file.`;
+    refs.logStatus.dataset.state = sessionState.autoSaveAt ? "saved" : "idle";
   }
 
   function populateSelect(select, label, values) {
