@@ -538,6 +538,8 @@
       case "name":
         return left.name.localeCompare(right.name);
       case "tier":
+        return left.tier.localeCompare(right.tier) || left.name.localeCompare(right.name);
+      case "rarity":
         return compareTierLabels(left.tier, right.tier) || left.name.localeCompare(right.name);
       case "display":
         return left.displayType.localeCompare(right.displayType) || left.name.localeCompare(right.name);
@@ -611,7 +613,7 @@
     state.displayType = OUTFIT_DISPLAY_TYPE;
     state.tier = "all";
     state.status = missingOnly ? "missing" : "all";
-    state.sort = "tier";
+    state.sort = "rarity";
     syncControls();
     render();
   }
