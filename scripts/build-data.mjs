@@ -106,7 +106,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     title: "Fallout 76 CAMP Collectibles Tracker",
     scope:
-      "Distinct displayable collector sets, dedicated junk collectible families, chase apparel, and solo-obtainable outfits for CAMP presentation that still have a legitimate in-game solo acquisition path. Atomic Shop items, paid unlocks, external promo gear, and season-locked legacy rewards are excluded.",
+      "Distinct displayable collector sets, dedicated junk collectible families, chase apparel, and solo-obtainable outfits for CAMP presentation that still have a legitimate live in-game acquisition path today. Atomic Shop items, paid unlocks, external promo gear, retired rewards, and currently unavailable seasonal event items are excluded.",
     categories,
     sources: [
       ...sharedSources,
@@ -158,7 +158,7 @@ async function main() {
       {
         label: "Stein",
         url: communityWikiUrl("Stein"),
-        note: "The full Fallout 76 stein family, including seasonal and event variants."
+        note: "Current beer stein pages used to keep only the live-obtainable steins."
       },
       {
         label: "Snow Globe (Fallout 76)",
@@ -178,17 +178,17 @@ async function main() {
       {
         label: "Fallout 76 Outfits",
         url: communityWikiUrl("Fallout 76 Outfits"),
-        note: "Current outfit overview used to audit solo-obtainable mannequin displays and exclude shop-only or season-locked entries."
+        note: "Current outfit overview used to audit mannequin displays and keep only live-obtainable entries."
       },
       {
         label: "Category:Fallout 76 outfits",
         url: communityWikiUrl("Category:Fallout 76 outfits"),
-        note: "Live outfit category used to re-audit the full mannequin-displayable apparel pool."
+        note: "Live outfit category used to re-audit the full mannequin-displayable apparel pool against current acquisition paths."
       },
       {
         label: "Category:Fasnacht Masks",
         url: communityWikiUrl("Category:Fasnacht Masks"),
-        note: "Current Fallout 76 Fasnacht mask and helmet category used to re-audit the full event pool."
+        note: "Current Fallout 76 Fasnacht mask and helmet category used to keep only masks with a live lootable path."
       }
     ],
     items
@@ -1061,24 +1061,33 @@ async function buildOutfits() {
 
         const categories = extractCategories(wikitext);
         const context = buildOutfitAcquisitionContext(wikitext, categories);
-        if (!isSoloObtainableOutfit(wikitext, context)) {
+        const implicitPlanTitle = extractImplicitOutfitPlanTitle(wikitext);
+        if (hasNegativeOutfitSignals(wikitext, context)) {
           return [];
         }
 
         return Promise.all(
           variants.map(async (variant) => {
+            const planTitle = resolvePlanTitle(variant.plan) || implicitPlanTitle;
+            const planSourceLines = await getCurrentOutfitPlanSourceLines(planTitle);
+            const variantContext = {
+              ...context,
+              planSourceLines
+            };
+            if (!hasPositiveOutfitSignals(variantContext)) {
+              return null;
+            }
             const image = await downloadOutfitImage(title, variant.name, variant.imageFile);
-            const planTitle = resolvePlanTitle(variant.plan);
             return {
               id: `outfit-${slugify(variant.name)}`,
               name: variant.name,
               categoryId: "outfits",
               category: "Outfits",
-              group: classifyOutfitGroup(variant.name, context),
+              group: classifyOutfitGroup(variant.name, variantContext),
               displayType: "Mannequin",
-              tier: classifyOutfitTier(variant.name, context),
-              sourceSummary: summarizeOutfit(variant.name, context),
-              locationNotes: buildOutfitNotes(variant, context),
+              tier: classifyOutfitTier(variant.name, variantContext),
+              sourceSummary: summarizeOutfit(variant.name, variantContext),
+              locationNotes: buildOutfitNotes(variant, variantContext),
               effect:
                 variant.headwear && !/^none$/i.test(variant.headwear) ? `Pairs with ${variant.headwear}.` : "",
               image,
@@ -1117,12 +1126,13 @@ async function buildFasnachtMasks() {
       const textLines = wikitext.split("\n").map((line) => cleanWiki(line.trim()));
       const eventLines = textLines.filter((line) => /Fasnacht Day|chance to be received|Atomic Shop/i.test(line));
       const name = aliasMap.get(title) || title;
-      const acquisitionText = `${locationText} ${eventLines.join(" ")}`.trim();
-      if (!isSoloObtainableFasnachtMask(name, locationText, eventLines.join(" "))) {
+      const currentNotes = getCurrentFasnachtLocationNotes(locationBullets);
+      const acquisitionText = currentNotes.join(" ");
+      if (!isSoloObtainableFasnachtMask(name, locationText, eventLines.join(" "), currentNotes)) {
         return null;
       }
       const image = await downloadCommunityPageImage(title, path.join("fasnacht-masks", `${slugify(title)}.png`));
-      const notes = trimBullets([...locationBullets, ...eventLines], 3);
+      const notes = trimBullets(currentNotes, 3);
       return {
         id: `fasnacht-${slugify(name)}`,
         name,
@@ -1131,21 +1141,8 @@ async function buildFasnachtMasks() {
         group: classifyFasnachtGroup(name),
         displayType: "Fasnacht Mask Display",
         tier: classifyFasnachtTier(name, acquisitionText, wikitext),
-        sourceSummary: summarizeBullets(
-          [...eventLines, ...locationBullets],
-          "Most masks are seasonal Fasnacht Day rewards or limited variants tied to the event."
-        ),
-        locationNotes: notes.length
-          ? notes
-          : [
-              /Atomic Shop/i.test(wikitext)
-                ? "This is a paid or alternate shop-linked mask variant."
-                : "This mask is tied to the Fasnacht Day seasonal pool.",
-              /glowing/i.test(title)
-                ? "Glowing masks are chase-tier event variants."
-                : "Check the item page for the exact reward or availability notes.",
-              "Use the item page and the Fasnacht Day event page together for the cleanest sourcing picture."
-            ],
+        sourceSummary: summarizeBullets(currentNotes, "This mask can still be looted from a live world location."),
+        locationNotes: notes.length ? notes : ["This mask can still be looted from a live world location."],
         effect: "",
         image,
         wikiTitle: title,
@@ -1745,6 +1742,18 @@ function resolvePlanTitle(value) {
   return match ? match[1].trim() : cleanWiki(value);
 }
 
+function extractImplicitOutfitPlanTitle(wikitext) {
+  const match = wikitext.match(/\{\{plan\|([^}|]+)/i);
+  if (!match) {
+    return "";
+  }
+  const title = cleanWiki(match[1]);
+  if (!title) {
+    return "";
+  }
+  return /^Plan:/i.test(title) ? title : `Plan: ${title}`;
+}
+
 function dedupeSources(sources) {
   const map = new Map();
   for (const source of sources.filter(Boolean)) {
@@ -1871,6 +1880,149 @@ function buildOutfitAcquisitionContext(wikitext, categories) {
   };
 }
 
+const LIMITED_TIME_OUTFIT_PATTERN =
+  /\b(?:Fasnacht Day|Spooky Scorched|Treasure Hunter(?:s)?|Holiday Scorched|Holiday Gift|Grahm's Meat-Cook|Meat Week|The Mothman Equinox|Mothman Equinox|Cultist High Priest Pack|Invaders from Beyond|Mischief Night|The Big Bloom|Call to Axe-ion|Fortifying ATLAS|seasonal event|seasonal community event|season rewards?|scoreboard|Nuclear Winter|Prime Gaming|Twitch Prime|Spread the Love|anniversary|television series|legacy content|{{Removed}})\b/i;
+
+const EVERGREEN_OUTFIT_EVENT_PATTERN =
+  /\b(?:Daily Ops|Encryptid|Riding Shotgun|Project Paradise|Dangerous Pastimes|Most Wanted|Seismic Activity|Spin the Wheel|Tunnel of Love|Safe and Sound|Beasts of Burden|Scorched Earth|A Colossal Problem|Final Departure|Strength in Numbers|Forbidden Knowledge|Into the Fire|Mistaken Identity|Back to Basic|Officer on Deck|Pleasant Valley Claim Ticket)\b/i;
+
+function getOutfitSourceLines(context) {
+  const lines = [
+    ...context.acquiredBullets,
+    ...context.locationBullets,
+    ...context.gameplayBullets,
+    ...context.craftingBullets,
+    firstSentence(context.acquiredSection),
+    firstSentence(context.locationSection),
+    firstSentence(context.gameplaySection),
+    firstSentence(context.craftingSection)
+  ]
+    .map((line) => cleanWiki(line || ""))
+    .filter(Boolean);
+
+  return dedupePlain(lines);
+}
+
+function isLimitedTimeOutfitLine(line) {
+  return LIMITED_TIME_OUTFIT_PATTERN.test(line);
+}
+
+function isCurrentOutfitLocationLine(line) {
+  return /(world spawn|can be found|found in|found at|sold by|vendor|merchant|trader|random encounter|technical data|claim ticket|purchased from|turning in|redeem|redeeming|portable toilet|underneath a table|on the second floor|inside the|behind a locked|at the Whitespring Resort|Transmission Station 1AT-U03|Dolly Sods Wilderness|Flatwoods|Fort Defiance|Black Mountain Ordnance Works|Charleston Station|Camden Park|Forest events|Savage Divide events|Ash Heap events|Toxic Valley|The Mire|Cranberry Bog|Idle Explosives|Play Time|Queen of the Hunt|Always Vigilant|Waste Not|Daily Ops|Daily Op|Riding Shotgun)/i.test(
+    line
+  );
+}
+
+function isCurrentOutfitEventLine(line) {
+  if (
+    !/(reward from|reward for|possible reward|rare reward|drop chance|awarded upon completion|awarded|possible vendor listing|chance to be rewarded|can only be obtained|only obtainable)/i.test(
+      line
+    )
+  ) {
+    return false;
+  }
+  return EVERGREEN_OUTFIT_EVENT_PATTERN.test(line);
+}
+
+function isCurrentOutfitSourceLine(line) {
+  if (!line) {
+    return false;
+  }
+  if (/^worn by /i.test(line)) {
+    return false;
+  }
+  if (isLimitedTimeOutfitLine(line) && !isCurrentOutfitLocationLine(line) && !isCurrentOutfitEventLine(line)) {
+    return false;
+  }
+  return isCurrentOutfitLocationLine(line) || isCurrentOutfitEventLine(line);
+}
+
+function isWeakOutfitSourceLine(line) {
+  return /^worn by /i.test(line) || /^can only be crafted by the player\.?$/i.test(line) || /^plan:/i.test(line) || /the plan unlocks crafting/i.test(line);
+}
+
+function extractCurrentOutfitAcquisitionLines(lines, { loose = false } = {}) {
+  return dedupePlain(
+    lines
+      .map((line) => cleanWiki(line || ""))
+      .filter(Boolean)
+      .filter((line) => {
+        if (isWeakOutfitSourceLine(line)) {
+          return false;
+        }
+        if (isLimitedTimeOutfitLine(line) && !isCurrentOutfitLocationLine(line) && !isCurrentOutfitEventLine(line)) {
+          return false;
+        }
+        if (isCurrentOutfitLocationLine(line) || isCurrentOutfitEventLine(line)) {
+          return true;
+        }
+        return loose;
+      })
+  );
+}
+
+const outfitPlanSourceCache = new Map();
+
+async function getCurrentOutfitPlanSourceLines(planTitle) {
+  if (!planTitle) {
+    return [];
+  }
+  if (!outfitPlanSourceCache.has(planTitle)) {
+    outfitPlanSourceCache.set(
+      planTitle,
+      (async () => {
+        try {
+          const wikitext = await getCommunityWikitext(planTitle);
+          const planContext = buildOutfitAcquisitionContext(wikitext, extractCategories(wikitext));
+          return extractCurrentOutfitAcquisitionLines(
+            [
+              ...planContext.acquiredBullets,
+              ...planContext.locationBullets,
+              firstSentence(planContext.acquiredSection),
+              firstSentence(planContext.locationSection),
+              ...planContext.gameplayBullets,
+              firstSentence(planContext.gameplaySection)
+            ],
+            { loose: true }
+          );
+        } catch (error) {
+          return [];
+        }
+      })()
+    );
+  }
+  return outfitPlanSourceCache.get(planTitle);
+}
+
+function getCurrentOutfitSourceLines(context) {
+  return dedupePlain([
+    ...extractCurrentOutfitAcquisitionLines(
+      [
+        ...context.acquiredBullets,
+        ...context.locationBullets,
+        firstSentence(context.acquiredSection),
+        firstSentence(context.locationSection)
+      ],
+      { loose: true }
+    ),
+    ...extractCurrentOutfitAcquisitionLines(
+      [
+        ...context.gameplayBullets,
+        ...context.craftingBullets,
+        firstSentence(context.gameplaySection),
+        firstSentence(context.craftingSection)
+      ],
+      { loose: false }
+    ),
+    ...(context.planSourceLines || [])
+  ]);
+}
+
+function getOutfitClassificationText(context) {
+  const lines = getCurrentOutfitSourceLines(context);
+  return lines.length ? lines.join(" ") : context.text;
+}
+
 function hasNegativeOutfitSignals(wikitext, context) {
   const raw = context.rawText;
   const text = context.text;
@@ -1902,7 +2054,7 @@ function hasNegativeOutfitSignals(wikitext, context) {
     return true;
   }
   if (
-    /\blegacy content\b|nuclear winter|twitch prime|prime gaming|free in-game bundle|anniversary|quakecon|gamescom|spread the love|limited time|played prior to wastelanders|television series|premier of the fallout television series/i.test(
+    /\blegacy content\b|nuclear winter|twitch prime|prime gaming|free in-game bundle|starter bundle|anniversary|quakecon|gamescom|spread the love|limited time|played prior to wastelanders|television series|premier of the fallout television series|call to axe-ion|fortifying atlas/i.test(
       text
     )
   ) {
@@ -1914,17 +2066,7 @@ function hasNegativeOutfitSignals(wikitext, context) {
 }
 
 function hasPositiveOutfitSignals(context) {
-  if (context.planFields.some((value) => !/^(no|none|n\/a)$/i.test(cleanWiki(value)))) {
-    return true;
-  }
-
-  if (context.locationSection || context.acquiredSection) {
-    return true;
-  }
-
-  return /(world spawn|can be found|found in|sold by|vendor|merchant|trader|quest|questline|daily ops|daily op|reward from|reward for|possible reward|public event|random encounter|drop chance|treasure hunter|spooky scorched|holiday scorched|holiday gift|mothman equinox|high priest pack|grahm's meat-cook|dangerous pastimes|project paradise|riding shotgun|most wanted|seismic activity|nuka-cade terminal|armor workbench|can be crafted|purchased from|betty hill|modus|flauresca|philippi battlefield cemetery|civil war reenactor|forbidden knowledge|into the fire|mistaken identity|back to basic|officer on deck|strength in numbers|opening .*pail|opening .*gift|opening .*pack|awarded|obtained from|obtained by|forest events|savage divide events|ash heap events|toxic valley events|the mire events|cranberry bog events|chance to find)/i.test(
-    context.text
-  );
+  return getCurrentOutfitSourceLines(context).length > 0;
 }
 
 function isSoloObtainableOutfit(wikitext, context) {
@@ -1946,7 +2088,7 @@ function isChaseOutfit(name, combined) {
 }
 
 function classifyOutfitGroup(name, context) {
-  const combined = `${name} ${context.text}`;
+  const combined = `${name} ${getOutfitClassificationText(context)}`;
   if (/Asylum Worker Uniform/i.test(name)) {
     return "Asylum Uniforms";
   }
@@ -1982,7 +2124,7 @@ function classifyOutfitGroup(name, context) {
 }
 
 function classifyOutfitTier(name, context) {
-  const combined = `${name} ${context.text}`;
+  const combined = `${name} ${getOutfitClassificationText(context)}`;
   if (isChaseOutfit(name, combined)) {
     return "Event Chase";
   }
@@ -2014,27 +2156,33 @@ function classifyOutfitTier(name, context) {
 }
 
 function summarizeOutfit(name, context) {
-  const summary = firstNonEmpty(
-    context.acquiredBullets[0],
-    context.locationBullets[0],
-    context.gameplayBullets[0],
-    context.craftingBullets[0],
-    firstSentence(context.acquiredSection),
-    firstSentence(context.locationSection),
-    firstSentence(context.gameplaySection),
-    firstSentence(context.craftingSection)
-  );
+  const currentLines = getCurrentOutfitSourceLines(context);
+  const summary =
+    currentLines[0] ||
+    firstNonEmpty(
+      context.acquiredBullets[0],
+      context.locationBullets[0],
+      context.gameplayBullets[0],
+      context.craftingBullets[0],
+      firstSentence(context.acquiredSection),
+      firstSentence(context.locationSection),
+      firstSentence(context.gameplaySection),
+      firstSentence(context.craftingSection)
+    );
 
   return summary || `${name} is a solo-obtainable outfit that can be staged on a mannequin display.`;
 }
 
 function buildOutfitNotes(variant, context) {
-  const notes = [
-    ...trimBullets(context.acquiredBullets, 2),
-    ...trimBullets(context.locationBullets, 2),
-    ...trimBullets(context.gameplayBullets, 1),
-    ...trimBullets(context.craftingBullets, 1)
-  ];
+  const currentLines = getCurrentOutfitSourceLines(context);
+  const notes = currentLines.length
+    ? [...trimBullets(currentLines, 3)]
+    : [
+        ...trimBullets(context.acquiredBullets, 2),
+        ...trimBullets(context.locationBullets, 2),
+        ...trimBullets(context.gameplayBullets, 1),
+        ...trimBullets(context.craftingBullets, 1)
+      ];
 
   if (!notes.length) {
     notes.push(
@@ -2142,10 +2290,14 @@ function isSoloObtainableBeerStein(title, wikitext, locationText, gameplayText, 
   if (hasAtomField(wikitext) || hasScoreLearnMethod(wikitext)) {
     return false;
   }
-  if (/scoreboard|ranking up on|reward during armor ace|available on the .*scoreboard/i.test(combined)) {
+  if (
+    /scoreboard|ranking up on|reward during armor ace|available on the .*scoreboard|Alien|Fasnacht|Meat Week|Mothman Equinox|Mischief Night|Scorchbeast Queen|Invaders from Beyond/i.test(
+      combined
+    )
+  ) {
     return false;
   }
-  return true;
+  return /(can be found|found in|Helvetia|Whitespring|Sunnytop)/i.test(combined);
 }
 
 function isShopOnlyFasnachtLocation(locationText) {
@@ -2157,32 +2309,28 @@ function isShopOnlyFasnachtLocation(locationText) {
   );
 }
 
-function isSoloObtainableFasnachtMask(title, locationText, eventText) {
+function getCurrentFasnachtLocationNotes(locationBullets) {
+  return dedupePlain(
+    locationBullets.filter((line) => /Fort Defiance|Trainyard|found in|can be found|mask is found/i.test(line))
+  );
+}
+
+function isSoloObtainableFasnachtMask(title, locationText, eventText, currentNotes) {
   const acquisitionText = `${locationText} ${eventText}`.trim();
-  if (!acquisitionText) {
+  if (!acquisitionText || !currentNotes.length) {
     return false;
   }
   if (isShopOnlyFasnachtLocation(locationText) || isShopOnlyFasnachtLocation(acquisitionText)) {
     return false;
   }
   if (
-    /may be worn by the Protectron marchers/i.test(acquisitionText) &&
-    !/chance to|earned from|reward|received|found in|can be found|given as|random drop|Helvetia|Fort Defiance|Trainyard/i.test(
-      acquisitionText
-    )
-  ) {
-    return false;
-  }
-  if (
     /standard mask/i.test(acquisitionText) &&
     /Atomic Shop/i.test(acquisitionText) &&
     /Red|Blue|Green|Yellow|Old Man Summer|Rail Splitter|Fasnachtler/i.test(title)
-  ) {
+    ) {
     return false;
   }
-  return /chance to|earned from|reward|received|found in|can be found|given as|random drop|Helvetia|Fort Defiance|Trainyard/i.test(
-    acquisitionText
-  );
+  return true;
 }
 
 function classifyFasnachtTier(title, acquisitionText, wikitext) {

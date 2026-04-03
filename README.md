@@ -1,10 +1,10 @@
 # F76 Collection Logger
 
-Static Fallout 76 collection logger for CAMP-displayable collectibles, chase apparel, and solo-obtainable outfits that still have a legitimate in-game acquisition path.
+Static Fallout 76 collection logger for CAMP-displayable collectibles, chase apparel, and solo-obtainable outfits that still have a legitimate live in-game acquisition path today.
 
 ## What is included
 
-- 456 tracked entries with local images
+- 380 tracked entries with local images
 - Full magazine set: 104 issues
 - Standard and glowing bobbleheads
 - Teddy bears
@@ -19,8 +19,8 @@ Static Fallout 76 collection logger for CAMP-displayable collectibles, chase app
 - Giddyup Buttercup parts
 - Robot models
 - Outfits for mannequin displays
-- Fasnacht masks
-- Atomic Shop, paid unlocks, external promo gear, and season-locked legacy rewards excluded
+- Lootable Fasnacht masks with live world spawns
+- Atomic Shop, paid unlocks, external promo gear, retired rewards, and currently unavailable seasonal event items excluded
 
 ## Use
 

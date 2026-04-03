@@ -1,13 +1,13 @@
 window.F76_COLLECTIBLES = {
-  "generatedAt": "2026-04-02T22:40:05.124Z",
+  "generatedAt": "2026-04-03T00:11:41.280Z",
   "title": "Fallout 76 CAMP Collectibles Tracker",
-  "scope": "Distinct displayable collector sets, dedicated junk collectible families, chase apparel, and solo-obtainable outfits for CAMP presentation that still have a legitimate in-game solo acquisition path. Atomic Shop items, paid unlocks, external promo gear, and season-locked legacy rewards are excluded.",
+  "scope": "Distinct displayable collector sets, dedicated junk collectible families, chase apparel, and solo-obtainable outfits for CAMP presentation that still have a legitimate live in-game acquisition path today. Atomic Shop items, paid unlocks, external promo gear, retired rewards, and currently unavailable seasonal event items are excluded.",
   "categories": [
     {
       "id": "beer-steins",
       "label": "Beer Steins",
       "displayType": "Beer Stein Display Case",
-      "count": 9
+      "count": 2
     },
     {
       "id": "bobbleheads",
@@ -25,7 +25,7 @@ window.F76_COLLECTIBLES = {
       "id": "fasnacht-masks",
       "label": "Fasnacht Masks",
       "displayType": "Fasnacht Mask Display",
-      "count": 52
+      "count": 2
     },
     {
       "id": "giddyup-parts",
@@ -61,7 +61,7 @@ window.F76_COLLECTIBLES = {
       "id": "outfits",
       "label": "Outfits",
       "displayType": "Mannequin",
-      "count": 160
+      "count": 141
     },
     {
       "id": "robot-models",
@@ -153,7 +153,7 @@ window.F76_COLLECTIBLES = {
     {
       "label": "Stein",
       "url": "https://fallout.wiki/wiki/Stein",
-      "note": "The full Fallout 76 stein family, including seasonal and event variants."
+      "note": "Current beer stein pages used to keep only the live-obtainable steins."
     },
     {
       "label": "Snow Globe (Fallout 76)",
@@ -173,148 +173,20 @@ window.F76_COLLECTIBLES = {
     {
       "label": "Fallout 76 Outfits",
       "url": "https://fallout.wiki/wiki/Fallout_76_Outfits",
-      "note": "Current outfit overview used to audit solo-obtainable mannequin displays and exclude shop-only or season-locked entries."
+      "note": "Current outfit overview used to audit mannequin displays and keep only live-obtainable entries."
     },
     {
       "label": "Category:Fallout 76 outfits",
       "url": "https://fallout.wiki/wiki/Category:Fallout_76_outfits",
-      "note": "Live outfit category used to re-audit the full mannequin-displayable apparel pool."
+      "note": "Live outfit category used to re-audit the full mannequin-displayable apparel pool against current acquisition paths."
     },
     {
       "label": "Category:Fasnacht Masks",
       "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks",
-      "note": "Current Fallout 76 Fasnacht mask and helmet category used to re-audit the full event pool."
+      "note": "Current Fallout 76 Fasnacht mask and helmet category used to keep only masks with a live lootable path."
     }
   ],
   "items": [
-    {
-      "id": "beer-stein-alien-souvenir-beer-stein",
-      "name": "Alien Souvenir Beer Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "Can be built in any C.A.M.P. if one has the applicable plan.",
-      "locationNotes": [
-        "Can be built in any C.A.M.P. if one has the applicable plan.",
-        "Can be crafted at a Tinker's Workbench after learning the associated plan.",
-        "Unlock path is documented on Plan: Alien souvenir beer stein."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/alien-souvenir-beer-stein.png",
-      "wikiTitle": "Alien Souvenir Beer Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Alien_Souvenir_Beer_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Alien_souvenir_beer_stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
-    {
-      "id": "beer-stein-fasnacht-souvenir-beer-stein",
-      "name": "Fasnacht Souvenir Beer Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "Fasnacht Souvenir Beer Stein is tied to Fasnacht 2024.",
-      "locationNotes": [
-        "Can only be crafted by the player.",
-        "Craft it after you unlock the associated plan or season reward.",
-        "Reward family: Fasnacht 2024."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/fasnacht-souvenir-beer-stein.png",
-      "wikiTitle": "Fasnacht Souvenir Beer Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Souvenir_Beer_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Fasnacht_souvenir_beer_stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
-    {
-      "id": "beer-stein-fasnacht-veggie-man-beer-stein",
-      "name": "Fasnacht Veggie Man Beer Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "Fasnacht Veggie Man Beer Stein is tied to Fasnacht 2024.",
-      "locationNotes": [
-        "Can only be crafted by the player.",
-        "Craft it after you unlock the associated plan or season reward.",
-        "Reward family: Fasnacht 2024."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/fasnacht-veggie-man-beer-stein.png",
-      "wikiTitle": "Fasnacht Veggie Man Beer Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Veggie_Man_Beer_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Fasnacht_veggie_man_beer_stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
-    {
-      "id": "beer-stein-meat-week-souvenir-beer-stein",
-      "name": "Meat Week Souvenir Beer Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "Available as a reward during Meat Week.",
-      "locationNotes": [
-        "Available as a reward during Meat Week.",
-        "Reward family: Meat Week Rewards 2024 Other.",
-        "Unlock path is documented on Plan: Meat Week souvenir beer stein."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/meat-week-souvenir-beer-stein.png",
-      "wikiTitle": "Meat Week Souvenir Beer Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Meat_Week_Souvenir_Beer_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Meat_Week_souvenir_beer_stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
     {
       "id": "beer-stein-metal-beer-stein",
       "name": "Metal Beer Stein",
@@ -336,102 +208,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Metal_Beer_Stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
-    {
-      "id": "beer-stein-mischief-night-stein",
-      "name": "Mischief Night Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "",
-      "locationNotes": [
-        "Can only be crafted by the player.",
-        "Craft it after you unlock the associated plan or season reward.",
-        "Unlock path is documented on Plan: Mischief Night Stein."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/mischief-night-stein.png",
-      "wikiTitle": "Mischief Night Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Mischief_Night_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Mischief_Night_Stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
-    {
-      "id": "beer-stein-mothman-equinox-stein",
-      "name": "Mothman Equinox Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "Available as a reward from The Mothman Equinox.",
-      "locationNotes": [
-        "Available as a reward from The Mothman Equinox.",
-        "Reward family: Mothman Equinox Rewards.",
-        "Unlock path is documented on Plan: Mothman Equinox souvenir beer stein."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/mothman-equinox-stein.png",
-      "wikiTitle": "Mothman Equinox Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Mothman_Equinox_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Mothman_Equinox_souvenir_beer_stein"
-        },
-        {
-          "label": "Set overview",
-          "url": "https://fallout.wiki/wiki/Stein"
-        }
-      ]
-    },
-    {
-      "id": "beer-stein-scorchbeast-queen-beer-stein",
-      "name": "Scorchbeast Queen Beer Stein",
-      "categoryId": "beer-steins",
-      "category": "Beer Steins",
-      "group": "Stein Collection",
-      "displayType": "Beer Stein Display Case",
-      "tier": "Event Reward",
-      "sourceSummary": "Scorchbeast Queen Beer Stein is tied to Fasnacht 2024.",
-      "locationNotes": [
-        "Can only be crafted by the player.",
-        "Craft it after you unlock the associated plan or season reward.",
-        "Reward family: Fasnacht 2024."
-      ],
-      "effect": "",
-      "image": "assets/images/beer-steins/scorchbeast-queen-beer-stein.png",
-      "wikiTitle": "Scorchbeast Queen Beer Stein",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Scorchbeast_Queen_Beer_Stein"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.fandom.com/wiki/Plan:_Scorchbeast_queen_beer_stein"
         },
         {
           "label": "Set overview",
@@ -1812,596 +1588,17 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
-      "id": "fasnacht-fasnacht-glowing-abe-mask",
-      "name": "Fasnacht Glowing Abe Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "Unlike its non glowing counterpart, it can be a potential reward for Fasnacht Day.",
-      "locationNotes": [
-        "Unlike its non glowing counterpart, it can be a potential reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-abe-mask.png",
-      "wikiTitle": "Fasnacht Glowing Abe Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Abe_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-alien-mask",
-      "name": "Fasnacht Glowing Alien Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "Received as a possible reward for Fasnacht Day starting in 2024.",
-      "locationNotes": [
-        "Received as a possible reward for Fasnacht Day starting in 2024."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-alien-mask.png",
-      "wikiTitle": "Fasnacht Glowing Alien Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Alien_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-bigfoot-mask",
-      "name": "Fasnacht Glowing Bigfoot Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask can be earned from participating in Fasnacht Day as of 2025.",
-      "locationNotes": [
-        "*This mask can be earned from participating in Fasnacht Day as of 2025."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-bigfoot-mask.png",
-      "wikiTitle": "Fasnacht Glowing Bigfoot Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Bigfoot_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-blue-devil-mask",
-      "name": "Fasnacht Glowing Blue Devil Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-blue-devil-mask.png",
-      "wikiTitle": "Fasnacht Glowing Blue Devil Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Blue_Devil_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-ghoul-boy-mask",
-      "name": "Fasnacht Glowing Ghoul Boy Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-ghoul-boy-mask.png",
-      "wikiTitle": "Fasnacht Glowing Ghoul Boy Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Ghoul_Boy_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-ghoul-girl-mask",
-      "name": "Fasnacht Glowing Ghoul Girl Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-ghoul-girl-mask.png",
-      "wikiTitle": "Fasnacht Glowing Ghoul Girl Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Ghoul_Girl_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-honey-bee-mask",
-      "name": "Fasnacht Glowing Honey Bee Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-honey-bee-mask.png",
-      "wikiTitle": "Fasnacht Glowing Honey Bee Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Honey_Bee_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-jackalope-mask",
-      "name": "Fasnacht Glowing Jackalope Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask can be earned from participating in Fasnacht Day as of 2025.",
-      "locationNotes": [
-        "*This mask can be earned from participating in Fasnacht Day as of 2025."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-jackalope-mask.png",
-      "wikiTitle": "Fasnacht Glowing Jackalope Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Jackalope_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-minotaur-mask",
-      "name": "Fasnacht Glowing Minotaur Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-minotaur-mask.png",
-      "wikiTitle": "Fasnacht Glowing Minotaur Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Minotaur_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-pig-mask",
-      "name": "Fasnacht Glowing Pig Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day.",
-        "* Zsade Fleming integrated the mask.[https://www.artstation.com/artwork/K3O1RB Zsade Fleming's ArtStation; Fasnacht Glowing Pig Mask (Asset Integration) - Fallout 76 Atomic Shop Item]"
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-pig-mask.png",
-      "wikiTitle": "Fasnacht Glowing Pig Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Pig_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-robot-mask-2",
-      "name": "Fasnacht Glowing Robot Mask 2",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-robot-mask-2.png",
-      "wikiTitle": "Fasnacht Glowing Robot Mask 2",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Robot_Mask_2"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-scorchbeast-mask",
-      "name": "Fasnacht Glowing Scorchbeast Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "A glowing mask of a Scorchbeast. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "A glowing mask of a Scorchbeast. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-scorchbeast-mask.png",
-      "wikiTitle": "Fasnacht Glowing Scorchbeast Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Scorchbeast_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-scorchbeast-queen-mask",
-      "name": "Fasnacht Glowing Scorchbeast Queen Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "A mask of a glowing Scorchbeast Queen. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "A mask of a glowing Scorchbeast Queen. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-scorchbeast-queen-mask.png",
-      "wikiTitle": "Fasnacht Glowing Scorchbeast Queen Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Scorchbeast_Queen_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-turkey-mask",
-      "name": "Fasnacht Glowing Turkey Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-turkey-mask.png",
-      "wikiTitle": "Fasnacht Glowing Turkey Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Turkey_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-unicorn-mask",
-      "name": "Fasnacht Glowing Unicorn Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-unicorn-mask.png",
-      "wikiTitle": "Fasnacht Glowing Unicorn Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Unicorn_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-glowing-veggie-man-mask",
-      "name": "Fasnacht Glowing Veggie Man Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Glowing Masks",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Chase",
-      "sourceSummary": "Most masks are seasonal Fasnacht Day rewards or limited variants tied to the event.",
-      "locationNotes": [
-        "This mask is tied to the Fasnacht Day seasonal pool.",
-        "Glowing masks are chase-tier event variants.",
-        "Use the item page and the Fasnacht Day event page together for the cleanest sourcing picture."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-glowing-veggie-man-mask.png",
-      "wikiTitle": "Fasnacht Glowing Veggie Man Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Glowing_Veggie_Man_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-alien-mask",
-      "name": "Fasnacht Alien Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Received as a possible reward for Fasnacht Day starting in 2024.",
-      "locationNotes": [
-        "Received as a possible reward for Fasnacht Day starting in 2024."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-alien-mask.png",
-      "wikiTitle": "Fasnacht Alien Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Alien_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-bigfoot-mask",
-      "name": "Fasnacht Bigfoot Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask can be earned from participating in Fasnacht Day as of 2025.",
-      "locationNotes": [
-        "*This mask can be earned from participating in Fasnacht Day as of 2025."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-bigfoot-mask.png",
-      "wikiTitle": "Fasnacht Bigfoot Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Bigfoot_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-blue-devil-mask",
-      "name": "Fasnacht Blue Devil Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "A mask of the Blue Devil. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "A mask of the Blue Devil. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a 71% to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-blue-devil-mask.png",
-      "wikiTitle": "Fasnacht Blue Devil Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Blue_Devil_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
       "id": "fasnacht-fasnacht-blue-man-mask",
       "name": "Fasnacht Blue Man Mask",
       "categoryId": "fasnacht-masks",
       "category": "Fasnacht Masks",
       "group": "Mask Set",
       "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "* The \"blue\" variant may be worn by the Protectron marchers during the Fasnacht Day parade.",
+      "tier": "World Spawn",
+      "sourceSummary": "Fort Defiance - In the second left room in the hallway to the right through the double doors on the second floor.",
       "locationNotes": [
         "Fort Defiance - In the second left room in the hallway to the right through the double doors on the second floor.",
-        "New Appalachian Central Trainyard - East of the tracks and west of the road, there is a bank. Inside the bank there is a room with several safes. The mask is found in one of the blown apart safes.",
-        "* The \"blue\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
+        "New Appalachian Central Trainyard - East of the tracks and west of the road, there is a bank. Inside the bank there is a room with several safes. The mask is found in one of the blown apart safes."
       ],
       "effect": "",
       "image": "assets/images/fasnacht-masks/fasnacht-blue-man-mask.png",
@@ -2422,488 +1619,17 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
-      "id": "fasnacht-fasnacht-brahmin-mask",
-      "name": "Fasnacht Brahmin Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "A large mask that resembles the heads of a Brahmin with bulging eyes. Each head wears a small collar-mounted bell. This mask was introduced in the 2021 return of Fasnacht Day.",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "A large mask that resembles the heads of a Brahmin with bulging eyes. Each head wears a small collar-mounted bell. This mask was introduced in the 2021 return of Fasnacht Day.",
-        "* The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-brahmin-mask.png",
-      "wikiTitle": "Fasnacht Brahmin Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Brahmin_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-buffoon-mask",
-      "name": "Fasnacht Buffoon Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "This mask was introduced in the 2021 return of Fasnacht Day.",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "This mask was introduced in the 2021 return of Fasnacht Day.",
-        "* The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-buffoon-mask.png",
-      "wikiTitle": "Fasnacht Buffoon Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Buffoon_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-crazy-guy-mask",
-      "name": "Fasnacht Crazy Guy Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "|quests =Fasnacht Day",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "|quests =Fasnacht Day",
-        "* The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-crazy-guy-mask.png",
-      "wikiTitle": "Fasnacht Crazy Guy Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Crazy_Guy_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-deathclaw-mask",
-      "name": "Fasnacht Deathclaw Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "|quests =Fasnacht Day",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "|quests =Fasnacht Day",
-        "It is a mask that resembles the head of a Deathclaw. Its mouth is wide open. This mask was introduced in the 2020 return of Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-deathclaw-mask.png",
-      "wikiTitle": "Fasnacht Deathclaw Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Deathclaw_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-demon-mask",
-      "name": "Fasnacht Demon Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "A mask resembling a scowling demon with beady eyes, asymmetric horns, and shaggy black hair. This mask was introduced in the 2021 return of Fasnacht Day",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "A mask resembling a scowling demon with beady eyes, asymmetric horns, and shaggy black hair. This mask was introduced in the 2021 return of Fasnacht Day",
-        "* The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-demon-mask.png",
-      "wikiTitle": "Fasnacht Demon Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Demon_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-fiend-mask",
-      "name": "Fasnacht Fiend Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "This mask was introduced in the 2022 Fasnacht Day.",
-      "locationNotes": [
-        "This mask was introduced in the 2022 Fasnacht Day.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-fiend-mask.png",
-      "wikiTitle": "Fasnacht Fiend Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Fiend_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-ghoul-boy-mask",
-      "name": "Fasnacht Ghoul Boy Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "* This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "This mask has a chance to drop as a reward for Fasnacht Day.",
-        "It is also part of the Queen of Fasnacht Bundle.",
-        "* This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-ghoul-boy-mask.png",
-      "wikiTitle": "Fasnacht Ghoul Boy Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Ghoul_Boy_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-ghoul-girl-mask",
-      "name": "Fasnacht Ghoul Girl Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "* This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "This mask has a chance to drop as a reward for Fasnacht Day.",
-        "It is also part of the Queen of Fasnacht Bundle.",
-        "* This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-ghoul-girl-mask.png",
-      "wikiTitle": "Fasnacht Ghoul Girl Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Ghoul_Girl_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-giant-mask",
-      "name": "Fasnacht Giant Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "The standard mask has a to be received for completing the seasonal Fasnacht Day event with 1-4 bots kept alive. It has a if all 5 bots are kept alive.",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with 1-4 bots kept alive. It has a if all 5 bots are kept alive."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-giant-mask.png",
-      "wikiTitle": "Fasnacht Giant Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Giant_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-goblin-mask",
-      "name": "Fasnacht Goblin Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "It may be received as an uncommon reward for completing Fasnacht Day.",
-      "locationNotes": [
-        "It may be received as an uncommon reward for completing Fasnacht Day.",
-        "* The \"red\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-goblin-mask.png",
-      "wikiTitle": "Fasnacht Goblin Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Goblin_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-hag-mask",
-      "name": "Fasnacht Hag Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "This mask was introduced in the 2022 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "This mask was introduced in the 2022 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-hag-mask.png",
-      "wikiTitle": "Fasnacht Hag Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Hag_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-honey-bee-mask",
-      "name": "Fasnacht Honey Bee Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a 71% to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-honey-bee-mask.png",
-      "wikiTitle": "Fasnacht Honey Bee Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Honey_Bee_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-jackalope-mask",
-      "name": "Fasnacht Jackalope Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask can be earned from participating in Fasnacht Day as of 2025.",
-      "locationNotes": [
-        "*This mask can be earned from participating in Fasnacht Day as of 2025."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-jackalope-mask.png",
-      "wikiTitle": "Fasnacht Jackalope Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Jackalope_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-jester-mask",
-      "name": "Fasnacht Jester Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "It may be received as an uncommon reward for completing Fasnacht Day.",
-      "locationNotes": [
-        "It may be received as an uncommon reward for completing Fasnacht Day.",
-        "* The \"blue\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-jester-mask.png",
-      "wikiTitle": "Fasnacht Jester Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Jester_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-loon-mask",
-      "name": "Fasnacht Loon Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "This mask was introduced in the 2022 return of Fasnacht Day.",
-      "locationNotes": [
-        "This mask was introduced in the 2022 return of Fasnacht Day.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-loon-mask.png",
-      "wikiTitle": "Fasnacht Loon Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Loon_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
       "id": "fasnacht-fasnacht-man-mask",
       "name": "Fasnacht Man Mask",
       "categoryId": "fasnacht-masks",
       "category": "Fasnacht Masks",
       "group": "Mask Set",
       "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "* The \"blue\" variant may be worn by the Protectron marchers during the Fasnacht Day parade.",
+      "tier": "World Spawn",
+      "sourceSummary": "Fort Defiance - In the second left room in the hallway to the right through the double doors on the second floor.",
       "locationNotes": [
         "Fort Defiance - In the second left room in the hallway to the right through the double doors on the second floor.",
-        "New Appalachian Central Trainyard - East of the tracks and west of the road, there is a bank. Inside the bank there is a room with several safes. The mask is found in one of the blown apart safes.",
-        "* The \"blue\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
+        "New Appalachian Central Trainyard - East of the tracks and west of the road, there is a bank. Inside the bank there is a room with several safes. The mask is found in one of the blown apart safes."
       ],
       "effect": "",
       "image": "assets/images/fasnacht-masks/fasnacht-man-mask.png",
@@ -2912,498 +1638,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Fasnacht_Man_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-minotaur-mask",
-      "name": "Fasnacht Minotaur Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-minotaur-mask.png",
-      "wikiTitle": "Fasnacht Minotaur Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Minotaur_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-owl-mask",
-      "name": "Fasnacht Owl Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "It may be received as a reward for completing Fasnacht Day.",
-      "locationNotes": [
-        "It may be received as a reward for completing Fasnacht Day.",
-        "* The \"blue\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-owl-mask.png",
-      "wikiTitle": "Fasnacht Owl Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Owl_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-pig-mask",
-      "name": "Fasnacht Pig Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day.",
-        "* Zsade Fleming integrated the mask.[https://www.artstation.com/artwork/1N4bLL Zsade Fleming's ArtStation; Fasnacht Pig Mask (Asset Integration) - Fallout 76 Atomic Shop Item]"
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-pig-mask.png",
-      "wikiTitle": "Fasnacht Pig Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Pig_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-raven-mask",
-      "name": "Fasnacht Raven Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "|quests =Fasnacht Day",
-      "locationNotes": [
-        "The standard mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "Red variant was originally but was reduced to 300 when brought back to the store in February 2021.",
-        "|quests =Fasnacht Day"
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-raven-mask.png",
-      "wikiTitle": "Fasnacht Raven Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Raven_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-robot-mask-2",
-      "name": "Fasnacht Robot Mask 2",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-robot-mask-2.png",
-      "wikiTitle": "Fasnacht Robot Mask 2",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Robot_Mask_2"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-scorchbeast-mask",
-      "name": "Fasnacht Scorchbeast Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "A mask of a Scorchbeast. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "A mask of a Scorchbeast. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-scorchbeast-mask.png",
-      "wikiTitle": "Fasnacht Scorchbeast Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Scorchbeast_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-scorchbeast-queen-mask",
-      "name": "Fasnacht Scorchbeast Queen Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "A mask of a Scorchbeast Queen. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-      "locationNotes": [
-        "A mask of a Scorchbeast Queen. This mask was introduced in the 2024 Fasnacht Day Parade event.",
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-scorchbeast-queen-mask.png",
-      "wikiTitle": "Fasnacht Scorchbeast Queen Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Scorchbeast_Queen_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-skull-mask",
-      "name": "Fasnacht Skull Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "It may be received as a rare reward for completing Fasnacht Day.",
-      "locationNotes": [
-        "It may be received as a rare reward for completing Fasnacht Day.",
-        "* The \"green\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-skull-mask.png",
-      "wikiTitle": "Fasnacht Skull Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Skull_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-soldier-mask",
-      "name": "Fasnacht Soldier Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Helvetia - Given as a reward for completing the Fasnacht Day event.",
-      "locationNotes": [
-        "Helvetia - Given as a reward for completing the Fasnacht Day event."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-soldier-mask.png",
-      "wikiTitle": "Fasnacht Soldier Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Soldier_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-sun-mask",
-      "name": "Fasnacht Sun Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Helvetia - Given as a rare reward for completing the Fasnacht Day event.",
-      "locationNotes": [
-        "Helvetia - Given as a rare reward for completing the Fasnacht Day event."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-sun-mask.png",
-      "wikiTitle": "Fasnacht Sun Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Sun_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-toothy-man-mask",
-      "name": "Fasnacht Toothy Man Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Helvetia - Given as a reward for completing the Fasnacht Day quest.",
-      "locationNotes": [
-        "Helvetia - Given as a reward for completing the Fasnacht Day quest."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-toothy-man-mask.png",
-      "wikiTitle": "Fasnacht Toothy Man Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Toothy_Man_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-turkey-mask",
-      "name": "Fasnacht Turkey Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-turkey-mask.png",
-      "wikiTitle": "Fasnacht Turkey Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Turkey_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-unicorn-mask",
-      "name": "Fasnacht Unicorn Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "*This mask has a chance to drop as a reward for Fasnacht Day.",
-      "locationNotes": [
-        "*This mask has a chance to drop as a reward for Fasnacht Day."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-unicorn-mask.png",
-      "wikiTitle": "Fasnacht Unicorn Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Unicorn_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-winter-man-mask",
-      "name": "Fasnacht Winter Man Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "* The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-      "locationNotes": [
-        "The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive).",
-        "The Old Man Summer variant is available for in the Atomic Shop.",
-        "* The mask has a to be received for completing the seasonal Fasnacht Day event with the best performance (all bots kept alive)."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-winter-man-mask.png",
-      "wikiTitle": "Fasnacht Winter Man Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Winter_Man_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-witch-mask",
-      "name": "Fasnacht Witch Mask",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Mask Set",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Helvetia - Given as a common reward for completing the Fasnacht Day event.",
-      "locationNotes": [
-        "Helvetia - Given as a common reward for completing the Fasnacht Day event.",
-        "* The \"yellow\" variant may be worn by the Protectron marchers during the Fasnacht Day parade."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/fasnacht-witch-mask.png",
-      "wikiTitle": "Fasnacht Witch Mask",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Witch_Mask"
-        },
-        {
-          "label": "Event page",
-          "url": "https://fallout.wiki/wiki/Fasnacht_Day"
-        },
-        {
-          "label": "Category page",
-          "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
-        }
-      ]
-    },
-    {
-      "id": "fasnacht-fasnacht-father-winter-helmet",
-      "name": "Fasnacht Father Winter helmet",
-      "categoryId": "fasnacht-masks",
-      "category": "Fasnacht Masks",
-      "group": "Special Headwear",
-      "displayType": "Fasnacht Mask Display",
-      "tier": "Event Rare",
-      "sourceSummary": "The helmet has a to be received for completing the Fasnacht Day seasonal event with the best performance (all bots kept alive).",
-      "locationNotes": [
-        "The helmet has a to be received for completing the Fasnacht Day seasonal event with the best performance (all bots kept alive).",
-        "* This helmet was introduced in the 2020 return of Fasnacht Day as a level 15 variant.",
-        "* The helmet was updated in the third return of Fasnacht Day in October 2020, with newly acquired versions scaling to the player character's level."
-      ],
-      "effect": "",
-      "image": "assets/images/fasnacht-masks/winterman-t-45-helmet.png",
-      "wikiTitle": "Winterman T-45 Helmet",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Winterman_T-45_Helmet"
         },
         {
           "label": "Event page",
@@ -6740,7 +4974,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Several can be found inside Fort Defiance, a legacy from back when the location was known as Allegheny Asylum.",
         "The clean, colored variants can only be found as rare spawns on the third floor of the north wing, either in the restroom on the benches across from the stalls, or on the beds in the rooms used as barracks.",
-        "Pairs with Asylum Worker Hat."
+        "One across from the restrooms, and one across from the elevator, marked by the Overseer's Cache next to the door."
       ],
       "effect": "Pairs with Asylum Worker Hat.",
       "image": "assets/images/outfits/asylum-worker-uniform.png",
@@ -6763,7 +4997,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 0.42%",
       "locationNotes": [
         "Fort Defiance World Spawn - 0.42%",
-        "Pairs with Asylum Worker Hat Blue."
+        "* Fort Defiance World Spawn - 0.42%",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Blue.",
       "image": "assets/images/outfits/asylum-worker-uniform-blue.png",
@@ -6786,7 +5021,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 1.67% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 1.67% chance",
-        "Pairs with Asylum Worker Hat Brown."
+        "* Fort Defiance World Spawn - 1.67% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Brown.",
       "image": "assets/images/outfits/asylum-worker-uniform-brown.png",
@@ -6809,7 +5045,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 0.09% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 0.09% chance",
-        "Pairs with Asylum Worker Hat Forest."
+        "* Fort Defiance World Spawn - 0.09% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Forest.",
       "image": "assets/images/outfits/asylum-worker-uniform-forest.png",
@@ -6832,7 +5069,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 0.83%",
       "locationNotes": [
         "Fort Defiance World Spawn - 0.83%",
-        "Pairs with Asylum Worker Hat Green."
+        "* Fort Defiance World Spawn - 0.83%",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Green.",
       "image": "assets/images/outfits/asylum-worker-uniform-green.png",
@@ -6855,7 +5093,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 0.21% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 0.21% chance",
-        "Pairs with Asylum Worker Hat Pink."
+        "* Fort Defiance World Spawn - 0.21% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Pink.",
       "image": "assets/images/outfits/asylum-worker-uniform-pink.png",
@@ -6878,7 +5117,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 0.01% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 0.01% chance",
-        "Pairs with Asylum Worker Hat Red."
+        "* Fort Defiance World Spawn - 0.01% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Red.",
       "image": "assets/images/outfits/asylum-worker-uniform-red.png",
@@ -6901,7 +5141,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 6.67% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 6.67% chance",
-        "Pairs with Asylum Worker Hat Weathered."
+        "* Fort Defiance World Spawn - 6.67% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Weathered.",
       "image": "assets/images/outfits/asylum-worker-uniform-weathered.png",
@@ -6924,7 +5165,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 3.33% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 3.33% chance",
-        "Pairs with Asylum Worker Hat White."
+        "* Fort Defiance World Spawn - 3.33% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat White.",
       "image": "assets/images/outfits/asylum-worker-uniform-white.png",
@@ -6947,7 +5189,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 6.67% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 6.67% chance",
-        "Pairs with Asylum Worker Hat White Dirty."
+        "* Fort Defiance World Spawn - 6.67% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat White Dirty.",
       "image": "assets/images/outfits/asylum-worker-uniform-white-dirty.png",
@@ -6970,7 +5213,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Fort Defiance World Spawn - 0.10% chance",
       "locationNotes": [
         "Fort Defiance World Spawn - 0.10% chance",
-        "Pairs with Asylum Worker Hat Yellow."
+        "* Fort Defiance World Spawn - 0.10% chance",
+        "The outfit can be found in the Fort Defiance."
       ],
       "effect": "Pairs with Asylum Worker Hat Yellow.",
       "image": "assets/images/outfits/asylum-worker-uniform-yellow.png",
@@ -6979,34 +5223,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Yellow"
-        }
-      ]
-    },
-    {
-      "id": "outfit-fanatic-stalker-outfit",
-      "name": "Fanatic Stalker Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Distinct Apparel",
-      "displayType": "Mannequin",
-      "tier": "Collectible Reward",
-      "sourceSummary": "An outfit resembling those of the Fanatics, it can be worn with a matching helmet.",
-      "locationNotes": [
-        "An outfit resembling those of the Fanatics, it can be worn with a matching helmet.",
-        "Plan unlock: Call to Axe-ion.",
-        "Pairs with Fanatic Stalker Helmet."
-      ],
-      "effect": "Pairs with Fanatic Stalker Helmet.",
-      "image": "assets/images/outfits/fanatic-stalker-outfit.png",
-      "wikiTitle": "Fanatic Stalker Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fanatic_Stalker_Outfit"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Call_to_Axe-ion"
         }
       ]
     },
@@ -7021,6 +5237,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be purchased from Nuka-Cade terminal",
       "locationNotes": [
         "Can be purchased from Nuka-Cade terminal",
+        "* Can be purchased from Nuka-Cade terminal",
         "Plan unlock: |displayable =."
       ],
       "effect": "",
@@ -7038,6 +5255,32 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
+      "id": "outfit-redcoat-outfit",
+      "name": "Redcoat Outfit",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "Distinct Apparel",
+      "displayType": "Mannequin",
+      "tier": "Collectible Reward",
+      "sourceSummary": "Can be bought from Ineke at Milepost Zero.",
+      "locationNotes": [
+        "Can be bought from Ineke at Milepost Zero."
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/redcoat-outfit.png",
+      "wikiTitle": "Redcoat Outfit",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Redcoat_Outfit"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Redcoat_Outfit"
+        }
+      ]
+    },
+    {
       "id": "outfit-arktos-lab-coat",
       "name": "Arktos Lab Coat",
       "categoryId": "outfits",
@@ -7047,9 +5290,7 @@ window.F76_COLLECTIBLES = {
       "tier": "Event Reward",
       "sourceSummary": "Received as a possible reward for completing the Project Paradise event.",
       "locationNotes": [
-        "Received as a possible reward for completing the Project Paradise event.",
-        "A white lab coat with a green-cyan trim.",
-        "This item can not be crafted."
+        "Received as a possible reward for completing the Project Paradise event."
       ],
       "effect": "",
       "image": "assets/images/outfits/arktos-lab-coat.png",
@@ -7072,7 +5313,6 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Only obtainable as rare rewards from the Riding Shotgun event, with a 5% drop chance.",
       "locationNotes": [
         "Only obtainable as rare rewards from the Riding Shotgun event, with a 5% drop chance.",
-        "The Blue Ridge Caravan outfit is a coat, worn by guards of the caravans.",
         "Pairs with Blue Ridge Caravan Gas Mask."
       ],
       "effect": "Pairs with Blue Ridge Caravan Gas Mask.",
@@ -7096,7 +5336,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Initiate: 0.22%",
       "locationNotes": [
         "Initiate: 0.22%",
-        "Paladin: 0.44%"
+        "Paladin: 0.44%",
+        "Elder: 3.56%"
       ],
       "effect": "",
       "image": "assets/images/outfits/brotherhood-special-ops-suit.png",
@@ -7120,7 +5361,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
         "The plan to craft is a possible reward for Dangerous Pastimes.",
-        "{{Crafting table FO76 |material1 =Cloth |matcnt1 =5 |workspace =Armor Workbench |learn method =plan |product1 = }}"
+        "Possible reward for Dangerous Pastimes."
       ],
       "effect": "",
       "image": "assets/images/outfits/burnt-vault-chemist-coat.png",
@@ -7148,7 +5389,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
         "The plan to craft is a possible reward for Dangerous Pastimes.",
-        "{{Crafting table FO76 |material1 =Cloth |matcnt1 =5 |workspace =Armor Workbench |learn method =plan |product1 = }}"
+        "Possible reward for Dangerous Pastimes."
       ],
       "effect": "",
       "image": "assets/images/outfits/burnt-vault-lab-coat.png",
@@ -7175,7 +5416,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3.",
       "locationNotes": [
         "Chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3.",
-        "Possible reward from Event: Most Wanted, Event: Seismic Activity, Event: Spin The Wheel or Event: Tunnel Of Love."
+        "Possible reward from Event: Most Wanted, Event: Seismic Activity, Event: Spin The Wheel or Event: Tunnel Of Love.",
+        "* Chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3."
       ],
       "effect": "",
       "image": "assets/images/outfits/cappy-jacket-jeans.png",
@@ -7199,7 +5441,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "The outfit can be found at Tyler County Fairgrounds at the lockers or on a shelf in the Hole in One stand on the central west area.",
         "The outfit can also be found at Lakeside Cabins, on a black chair, in a cabin northeast of the largest cabin.",
-        "Pairs with Clown Hat."
+        "The hat can be found at Sunnytop Ski Lanes at the chimney."
       ],
       "effect": "Pairs with Clown Hat.",
       "image": "assets/images/outfits/clown-outfit.png",
@@ -7208,30 +5450,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Clown_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-fireman-uniform",
-      "name": "Fireman Uniform",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Reward",
-      "sourceSummary": "The helmet is frequently sold by Cap'n at the Whitespring Resort.",
-      "locationNotes": [
-        "The helmet is frequently sold by Cap'n at the Whitespring Resort.",
-        "The helmet can sometimes be found at a camp site northwest of The Rusty Pick in the Ash Heap.",
-        "Pairs with }}."
-      ],
-      "effect": "Pairs with }}.",
-      "image": "assets/images/outfits/fireman-uniform.png",
-      "wikiTitle": "Fireman Uniform",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Fireman_Uniform"
         }
       ]
     },
@@ -7246,7 +5464,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Possible reward from Event: Most Wanted",
       "locationNotes": [
         "Possible reward from Event: Most Wanted",
-        "Plan: Nuka-World Cowboy Duster",
+        "* Possible reward from Event: Most Wanted",
         "Plan unlock: Plan: Nuka-World Cowboy Duster."
       ],
       "effect": "",
@@ -7275,7 +5493,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "0.65% chance to be rewarded from Final Departure and Strength in Numbers.",
         "0.033% chance to be rewarded from the following dailies or events in The Forest:",
-        "Pairs with Responder Fireman Helmet."
+        "Back on the Beat"
       ],
       "effect": "Pairs with Responder Fireman Helmet.",
       "image": "assets/images/outfits/responder-fireman-uniform.png",
@@ -7299,7 +5517,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
         "The plan to craft is a possible reward for Dangerous Pastimes.",
-        "Plan unlock: Plan: Shenandoah T-Shirt and Slacks."
+        "Possible reward for Dangerous Pastimes."
       ],
       "effect": "",
       "image": "assets/images/outfits/shenandoah-t-shirt-and-slacks.png",
@@ -7327,7 +5545,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
         "The plan to craft is a possible reward for Dangerous Pastimes.",
-        "Plan unlock: Plan: V63 Recon Outfit Burnt."
+        "Possible reward for Dangerous Pastimes."
       ],
       "effect": "",
       "image": "assets/images/outfits/v63-recon-outfit-burnt.png",
@@ -7355,7 +5573,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
         "The plan to craft is a possible reward for Dangerous Pastimes.",
-        "Plan unlock: Plan: V63 Riot Control Outfit Burnt."
+        "Possible reward for Dangerous Pastimes."
       ],
       "effect": "",
       "image": "assets/images/outfits/v63-riot-control-outfit-burnt.png",
@@ -7383,7 +5601,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
         "The plan to craft is a possible reward for Dangerous Pastimes.",
-        "Plan unlock: Plan: V63 Security Outfit Burnt."
+        "Possible reward for Dangerous Pastimes."
       ],
       "effect": "",
       "image": "assets/images/outfits/v63-security-outfit-burnt.png",
@@ -7409,7 +5627,8 @@ window.F76_COLLECTIBLES = {
       "tier": "Event Chase",
       "sourceSummary": "Savage Divide events: 0.15%",
       "locationNotes": [
-        "Savage Divide events: 0.15%"
+        "Savage Divide events: 0.15%",
+        "* Savage Divide events: 0.15%"
       ],
       "effect": "",
       "image": "assets/images/outfits/bos-jumpsuit.png",
@@ -7431,7 +5650,8 @@ window.F76_COLLECTIBLES = {
       "tier": "Event Chase",
       "sourceSummary": "Forest events: 0.03% Drop Chance",
       "locationNotes": [
-        "Forest events: 0.03% Drop Chance"
+        "Forest events: 0.03% Drop Chance",
+        "* Forest events: 0.03% Drop Chance"
       ],
       "effect": "",
       "image": "assets/images/outfits/forest-camo-jumpsuit.png",
@@ -7453,7 +5673,8 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "A mechanic jumpsuit can be found at Hornwright Air Purifier Site 02.",
       "locationNotes": [
-        "A mechanic jumpsuit can be found at Hornwright Air Purifier Site 02."
+        "A mechanic jumpsuit can be found at Hornwright Air Purifier Site 02.",
+        "* A mechanic jumpsuit can be found at Hornwright Air Purifier Site 02."
       ],
       "effect": "",
       "image": "assets/images/outfits/mechanic-jumpsuit.png",
@@ -7476,6 +5697,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be purchased from Nuka-Cade terminal",
       "locationNotes": [
         "Can be purchased from Nuka-Cade terminal",
+        "* Can be purchased from Nuka-Cade terminal",
         "Plan unlock: |displayable =."
       ],
       "effect": "",
@@ -7502,7 +5724,8 @@ window.F76_COLLECTIBLES = {
       "tier": "Event Chase",
       "sourceSummary": "Savage Divide events",
       "locationNotes": [
-        "Savage Divide events"
+        "Savage Divide events",
+        "* Savage Divide events"
       ],
       "effect": "",
       "image": "assets/images/outfits/white-powder-jumpsuit.png",
@@ -7525,7 +5748,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "Plan unlock: Plan: Apocalyptic Farmer Outfit."
+        "Reward from The Human Condition",
+        "* Reward from The Human Condition"
       ],
       "effect": "",
       "image": "assets/images/outfits/apocalyptic-farmer-outfit.png",
@@ -7542,90 +5766,6 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
-      "id": "outfit-brotherhood-civvies",
-      "name": "Brotherhood Civvies",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "The plan can be obtained by successfully completing the quest Out of the Blue.",
-      "locationNotes": [
-        "The plan can be obtained by successfully completing the quest Out of the Blue.",
-        "The civvies consist of a scarf, bag, and cargo jacket adorned with several pins and belt with a flashlight.",
-        "Plan unlock: Plan: Brotherhood civvies."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/brotherhood-civvies.png",
-      "wikiTitle": "Brotherhood Civvies",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Brotherhood_Civvies"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Brotherhood_civvies"
-        }
-      ]
-    },
-    {
-      "id": "outfit-civil-war-era-dress",
-      "name": "Civil War Era Dress",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "One next to a Confederate uniform in the display case at the Philippi Battlefield Cemetery museum's basement, unlocked by pressing the red button.",
-      "locationNotes": [
-        "One next to a Confederate uniform in the display case at the Philippi Battlefield Cemetery museum's basement, unlocked by pressing the red button.",
-        "One alongside a Civil War Era Top Hat and Union hat next to some skeletons in a broken boxcar, on the tracks east of Lewisburg Station.",
-        "Plan unlock: Plan: Civil War Era Dress."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/civil-war-era-dress.png",
-      "wikiTitle": "Civil War Era Dress",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Civil_War_Era_Dress"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Civil_War_Era_Dress"
-        }
-      ]
-    },
-    {
-      "id": "outfit-civil-war-era-suit",
-      "name": "Civil War Era Suit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Inside the museum at the Philippi Battlefield Cemetery:",
-      "locationNotes": [
-        "Inside the museum at the Philippi Battlefield Cemetery:",
-        "On the front counter next to a Civil War Era Top Hat",
-        "Plan unlock: Plan: Civil War Era Suit."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/civil-war-era-suit.png",
-      "wikiTitle": "Civil War Era Suit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Civil_War_Era_Suit"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Civil_War_Era_Suit"
-        }
-      ]
-    },
-    {
       "id": "outfit-confederate-uniform",
       "name": "Confederate Uniform",
       "categoryId": "outfits",
@@ -7637,7 +5777,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted from the plans, found randomly on a dead Civil War Reenactor as part of the Philippi's Cemetery Battlefield Revealed random encounter.",
         "Philippi Battlefield Cemetery:",
-        "Plan unlock: Plan: Confederate Uniform."
+        "A uniform can be found inside the Prickett's Fort gift shop basement display case on the right."
       ],
       "effect": "",
       "image": "assets/images/outfits/confederate-uniform.png",
@@ -7664,8 +5804,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "The plan to craft is a possible reward for completing the Skyline Valley Questline.",
-        "{{Crafting table FO76 |material1 = Cloth |matcnt1 = 3 |workspace = Armor Workbench |learn method = plan |product1 = }}"
+        "Reward for completion of the Skyline Valley Questline.",
+        "Plan unlock: Plan: Cultist Monarch Outfit."
       ],
       "effect": "",
       "image": "assets/images/outfits/cultist-monarch-outfit.png",
@@ -7692,8 +5832,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned from Plan: Deathclaw Skin Outfit.",
       "locationNotes": [
         "Learned from Plan: Deathclaw Skin Outfit.",
-        "A variant of outfit.",
-        "{{Crafting table FO76 |type =production |material1 =Cloth |matcnt1 =3 |workspace =Armor Workbench |learn method =plan |product1 = }}"
+        "Pairs with MILE_Clothes_DeathClaw_Outfit."
       ],
       "effect": "Pairs with MILE_Clothes_DeathClaw_Outfit.",
       "image": "assets/images/outfits/deathclaw-skin-outfit.png",
@@ -7716,7 +5855,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned from Plan: Enforcer's Outfit.",
       "locationNotes": [
         "Learned from Plan: Enforcer's Outfit.",
-        "Plan unlock: Plan: Enforcer's Outfit."
+        "Reward from The Human Condition",
+        "* Reward from The Human Condition"
       ],
       "effect": "",
       "image": "assets/images/outfits/enforcer-s-outfit.png",
@@ -7740,9 +5880,9 @@ window.F76_COLLECTIBLES = {
       "group": "Plan Unlocks",
       "displayType": "Mannequin",
       "tier": "Plan Unlock",
-      "sourceSummary": "Plan: Flower Suit",
+      "sourceSummary": "* Plan: Flower Suit",
       "locationNotes": [
-        "Plan: Flower Suit"
+        "* Plan: Flower Suit"
       ],
       "effect": "",
       "image": "assets/images/outfits/flower-suit.png",
@@ -7762,9 +5902,9 @@ window.F76_COLLECTIBLES = {
       "group": "Plan Unlocks",
       "displayType": "Mannequin",
       "tier": "Plan Unlock",
-      "sourceSummary": "Plan: Flower-Printed Sundress",
+      "sourceSummary": "* Plan: Flower-Printed Sundress",
       "locationNotes": [
-        "Plan: Flower-Printed Sundress"
+        "* Plan: Flower-Printed Sundress"
       ],
       "effect": "",
       "image": "assets/images/outfits/flower-printed-sundress.png",
@@ -7788,7 +5928,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted at any Armor Workbench with the correct materials after the Initiate of Mysteries quest.",
         "The Tattered dress can be repaired back into a Garb of Mysteries by using the fabricator inside Riverside Manor's basement during The Mistress of Mystery side quest. This may only be performed once.",
-        "Plan unlock: |mods =."
+        "* Can be crafted at any Armor Workbench with the correct materials after the Initiate of Mysteries quest."
       ],
       "effect": "",
       "image": "assets/images/outfits/garb-of-mysteries.png",
@@ -7815,8 +5955,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned via Plan: Gulper Skin Outfit.",
       "locationNotes": [
         "Learned via Plan: Gulper Skin Outfit.",
-        "A variant of outfit with a matching Gulper Skin Hood.",
-        "{{Crafting table FO76 |type =production |material1 =Cloth |matcnt1 =3 |workspace =Armor Workbench |learn method =plan |product1 = }}"
+        "Pairs with Gulper Skin Hood."
       ],
       "effect": "Pairs with Gulper Skin Hood.",
       "image": "assets/images/outfits/gulper-skin-outfit.png",
@@ -7825,34 +5964,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Gulper_Skin_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-halloween-costume-witch",
-      "name": "Halloween Costume Witch",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "The plans to create this costume and its respective hat can be obtained from a corpse of a dead trick-or-treater wearing the ensemble in a random encounter.",
-      "locationNotes": [
-        "The plans to create this costume and its respective hat can be obtained from a corpse of a dead trick-or-treater wearing the ensemble in a random encounter.",
-        "The hat can be found in the following locations:",
-        "Plan unlock: Plan: Witch Costume."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/halloween-costume-witch.png",
-      "wikiTitle": "Halloween Costume Witch",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Halloween_Costume_Witch"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Witch_Costume"
         }
       ]
     },
@@ -7867,8 +5978,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned via Plan: Hunter's Hanbok Outfit.",
       "locationNotes": [
         "Learned via Plan: Hunter's Hanbok Outfit.",
-        "A variant of outfit.",
-        "{{Crafting table FO76 |type =production |material1 =Cloth |matcnt1 =3 |workspace =Armor Workbench |learn method =plan |product1 = }}"
+        "Pairs with }}."
       ],
       "effect": "Pairs with }}.",
       "image": "assets/images/outfits/hunter-s-hanbok-outfit.png",
@@ -7877,33 +5987,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Hunter's_Hanbok_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-insurgent-outfit",
-      "name": "Insurgent Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "An outfit consisting of a blue and black coverall and pants, a body vest and a dirty white scarf around the neck.",
-      "locationNotes": [
-        "An outfit consisting of a blue and black coverall and pants, a body vest and a dirty white scarf around the neck.",
-        "Plan unlock: Plan: Insurgent outfit."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/insurgent-outfit.png",
-      "wikiTitle": "Insurgent Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Insurgent_Outfit"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Insurgent_outfit"
         }
       ]
     },
@@ -7918,8 +6001,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned via Plan: Lederhosen Outfit.",
       "locationNotes": [
         "Learned via Plan: Lederhosen Outfit.",
-        "A variant of outfit with a matching hat.",
-        "{{Crafting table FO76 |type =production |material1 =Cloth |matcnt1 =3 |workspace =Armor Workbench |learn method =plan |product1 = }}"
+        "Pairs with Lederhosen Outfit Hat."
       ],
       "effect": "Pairs with Lederhosen Outfit Hat.",
       "image": "assets/images/outfits/lederhosen-outfit.png",
@@ -7943,7 +6025,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be awarded after completing Missing Persons.",
         "Can be crafted at any Armor Workbench after learning the plan.",
-        "Plan unlock: Plan: Mercenary outfit."
+        "* Can be awarded after completing Missing Persons."
       ],
       "effect": "",
       "image": "assets/images/outfits/mercenary-outfit.png",
@@ -7960,53 +6042,6 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
-      "id": "outfit-piper-s-press-outfit",
-      "name": "Piper's Press Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Crafted at any Armor Workbench.",
-      "locationNotes": [
-        "Crafted at any Armor Workbench.",
-        "This is a cosmetic item, worn apart from any equipped armor.",
-        "Pairs with Piper's Press Cap, Piper's Road Goggles."
-      ],
-      "effect": "Pairs with Piper's Press Cap, Piper's Road Goggles.",
-      "image": "assets/images/outfits/piper-s-press-outfit.png",
-      "wikiTitle": "Piper's Press Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Piper's_Press_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-redcoat-outfit",
-      "name": "Redcoat Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "An outfit that pairs with the Redcoat Hat.",
-      "locationNotes": [
-        "An outfit that pairs with the Redcoat Hat.",
-        "{{Crafting table FO76 |type =production |material1 =Cloth |matcnt1 =3 |workspace =Armor Workbench |learn method =plan |product1 = }}"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/redcoat-outfit.png",
-      "wikiTitle": "Redcoat Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Redcoat_Outfit"
-        }
-      ]
-    },
-    {
       "id": "outfit-responders-padded-jacket",
       "name": "Responders' Padded Jacket",
       "categoryId": "outfits",
@@ -8017,7 +6052,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Crafted via Plan: Responders' Padded Jacket",
       "locationNotes": [
         "Crafted via Plan: Responders' Padded Jacket",
-        "Plan unlock: Plan: Responders' Padded Jacket."
+        "* Crafted via Plan: Responders' Padded Jacket",
+        "Responders Reborn reward"
       ],
       "effect": "",
       "image": "assets/images/outfits/responders-padded-jacket.png",
@@ -8044,7 +6080,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned from Plan: Snake Wrangler Hat.",
       "locationNotes": [
         "Learned from Plan: Snake Wrangler Hat.",
-        "Plan unlock: Plan: Seasoned Survivor Outfit."
+        "Reward from The Most Sensational Game",
+        "Purchase with Stamps from Giuseppe"
       ],
       "effect": "",
       "image": "assets/images/outfits/seasoned-survivor-outfit.png",
@@ -8071,7 +6108,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned from Plan: Snake Wrangler Outfit.",
       "locationNotes": [
         "Learned from Plan: Snake Wrangler Outfit.",
-        "Plan unlock: Plan: Snake Wrangler Outfit."
+        "Reward from The Most Sensational Game",
+        "Purchase with Stamps from Giuseppe"
       ],
       "effect": "",
       "image": "assets/images/outfits/snake-wrangler-outfit.png",
@@ -8088,57 +6126,6 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
-      "id": "outfit-spooky-scarecrow-outfit",
-      "name": "Spooky Scarecrow Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Can only be crafted by the player.",
-      "locationNotes": [
-        "Can only be crafted by the player.",
-        "A dark shirt with light pants, both having several repair patches, and being held together with a rope around the waist.",
-        "Plan unlock: Plan: Spooky Scarecrow Outfit."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/spooky-scarecrow-outfit.png",
-      "wikiTitle": "Spooky Scarecrow Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Spooky_Scarecrow_Outfit"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Spooky_Scarecrow_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-steel-dawn-army-fatigues",
-      "name": "Steel Dawn Army Fatigues",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Reward for completing the first stage of Project Bravo successfully during the Fortifying ATLAS community event. It could then be crafted at any Armor Workbench.",
-      "locationNotes": [
-        "Reward for completing the first stage of Project Bravo successfully during the Fortifying ATLAS community event. It could then be crafted at any Armor Workbench.",
-        "Worn by Russell Dorsey."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/steel-dawn-army-fatigues.png",
-      "wikiTitle": "Steel Dawn Army Fatigues",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Steel_Dawn_Army_Fatigues"
-        }
-      ]
-    },
-    {
       "id": "outfit-sunburst-sequin-dress",
       "name": "Sunburst Sequin Dress",
       "categoryId": "outfits",
@@ -8149,7 +6136,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Learned from Plan: Sunburst Sequin Dress.",
       "locationNotes": [
         "Learned from Plan: Sunburst Sequin Dress.",
-        "Plan unlock: Plan: Sunburst Sequin Dress."
+        "Reward from The Most Sensational Game",
+        "Purchase with Stamps from Giuseppe"
       ],
       "effect": "",
       "image": "assets/images/outfits/sunburst-sequin-dress.png",
@@ -8166,84 +6154,6 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
-      "id": "outfit-tinkerer-s-overalls",
-      "name": "Tinkerer's Overalls",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Plan: Tinkerer's Overalls",
-      "locationNotes": [
-        "Plan: Tinkerer's Overalls",
-        "Plan unlock: Plan: Tinkerer's Overalls."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/tinkerer-s-overalls.png",
-      "wikiTitle": "Tinkerer's Overalls",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Tinkerer's_Overalls"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Tinkerer's_Overalls"
-        }
-      ]
-    },
-    {
-      "id": "outfit-trench-runner-s-coat",
-      "name": "Trench Runner's Coat",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Plan: Trench Runner's Coat",
-      "locationNotes": [
-        "Plan: Trench Runner's Coat",
-        "Plan unlock: Plan: Trench Runner's Coat."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/trench-runner-s-coat.png",
-      "wikiTitle": "Trench Runner's Coat",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Trench_Runner's_Coat"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Trench_Runner's_Coat"
-        }
-      ]
-    },
-    {
-      "id": "outfit-ulysses-outfit",
-      "name": "Ulysses Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Plan Unlocks",
-      "displayType": "Mannequin",
-      "tier": "Plan Unlock",
-      "sourceSummary": "Craftable at any Armor Workbench after purchase of the Starter Bundle.",
-      "locationNotes": [
-        "Craftable at any Armor Workbench after purchase of the Starter Bundle.",
-        "Crafting of this outfit is unlocked automatically upon purchase of the Starter Bundle.",
-        "Pairs with Ulysses Mask."
-      ],
-      "effect": "Pairs with Ulysses Mask.",
-      "image": "assets/images/outfits/ulysses-outfit.png",
-      "wikiTitle": "Ulysses Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Ulysses_Outfit"
-        }
-      ]
-    },
-    {
       "id": "outfit-union-uniform",
       "name": "Union Uniform",
       "categoryId": "outfits",
@@ -8255,7 +6165,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted from the plans, found randomly on a dead Civil War Reenactor as part of the Philippi's Cemetery Battlefield Revealed random encounter.",
         "The outfit can be found in display cases behind the counter inside of Philippi Battlefield Cemetery. A red button nearby will open the glass of the displays, allowing the outfit to be retrieved.",
-        "Plan unlock: Plan: Union uniform."
+        "The hat can be found east of Hopewell Cave, at a small graveyard."
       ],
       "effect": "Pairs with Union Hat.",
       "image": "assets/images/outfits/union-uniform.png",
@@ -8282,7 +6192,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "The plan to craft is a possible reward for completing Neurological Warfare.",
+        "Possible reward for Neurological Warfare.",
         "Plan unlock: Plan: V63 Recon Outfit."
       ],
       "effect": "",
@@ -8310,7 +6220,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "The plan to craft is a possible reward for completing Neurological Warfare.",
+        "Possible reward for Neurological Warfare.",
         "Plan unlock: Plan: V63 Riot Control Outfit."
       ],
       "effect": "",
@@ -8338,7 +6248,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "The plan to craft is a possible reward for completing Neurological Warfare.",
+        "Possible reward for Neurological Warfare.",
         "Plan unlock: Plan: V63 Security Outfit."
       ],
       "effect": "",
@@ -8366,7 +6276,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "The plan to craft is a possible reward for completing the Skyline Valley Questline.",
+        "Reward for completion of the Skyline Valley Questline.",
         "Plan unlock: Plan: Vault 63 Burnt Jumpsuit."
       ],
       "effect": "",
@@ -8394,8 +6304,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be crafted at an Armor Workbench after learning the associated plan.",
       "locationNotes": [
         "Can be crafted at an Armor Workbench after learning the associated plan.",
-        "Worn by three dead Scientists in Vault 63 Organics Sector.",
-        "Plan unlock: Plan: Vault 63 Hazmat Suit."
+        "One static suit is laying on a table next to the Data Terminal inside Shining Creek Cavern.",
+        "* Can be crafted at an Armor Workbench after learning the associated plan."
       ],
       "effect": "",
       "image": "assets/images/outfits/vault-63-hazmat-suit.png",
@@ -8423,7 +6333,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "Can be crafted with the accompanying plan at an Armor Workbench.",
         "The Vault-Tec Jumpsuit may be rarely obtained by completing Final Departure.",
-        "Plan unlock: Plan: Vault-Tec jumpsuit."
+        "The Vault-Tec Jumpsuit may be rarely obtained by completing daily quests or events within The Forest region."
       ],
       "effect": "",
       "image": "assets/images/outfits/vault-tec-jumpsuit.png",
@@ -8447,9 +6357,9 @@ window.F76_COLLECTIBLES = {
       "group": "Plan Unlocks",
       "displayType": "Mannequin",
       "tier": "Plan Unlock",
-      "sourceSummary": "Plan: Wasteland Florist Apron",
+      "sourceSummary": "* Plan: Wasteland Florist Apron",
       "locationNotes": [
-        "Plan: Wasteland Florist Apron"
+        "* Plan: Wasteland Florist Apron"
       ],
       "effect": "",
       "image": "assets/images/outfits/wasteland-florist-apron.png",
@@ -8472,7 +6382,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Two at Tyler County Fairgrounds:",
       "locationNotes": [
         "Two at Tyler County Fairgrounds:",
-        "On a hay bale in the metal building with the Tyler County Scare! sign at the northwest end of the area."
+        "On a hay bale in the metal building with the Tyler County Scare! sign at the northwest end of the area.",
+        "On a shelf in the Hole in One booth."
       ],
       "effect": "",
       "image": "assets/images/outfits/amusement-park-worker-outfit.png",
@@ -8496,7 +6407,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "One can be found at Camp McClintock as part of the Back to Basic quest.",
         "Quest reward for Forbidden Knowledge - 4.29% chance.",
-        "Pairs with Army Helmet."
+        "Can be obtained from the Camp McClintock uniform dispenser as part of the Back to Basic quest."
       ],
       "effect": "Pairs with Army Helmet.",
       "image": "assets/images/outfits/army-fatigues.png",
@@ -8518,8 +6429,7 @@ window.F76_COLLECTIBLES = {
       "tier": "Quest Reward",
       "sourceSummary": "Possible reward from the Forbidden Knowledge and Breaking Radio Silence side quests.",
       "locationNotes": [
-        "Possible reward from the Forbidden Knowledge and Breaking Radio Silence side quests.",
-        "An orange and gray Brotherhood Soldier Suit worn underneath a brown leather jacket."
+        "Possible reward from the Forbidden Knowledge and Breaking Radio Silence side quests."
       ],
       "effect": "",
       "image": "assets/images/outfits/bomber-jacket.png",
@@ -8528,6 +6438,34 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Bomber_Jacket_(Fallout_76)"
+        }
+      ]
+    },
+    {
+      "id": "outfit-brotherhood-civvies",
+      "name": "Brotherhood Civvies",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "Quest Rewards",
+      "displayType": "Mannequin",
+      "tier": "Quest Reward",
+      "sourceSummary": "The plan can be obtained by successfully completing the quest Out of the Blue.",
+      "locationNotes": [
+        "The plan can be obtained by successfully completing the quest Out of the Blue.",
+        "Guaranteed reward upon completion of the Out of the Blue quest.",
+        "15% chance to obtain from Activity: Surface to Air, only if not learned yet."
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/brotherhood-civvies.png",
+      "wikiTitle": "Brotherhood Civvies",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Brotherhood_Civvies"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Brotherhood_civvies"
         }
       ]
     },
@@ -8542,7 +6480,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be acquired as a quest reward from the mission Defiance Has Fallen.",
       "locationNotes": [
         "Can be acquired as a quest reward from the mission Defiance Has Fallen.",
-        "Obtainable as a reward for turning in Technical Data during the quest Forbidden Knowledge."
+        "Obtainable as a reward for turning in Technical Data during the quest Forbidden Knowledge.",
+        "Can be found on deceased Brotherhood initiates post-Steel Dawn."
       ],
       "effect": "",
       "image": "assets/images/outfits/brotherhood-scribe-outfit.png",
@@ -8588,7 +6527,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be obtained from the Camp McClintock uniform dispenser as part of the Back to Basic quest.",
       "locationNotes": [
         "Can be obtained from the Camp McClintock uniform dispenser as part of the Back to Basic quest.",
-        "Worn by Sergeant Radcliff.",
+        "* Can be obtained from the Camp McClintock uniform dispenser as part of the Back to Basic quest.",
         "Pairs with Army Helmet."
       ],
       "effect": "Pairs with Army Helmet.",
@@ -8612,7 +6551,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "The full uniform is awarded to the player character upon completion of the quest Officer on Deck.",
       "locationNotes": [
         "The full uniform is awarded to the player character upon completion of the quest Officer on Deck.",
-        "The full uniform can be purchased from the armory of The Whitespring Bunker."
+        "The full uniform can be purchased from the armory of The Whitespring Bunker.",
+        "* The full uniform is awarded to the player character upon completion of the quest Officer on Deck."
       ],
       "effect": "",
       "image": "assets/images/outfits/enclave-officer-uniform.png",
@@ -8634,8 +6574,7 @@ window.F76_COLLECTIBLES = {
       "tier": "Quest Reward",
       "sourceSummary": "Obtainable as a reward for turning in Technical Data during Forbidden Knowledge.",
       "locationNotes": [
-        "Obtainable as a reward for turning in Technical Data during Forbidden Knowledge.",
-        "The outfit was worn by Brotherhood of Steel members and can be seen on their corpses scattered around Appalachia."
+        "Obtainable as a reward for turning in Technical Data during Forbidden Knowledge."
       ],
       "effect": "",
       "image": "assets/images/outfits/engineer-s-uniform.png",
@@ -8657,8 +6596,7 @@ window.F76_COLLECTIBLES = {
       "tier": "Quest Reward",
       "sourceSummary": "The uniform can be obtained by joining the Brotherhood of Steel via the Forbidden Knowledge quest.",
       "locationNotes": [
-        "The uniform can be obtained by joining the Brotherhood of Steel via the Forbidden Knowledge quest.",
-        "A uniform and hat worn by Brotherhood of Steel scribes."
+        "The uniform can be obtained by joining the Brotherhood of Steel via the Forbidden Knowledge quest."
       ],
       "effect": "",
       "image": "assets/images/outfits/field-scribe-s-uniform.png",
@@ -8681,7 +6619,6 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "The player character receives this and a Fire Breather Helmet during the quest Into the Fire.",
       "locationNotes": [
         "The player character receives this and a Fire Breather Helmet during the quest Into the Fire.",
-        "The uniform consists of a dark red pre-War Charleston Fire Department uniform, with a Responders emblem attached to the right sleeve.",
         "Pairs with Fire Breather Helmet."
       ],
       "effect": "Pairs with Fire Breather Helmet.",
@@ -8705,7 +6642,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Idle Explosives",
       "locationNotes": [
         "Idle Explosives",
-        "Play Time"
+        "Play Time",
+        "Queen of the Hunt"
       ],
       "effect": "",
       "image": "assets/images/outfits/leather-coat.png",
@@ -8728,7 +6666,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One is given as a reward for completing the quest Leap of Faith.",
       "locationNotes": [
         "One is given as a reward for completing the quest Leap of Faith.",
-        "Worn by Parthenia Blankenship."
+        "* One is given as a reward for completing the quest Leap of Faith."
       ],
       "effect": "",
       "image": "assets/images/outfits/radiation-quack-outfit.png",
@@ -8751,7 +6689,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be obtained by completing the quest Final Departure at Morgantown Airport.",
       "locationNotes": [
         "Can be obtained by completing the quest Final Departure at Morgantown Airport.",
-        "Has a chance to be obtained by completing the Back on the Beat event quest."
+        "Has a chance to be obtained by completing the Back on the Beat event quest.",
+        "* Can be obtained by completing the quest Final Departure at Morgantown Airport."
       ],
       "effect": "",
       "image": "assets/images/outfits/responder-police-uniform.png",
@@ -8774,7 +6713,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Earned as a quest reward for completing First Contact.",
       "locationNotes": [
         "Earned as a quest reward for completing First Contact.",
-        "Can also be earned as a reward from Buried with Honor or Strange Brew."
+        "Can also be earned as a reward from Buried with Honor or Strange Brew.",
+        "* Earned as a quest reward for completing First Contact."
       ],
       "effect": "",
       "image": "assets/images/outfits/responders-paramedic-jumpsuit.png",
@@ -8797,7 +6737,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Idle Explosives",
       "locationNotes": [
         "Idle Explosives",
-        "Play Time"
+        "Play Time",
+        "Queen of the Hunt"
       ],
       "effect": "",
       "image": "assets/images/outfits/tattered-field-jacket.png",
@@ -8820,7 +6761,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Idle Explosives",
       "locationNotes": [
         "Idle Explosives",
-        "Play Time"
+        "Play Time",
+        "Queen of the Hunt"
       ],
       "effect": "",
       "image": "assets/images/outfits/traveling-leather-coat.png",
@@ -8843,7 +6785,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Potential reward from submitting a Pleasant Valley Claim Ticket.",
       "locationNotes": [
         "Potential reward from submitting a Pleasant Valley Claim Ticket.",
-        "It may be given as an extremely rare reward from the following daily quests or events in the Toxic Valley:"
+        "It may be given as an extremely rare reward from the following daily quests or events in the Toxic Valley:",
+        "Pass the Buck"
       ],
       "effect": "",
       "image": "assets/images/outfits/western-outfit.png",
@@ -8866,7 +6809,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Potential reward from submitting a Pleasant Valley Claim Ticket.",
       "locationNotes": [
         "Potential reward from submitting a Pleasant Valley Claim Ticket.",
-        "It may be given as an extremely rare reward from the following daily quests or events in the Toxic Valley:"
+        "It may be given as an extremely rare reward from the following daily quests or events in the Toxic Valley:",
+        "Pass the Buck"
       ],
       "effect": "",
       "image": "assets/images/outfits/western-outfit-chaps.png",
@@ -8875,422 +6819,6 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Western_outfit_(Fallout_76)"
-        }
-      ]
-    },
-    {
-      "id": "outfit-bloody-chef-outfit",
-      "name": "Bloody Chef Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "The outfit and hat can be obtained separately as rewards for the Grahm's Meat-Cook event.",
-      "locationNotes": [
-        "The outfit and hat can be obtained separately as rewards for the Grahm's Meat-Cook event.",
-        "A white, long sleeve shirt with a black bow tie, a black pair of pants, and a dirty white apron with blood spatters.",
-        "Pairs with Bloody Chef Hat."
-      ],
-      "effect": "Pairs with Bloody Chef Hat.",
-      "image": "assets/images/outfits/bloody-chef-outfit.png",
-      "wikiTitle": "Bloody Chef Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Bloody_Chef_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-communist-commander-outfit",
-      "name": "Communist Commander Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Looted small gift: 0.33%",
-      "locationNotes": [
-        "Looted small gift: 0.33%",
-        "Looted medium gift: 1.33%"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/communist-commander-outfit.png",
-      "wikiTitle": "Communist Commander Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Communist_Commander_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-cultist-adept-robes",
-      "name": "Cultist Adept Robes",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Chase",
-      "sourceSummary": "Rare reward from The Mothman Equinox.",
-      "locationNotes": [
-        "Rare reward from The Mothman Equinox."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/cultist-adept-robes.png",
-      "wikiTitle": "Cultist Adept Robes",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Cultist_Adept_Robes"
-        }
-      ]
-    },
-    {
-      "id": "outfit-cultist-elder-clothes",
-      "name": "Cultist Elder Clothes",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Worn by Cultists.",
-      "locationNotes": [
-        "Worn by Cultists."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/cultist-elder-clothes.png",
-      "wikiTitle": "Cultist Elder Clothes",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Cultist_Elder_Clothes"
-        }
-      ]
-    },
-    {
-      "id": "outfit-cultist-enlightened-robes",
-      "name": "Cultist Enlightened Robes",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Chase",
-      "sourceSummary": "Rare reward from The Mothman Equinox",
-      "locationNotes": [
-        "Rare reward from The Mothman Equinox"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/cultist-enlightened-robes.png",
-      "wikiTitle": "Cultist Enlightened Robes",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Cultist_Enlightened_Robes"
-        }
-      ]
-    },
-    {
-      "id": "outfit-cultist-eventide-robes",
-      "name": "Cultist Eventide Robes",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "A possible reward from The Mothman Equinox.",
-      "locationNotes": [
-        "A possible reward from The Mothman Equinox.",
-        "{{Crafting table FO76 |material1 = Cloth |matcnt1 = 3 |material2 = Oil |matcnt2 = 1 |workspace = Armor Workbench |learn method = plan |product1 = }}",
-        "Plan unlock: Plan: Cultist Eventide Robes."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/cultist-eventide-robes.png",
-      "wikiTitle": "Cultist Eventide Robes",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Cultist_Eventide_Robes"
-        },
-        {
-          "label": "Plan page",
-          "url": "https://fallout.wiki/wiki/Plan:_Cultist_Eventide_Robes"
-        }
-      ]
-    },
-    {
-      "id": "outfit-cultist-neophyte-robes",
-      "name": "Cultist Neophyte Robes",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Chase",
-      "sourceSummary": "Obtainable as a rare reward from The Mothman Equinox seasonal event.",
-      "locationNotes": [
-        "Obtainable as a rare reward from The Mothman Equinox seasonal event.",
-        "The outfit consists of a set of foot wraps, tattered shorts with a belt and rope, a top enhanced with wood plates, two hand wraps, and a simple cloth hood."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/cultist-neophyte-robes.png",
-      "wikiTitle": "Cultist Neophyte Robes",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Cultist_Neophyte_Robes"
-        }
-      ]
-    },
-    {
-      "id": "outfit-deathclaw-hunter-outfit",
-      "name": "Deathclaw Hunter Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Acquired from Treasure Hunters",
-      "locationNotes": [
-        "Acquired from Treasure Hunters"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/deathclaw-hunter-outfit.png",
-      "wikiTitle": "Deathclaw Hunter Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Deathclaw_Hunter_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-garrahan-foreman-outfit",
-      "name": "Garrahan Foreman Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Available from Treasure Hunters",
-      "locationNotes": [
-        "Available from Treasure Hunters"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/garrahan-foreman-outfit.png",
-      "wikiTitle": "Garrahan Foreman Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Garrahan_Foreman_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-ghost-skeleton-costume",
-      "name": "Ghost Skeleton Costume",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "A reward from Spooky Scorched.",
-      "locationNotes": [
-        "A reward from Spooky Scorched.",
-        "Pairs with Ghost Skeleton Hood Mask."
-      ],
-      "effect": "Pairs with Ghost Skeleton Hood Mask.",
-      "image": "assets/images/outfits/ghost-skeleton-costume.png",
-      "wikiTitle": "Ghost Skeleton Costume",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Ghost_Skeleton_Costume"
-        }
-      ]
-    },
-    {
-      "id": "outfit-jack-o-lantern-short-suit",
-      "name": "Jack O'Lantern Short Suit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Chase",
-      "sourceSummary": "Potential rare reward (2.5% chance) from opening spooky treat bags during the seasonal Spooky Scorched community event.",
-      "locationNotes": [
-        "Potential rare reward (2.5% chance) from opening spooky treat bags during the seasonal Spooky Scorched community event.",
-        "Potential rare reward (2.5% chance) for completing the seasonal Mischief Night event if the player is wearing a costume ."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/jack-o-lantern-short-suit.png",
-      "wikiTitle": "Jack O'Lantern Short Suit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Jack_O'Lantern_Short_Suit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-jack-o-lantern-suit",
-      "name": "Jack O'Lantern Suit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Chase",
-      "sourceSummary": "Potential rare reward (2.5% chance) from opening spooky treat bags during the seasonal Spooky Scorched community event.",
-      "locationNotes": [
-        "Potential rare reward (2.5% chance) from opening spooky treat bags during the seasonal Spooky Scorched community event.",
-        "Potential rare reward (2.5% chance) for completing the seasonal Mischief Night event if the player is wearing a costume ."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/jack-o-lantern-suit.png",
-      "wikiTitle": "Jack O'Lantern Suit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Jack_O'Lantern_Suit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-jaguar-short-suit",
-      "name": "Jaguar Short Suit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Looted small gift: 0.33%",
-      "locationNotes": [
-        "Looted small gift: 0.33%",
-        "Looted medium gift: 1.33%"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/jaguar-short-suit.png",
-      "wikiTitle": "Jaguar Short Suit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Jaguar_Short_Suit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-jaguar-suit",
-      "name": "Jaguar Suit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Looted small gift: 0.33%",
-      "locationNotes": [
-        "Looted small gift: 0.33%",
-        "Looted medium gift: 1.33%"
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/jaguar-suit.png",
-      "wikiTitle": "Jaguar Suit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Jaguar_Suit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-pastor-s-vestments",
-      "name": "Pastor's Vestments",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Possible Spooky Scorched reward.",
-      "locationNotes": [
-        "Possible Spooky Scorched reward.",
-        "On the second floor of the church in Flatwoods, underneath a table."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/pastor-s-vestments.png",
-      "wikiTitle": "Pastor's Vestments (Fallout 76)",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Pastor's_Vestments_(Fallout_76)"
-        }
-      ]
-    },
-    {
-      "id": "outfit-ranger-outfit-clean",
-      "name": "Ranger Outfit Clean",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "Possible reward from Spooky Scorched.",
-      "locationNotes": [
-        "Possible reward from Spooky Scorched.",
-        "Found in the portable toilet behind Transmission Station 1AT-U03.",
-        "Pairs with Ranger Hat Clean."
-      ],
-      "effect": "Pairs with Ranger Hat Clean.",
-      "image": "assets/images/outfits/ranger-outfit-clean.png",
-      "wikiTitle": "Ranger Outfit Clean",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Ranger_Outfit_Clean"
-        }
-      ]
-    },
-    {
-      "id": "outfit-treasure-hunter-outfit",
-      "name": "Treasure Hunter Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Seasonal Event",
-      "sourceSummary": "It can be crafted from the plan, which had a chance to drop from pails during the Treasure Hunter event.",
-      "locationNotes": [
-        "It can be crafted from the plan, which had a chance to drop from pails during the Treasure Hunter event.",
-        "The outfit is a white tank top and thick green vest, worn with a pair of khaki pants.",
-        "Pairs with Treasure Hunter Hat."
-      ],
-      "effect": "Pairs with Treasure Hunter Hat.",
-      "image": "assets/images/outfits/treasure-hunter-outfit.png",
-      "wikiTitle": "Treasure Hunter Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Treasure_Hunter_Outfit"
-        }
-      ]
-    },
-    {
-      "id": "outfit-whitespring-jumpsuit",
-      "name": "Whitespring Jumpsuit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Seasonal Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Chase",
-      "sourceSummary": "Possible reward during Spooky Scorched event.",
-      "locationNotes": [
-        "Possible reward during Spooky Scorched event."
-      ],
-      "effect": "",
-      "image": "assets/images/outfits/whitespring-jumpsuit.png",
-      "wikiTitle": "Whitespring Jumpsuit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Whitespring_Jumpsuit"
         }
       ]
     },
@@ -9306,7 +6834,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "The Whitespring Resort - A full set is sold by Flauresca in the store Live Chic.",
         "Grafton High School - A cap can be found within the gym's equipment room.",
-        "Pairs with Baseball Cap."
+        "Helvetia - A cap can be found within the Honey Haus in the locked room."
       ],
       "effect": "Pairs with Baseball Cap.",
       "image": "assets/images/outfits/baseball-uniform.png",
@@ -9328,8 +6856,7 @@ window.F76_COLLECTIBLES = {
       "tier": "Vendor/World",
       "sourceSummary": "It is sold by the clothes vendor Flauresca, at the Whitespring Resort.",
       "locationNotes": [
-        "It is sold by the clothes vendor Flauresca, at the Whitespring Resort.",
-        "A cozy blue bathrobe with a white trim and a sash to fasten it around the wearer's waist."
+        "It is sold by the clothes vendor Flauresca, at the Whitespring Resort."
       ],
       "effect": "",
       "image": "assets/images/outfits/bathrobe.png",
@@ -9352,6 +6879,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be purchased from Betty Hill.",
       "locationNotes": [
         "Can be purchased from Betty Hill.",
+        "* Can be purchased from Betty Hill.",
         "Plan unlock: |displayable =."
       ],
       "effect": "",
@@ -9379,7 +6907,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Occasionally sold by the traveling vendor bot Responder.",
       "locationNotes": [
         "Occasionally sold by the traveling vendor bot Responder.",
-        "The brown variant is sold by Cunningham at The Whitespring Resort."
+        "The brown variant is sold by Cunningham at The Whitespring Resort.",
+        "* Occasionally sold by the traveling vendor bot Responder."
       ],
       "effect": "",
       "image": "assets/images/outfits/brown-fisherman-s-overalls.png",
@@ -9402,7 +6931,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Occasionally two clean spacesuit helmets can be found at the Whitespring Resort:",
       "locationNotes": [
         "Occasionally two clean spacesuit helmets can be found at the Whitespring Resort:",
-        "By exiting through the Summit Room. It spawns on one of the chairs outside by the firepit."
+        "By exiting through the Summit Room. It spawns on one of the chairs outside by the firepit.",
+        "Can be found on a small white table between folding chairs, immediately north of the firepit."
       ],
       "effect": "",
       "image": "assets/images/outfits/clean-spacesuit.png",
@@ -9425,7 +6955,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Vendor Bot Chad sells both the clean steel worker uniform and the clean steel worker hat.",
       "locationNotes": [
         "Vendor Bot Chad sells both the clean steel worker uniform and the clean steel worker hat.",
-        "A clean hat is found at Black Mountain Ordnance Works."
+        "A clean hat is found at Black Mountain Ordnance Works.",
+        "* Vendor Bot Chad sells both the clean steel worker uniform and the clean steel worker hat."
       ],
       "effect": "",
       "image": "assets/images/outfits/clean-steel-worker-uniform.png",
@@ -9448,7 +6979,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found in the Charleston Capitol Courthouse building at the Charleston Capitol Building, on a bookshelf in the judge's chambers, immediately to the left of the green army trunk.",
       "locationNotes": [
         "One can be found in the Charleston Capitol Courthouse building at the Charleston Capitol Building, on a bookshelf in the judge's chambers, immediately to the left of the green army trunk.",
-        "One can be found in the basement of Pleasant Valley Ski Resort on the area behind the laser grids."
+        "One can be found in the basement of Pleasant Valley Ski Resort on the area behind the laser grids.",
+        "Can sometimes be found at The Whitespring Golf Club."
       ],
       "effect": "",
       "image": "assets/images/outfits/dirty-tan-suit.png",
@@ -9457,6 +6989,30 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Dirty_Tan_Suit_(Fallout_76)"
+        }
+      ]
+    },
+    {
+      "id": "outfit-fireman-uniform",
+      "name": "Fireman Uniform",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "Vendor and Random Encounter",
+      "displayType": "Mannequin",
+      "tier": "Vendor/World",
+      "sourceSummary": "The helmet is frequently sold by Cap'n at the Whitespring Resort.",
+      "locationNotes": [
+        "The helmet is frequently sold by Cap'n at the Whitespring Resort.",
+        "The helmet can sometimes be found at a camp site northwest of The Rusty Pick in the Ash Heap.",
+        "* The helmet is frequently sold by Cap'n at the Whitespring Resort."
+      ],
+      "effect": "Pairs with }}.",
+      "image": "assets/images/outfits/fireman-uniform.png",
+      "wikiTitle": "Fireman Uniform",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Fireman_Uniform"
         }
       ]
     },
@@ -9470,7 +7026,8 @@ window.F76_COLLECTIBLES = {
       "tier": "Vendor/World",
       "sourceSummary": "The grey variant may be sold by the traveling vendor bot Responder.",
       "locationNotes": [
-        "The grey variant may be sold by the traveling vendor bot Responder."
+        "The grey variant may be sold by the traveling vendor bot Responder.",
+        "* The grey variant may be sold by the traveling vendor bot Responder."
       ],
       "effect": "",
       "image": "assets/images/outfits/grey-fisherman-s-overalls.png",
@@ -9493,7 +7050,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be found at the top of the Flatwoods Lookout.",
       "locationNotes": [
         "Can be found at the top of the Flatwoods Lookout.",
-        "Chance to be found under a bedside dresser at Toxic Larry's Meat 'n Go."
+        "Chance to be found under a bedside dresser at Toxic Larry's Meat 'n Go.",
+        "Sold by the Brotherhood and raiders vendors at the Whitespring Resort."
       ],
       "effect": "",
       "image": "assets/images/outfits/hooded-rags.png",
@@ -9516,7 +7074,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Possible vendor listing from the vendor bot Responder random encounter.",
       "locationNotes": [
         "Possible vendor listing from the vendor bot Responder random encounter.",
-        "Random vendor listing from the Scavenger Trader at a campsite next to a Vault 76 sign, slightly northwest of Anchor Farm."
+        "Random vendor listing from the Scavenger Trader at a campsite next to a Vault 76 sign, slightly northwest of Anchor Farm.",
+        "* Possible vendor listing from the vendor bot Responder random encounter."
       ],
       "effect": "",
       "image": "assets/images/outfits/hunter-s-long-coat.png",
@@ -9539,7 +7098,6 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can occasionally be sold by the vendor bot Responder, who may appear in a random encounter location next to the Charleston Station, or in other travel-type random encounter locations in The Forest.",
       "locationNotes": [
         "Can occasionally be sold by the vendor bot Responder, who may appear in a random encounter location next to the Charleston Station, or in other travel-type random encounter locations in The Forest.",
-        "A yellow and brown waterproof outfit, with brown pants under a long, tattered yellow raincoat fashioned with fishing net and belt straps.",
         "Pairs with Yellow Slicker Hat."
       ],
       "effect": "Pairs with Yellow Slicker Hat.",
@@ -9563,6 +7121,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be purchased from Betty Hill",
       "locationNotes": [
         "Can be purchased from Betty Hill",
+        "* Can be purchased from Betty Hill",
         "Plan unlock: |displayable =."
       ],
       "effect": "",
@@ -9590,6 +7149,7 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be purchased from Betty Hill",
       "locationNotes": [
         "Can be purchased from Betty Hill",
+        "* Can be purchased from Betty Hill",
         "Plan unlock: |displayable =."
       ],
       "effect": "",
@@ -9607,6 +7167,30 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
+      "id": "outfit-ranger-outfit-clean",
+      "name": "Ranger Outfit Clean",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "Vendor and Random Encounter",
+      "displayType": "Mannequin",
+      "tier": "Vendor/World",
+      "sourceSummary": "Found in the portable toilet behind Transmission Station 1AT-U03.",
+      "locationNotes": [
+        "Found in the portable toilet behind Transmission Station 1AT-U03.",
+        "Sold by the traveling Vendor Bot Responder.",
+        "Pairs with Ranger Hat Clean."
+      ],
+      "effect": "Pairs with Ranger Hat Clean.",
+      "image": "assets/images/outfits/ranger-outfit-clean.png",
+      "wikiTitle": "Ranger Outfit Clean",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Ranger_Outfit_Clean"
+        }
+      ]
+    },
+    {
       "id": "outfit-straight-jacket",
       "name": "Straight jacket",
       "categoryId": "outfits",
@@ -9617,7 +7201,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be found throughout Fort Defiance.",
       "locationNotes": [
         "Can be found throughout Fort Defiance.",
-        "One can be found at Gorge Junkyard, inside the Picklock 3 locked trailer."
+        "One can be found at Gorge Junkyard, inside the Picklock 3 locked trailer.",
+        "Two can be found on the back of a truck at the Freak Show."
       ],
       "effect": "",
       "image": "assets/images/outfits/straight-jacket.png",
@@ -9640,7 +7225,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found outside of Site Alpha, on a locker.",
       "locationNotes": [
         "One can be found outside of Site Alpha, on a locker.",
-        "One can be found outside of Site Bravo."
+        "One can be found outside of Site Bravo.",
+        "Can be sold by Flauresca at Live Chic."
       ],
       "effect": "",
       "image": "assets/images/outfits/surveyor-outfit.png",
@@ -9662,8 +7248,7 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "There is a chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3.",
       "locationNotes": [
-        "There is a chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3.",
-        "A variant of the Cappy jacket & jeans, the outfit comes with the same white shoes and rolled up jeans."
+        "There is a chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3."
       ],
       "effect": "",
       "image": "assets/images/outfits/bottle-and-cappy-orange-jacket-jeans.png",
@@ -9685,8 +7270,7 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "There is a chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3.",
       "locationNotes": [
-        "There is a chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3.",
-        "The outfit has a different light blue shirt printed with a Nuka-World logo along with a red and yellow jacket featuring Bottle & Cappy on the back."
+        "There is a chance to find this outfit or another Nuka-World variant at Black Mountain Ordnance Works, inside TNT dome #3."
       ],
       "effect": "",
       "image": "assets/images/outfits/bottle-and-cappy-red-jacket-jeans.png",
@@ -9709,7 +7293,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "On the first floor in the right corner next to a cabinet container.",
       "locationNotes": [
         "On the first floor in the right corner next to a cabinet container.",
-        "On the second floor on a vanity container."
+        "On the second floor on a vanity container.",
+        "Can occasionally be found at Appalachian Antiques: * On the first floor in the right corner next to a cabinet container."
       ],
       "effect": "",
       "image": "assets/images/outfits/brotherhood-lab-coat.png",
@@ -9732,7 +7317,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Four can be found at the Whitespring Resort.",
       "locationNotes": [
         "Four can be found at the Whitespring Resort.",
-        "Three can be found in the clothing store in the Artisan Row Shoppes."
+        "Three can be found in the clothing store in the Artisan Row Shoppes.",
+        "One can be found in one of the shuttle buses."
       ],
       "effect": "",
       "image": "assets/images/outfits/casual-outfit.png",
@@ -9741,6 +7327,86 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Casual_Outfit_(Fallout_76)"
+        }
+      ]
+    },
+    {
+      "id": "outfit-civil-war-era-dress",
+      "name": "Civil War Era Dress",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "World Spawn",
+      "sourceSummary": "One next to a Confederate uniform in the display case at the Philippi Battlefield Cemetery museum's basement, unlocked by pressing the red button.",
+      "locationNotes": [
+        "One next to a Confederate uniform in the display case at the Philippi Battlefield Cemetery museum's basement, unlocked by pressing the red button.",
+        "One alongside a Civil War Era Top Hat and Union hat next to some skeletons in a broken boxcar, on the tracks east of Lewisburg Station.",
+        "* One next to a Confederate uniform in the display case at the Philippi Battlefield Cemetery museum's basement, unlocked by pressing the red button."
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/civil-war-era-dress.png",
+      "wikiTitle": "Civil War Era Dress",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Civil_War_Era_Dress"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Civil_War_Era_Dress"
+        }
+      ]
+    },
+    {
+      "id": "outfit-civil-war-era-suit",
+      "name": "Civil War Era Suit",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "World Spawn",
+      "sourceSummary": "Inside the museum at the Philippi Battlefield Cemetery:",
+      "locationNotes": [
+        "Inside the museum at the Philippi Battlefield Cemetery:",
+        "On the front counter next to a Civil War Era Top Hat",
+        "Another on the second floor in the middle display case along the eastern wall, as well as a Civil War Era Top Hat to the left, inside another display case."
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/civil-war-era-suit.png",
+      "wikiTitle": "Civil War Era Suit",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Civil_War_Era_Suit"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Civil_War_Era_Suit"
+        }
+      ]
+    },
+    {
+      "id": "outfit-communist-commander-outfit",
+      "name": "Communist Commander Outfit",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "Event Chase",
+      "sourceSummary": "Looted small gift: 0.33%",
+      "locationNotes": [
+        "Looted small gift: 0.33%",
+        "Looted medium gift: 1.33%",
+        "Looted large gift: 2.67%"
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/communist-commander-outfit.png",
+      "wikiTitle": "Communist Commander Outfit",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Communist_Commander_Outfit"
         }
       ]
     },
@@ -9755,7 +7421,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found in The Whitespring Resort.",
       "locationNotes": [
         "One can be found in The Whitespring Resort.",
-        "One is situated hanging from one of the lockers around Cell Block A in Eastern Regional Penitentiary."
+        "One is situated hanging from one of the lockers around Cell Block A in Eastern Regional Penitentiary.",
+        "* One can be found in The Whitespring Resort."
       ],
       "effect": "",
       "image": "assets/images/outfits/drifter-outfit.png",
@@ -9778,7 +7445,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Reliably found in East Mountain Lookout.",
       "locationNotes": [
         "Reliably found in East Mountain Lookout.",
-        "Chance to be found at Aaronholt Homestead:"
+        "Chance to be found at Aaronholt Homestead:",
+        "On the second level of the red house, on the floor next to a nightstand."
       ],
       "effect": "",
       "image": "assets/images/outfits/explorer-outfit.png",
@@ -9801,7 +7469,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found at Greg's Mine Supply, in a metal mobile home at the north end of the area.",
       "locationNotes": [
         "One can be found at Greg's Mine Supply, in a metal mobile home at the north end of the area.",
-        "One can be found at Dabney Homestead, next to a mattress on the second floor of the barn."
+        "One can be found at Dabney Homestead, next to a mattress on the second floor of the barn.",
+        "Exterior of Site Alpha, on a locker."
       ],
       "effect": "",
       "image": "assets/images/outfits/farmhand-clothes.png",
@@ -9824,7 +7493,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found north of Big Fred's BBQ Shack, inside of a truck on the road.",
       "locationNotes": [
         "One can be found north of Big Fred's BBQ Shack, inside of a truck on the road.",
-        "One can be found in a dock behind a locked door at the Toxic Dried Lakebed."
+        "One can be found in a dock behind a locked door at the Toxic Dried Lakebed.",
+        "* One can be found north of Big Fred's BBQ Shack, inside of a truck on the road."
       ],
       "effect": "",
       "image": "assets/images/outfits/fisherman-s-outfit.png",
@@ -9847,7 +7517,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Bolton Greens - On a couch in the locked room with the Gourmands' terminal, off the kitchen.",
       "locationNotes": [
         "Bolton Greens - On a couch in the locked room with the Gourmands' terminal, off the kitchen.",
-        "One can be found at the Whitespring Resort, in one of the shuttle buses."
+        "One can be found at the Whitespring Resort, in one of the shuttle buses.",
+        "One can be found at Pleasant Valley Station."
       ],
       "effect": "",
       "image": "assets/images/outfits/golf-outfit.png",
@@ -9869,7 +7540,8 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "Bolton Greens - On a couch in the back room with the Gourmands' terminal, off the kitchen.",
       "locationNotes": [
-        "Bolton Greens - On a couch in the back room with the Gourmands' terminal, off the kitchen."
+        "Bolton Greens - On a couch in the back room with the Gourmands' terminal, off the kitchen.",
+        "* Bolton Greens - On a couch in the back room with the Gourmands' terminal, off the kitchen."
       ],
       "effect": "",
       "image": "assets/images/outfits/golf-skirt.png",
@@ -9891,8 +7563,7 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "One can be found at the treetops on the top level in a nightstand.",
       "locationNotes": [
-        "One can be found at the treetops on the top level in a nightstand.",
-        "An outfit consisting of a green short-sleeved collared shirt and a pair of patched khaki pants."
+        "One can be found at the treetops on the top level in a nightstand."
       ],
       "effect": "",
       "image": "assets/images/outfits/green-shirt-and-combat-boots.png",
@@ -9901,6 +7572,34 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Green_Shirt_and_Combat_Boots_(Fallout_76)"
+        }
+      ]
+    },
+    {
+      "id": "outfit-halloween-costume-witch",
+      "name": "Halloween Costume Witch",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "World Spawn",
+      "sourceSummary": "The plans to create this costume and its respective hat can be obtained from a corpse of a dead trick-or-treater wearing the ensemble in a random encounter.",
+      "locationNotes": [
+        "The plans to create this costume and its respective hat can be obtained from a corpse of a dead trick-or-treater wearing the ensemble in a random encounter.",
+        "The hat can be found in the following locations:",
+        "Freddy Fear's House of Scares - On a box on the lower middle shelf."
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/halloween-costume-witch.png",
+      "wikiTitle": "Halloween Costume Witch",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Halloween_Costume_Witch"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Witch_Costume"
         }
       ]
     },
@@ -9932,6 +7631,54 @@ window.F76_COLLECTIBLES = {
       ]
     },
     {
+      "id": "outfit-jaguar-short-suit",
+      "name": "Jaguar Short Suit",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "Event Chase",
+      "sourceSummary": "Looted small gift: 0.33%",
+      "locationNotes": [
+        "Looted small gift: 0.33%",
+        "Looted medium gift: 1.33%",
+        "Looted large gift: 2.67%"
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/jaguar-short-suit.png",
+      "wikiTitle": "Jaguar Short Suit",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Jaguar_Short_Suit"
+        }
+      ]
+    },
+    {
+      "id": "outfit-jaguar-suit",
+      "name": "Jaguar Suit",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "Event Chase",
+      "sourceSummary": "Looted small gift: 0.33%",
+      "locationNotes": [
+        "Looted small gift: 0.33%",
+        "Looted medium gift: 1.33%",
+        "Looted large gift: 2.67%"
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/jaguar-suit.png",
+      "wikiTitle": "Jaguar Suit",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Jaguar_Suit"
+        }
+      ]
+    },
+    {
       "id": "outfit-lab-coat",
       "name": "Lab coat",
       "categoryId": "outfits",
@@ -9942,7 +7689,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Two can be found inside a box in the cabin of an orange grounded boat in Gorge Junkyard, east from the workshop.",
       "locationNotes": [
         "Two can be found inside a box in the cabin of an orange grounded boat in Gorge Junkyard, east from the workshop.",
-        "One can be found on a counter of the laboratory area of the executive section of the Hornwright Industrial Headquarters."
+        "One can be found on a counter of the laboratory area of the executive section of the Hornwright Industrial Headquarters.",
+        "One can be found inside the Watoga Transit Hub, on a large metal crate."
       ],
       "effect": "",
       "image": "assets/images/outfits/lab-coat.png",
@@ -9966,7 +7714,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "On corpses inside Emmett Mountain Disposal Site.",
         "One can be found on a corpse near Kerwood Mine. Outside of the mine is a shack with a petrified corpse and a miner corpse inside.",
-        "Pairs with Miner Hat."
+        "One is at the Charleston Fire Department on the first floor on a bench."
       ],
       "effect": "Pairs with Miner Hat.",
       "image": "assets/images/outfits/miner-uniform.png",
@@ -9989,7 +7737,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "The soiled variant of both the suit and head can be obtained by redeeming Mr. Fuzzy Tokens at the Camden Park Company Store, for 150 and 300 tokens respectively.",
       "locationNotes": [
         "The soiled variant of both the suit and head can be obtained by redeeming Mr. Fuzzy Tokens at the Camden Park Company Store, for 150 and 300 tokens respectively.",
-        "The mascot suit costs 150 tokens."
+        "The mascot suit costs 150 tokens.",
+        "The mascot head costs 300 tokens."
       ],
       "effect": "",
       "image": "assets/images/outfits/mr-fuzzy-mascot-suit.png",
@@ -10011,8 +7760,7 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "There is a chance to find either of these outfits at Black Mountain Ordnance Works, inside TNT dome #3.",
       "locationNotes": [
-        "There is a chance to find either of these outfits at Black Mountain Ordnance Works, inside TNT dome #3.",
-        "The Nuka-World jacket & jeans features a pair of patched blue jeans, an orange and white Nuka-World jacket, with a pale blue T-shirt featuring one of the Nuka-Cola mascots, Bottle."
+        "There is a chance to find either of these outfits at Black Mountain Ordnance Works, inside TNT dome #3."
       ],
       "effect": "",
       "image": "assets/images/outfits/nuka-world-geyser-jacket-jeans.png",
@@ -10034,8 +7782,7 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "There is a chance to find either of these outfits at Black Mountain Ordnance Works, inside TNT dome #3.",
       "locationNotes": [
-        "There is a chance to find either of these outfits at Black Mountain Ordnance Works, inside TNT dome #3.",
-        "The Nuka-World jacket & jeans features a pair of patched blue jeans, an orange and white Nuka-World jacket, with a pale blue T-shirt featuring one of the Nuka-Cola mascots, Bottle."
+        "There is a chance to find either of these outfits at Black Mountain Ordnance Works, inside TNT dome #3."
       ],
       "effect": "",
       "image": "assets/images/outfits/nuka-world-jacket-jeans.png",
@@ -10058,7 +7805,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Two can be found at the lockers of abandoned mine shaft 5.",
       "locationNotes": [
         "Two can be found at the lockers of abandoned mine shaft 5.",
-        "One can be found on a bed next to a safe in a shack at the Abandoned Bog Town."
+        "One can be found on a bed next to a safe in a shack at the Abandoned Bog Town.",
+        "One may be found at Helvetia, inside the Welcome Haus (motel), on the second floor, on a dresser in the northwest bedroom."
       ],
       "effect": "",
       "image": "assets/images/outfits/padded-blue-jacket.png",
@@ -10081,7 +7829,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Two outfits without the hat may be found at the Sons of Dane Compound:",
       "locationNotes": [
         "Two outfits without the hat may be found at the Sons of Dane Compound:",
-        "One outfit may be found in the chemistry shack, on the floor, opposite of Paulie Keith's terminal."
+        "One outfit may be found in the chemistry shack, on the floor, opposite of Paulie Keith's terminal.",
+        "One outfit may be found in the house opposite of the Buck's Den Beer Hall on the second floor, on the bed mattress."
       ],
       "effect": "",
       "image": "assets/images/outfits/park-ranger-uniform.png",
@@ -10090,6 +7839,30 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Park_Ranger_Uniform"
+        }
+      ]
+    },
+    {
+      "id": "outfit-pastor-s-vestments",
+      "name": "Pastor's Vestments",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "World Spawn",
+      "sourceSummary": "On the second floor of the church in Flatwoods, underneath a table.",
+      "locationNotes": [
+        "On the second floor of the church in Flatwoods, underneath a table.",
+        "Two at Helvetia:",
+        "On the second floor of the church, on a table."
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/pastor-s-vestments.png",
+      "wikiTitle": "Pastor's Vestments (Fallout 76)",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Pastor's_Vestments_(Fallout_76)"
         }
       ]
     },
@@ -10104,7 +7877,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Can be given as a random reward for cashing in Pleasant Valley Claim Tickets.",
       "locationNotes": [
         "Can be given as a random reward for cashing in Pleasant Valley Claim Tickets.",
-        "Can be given as a reward for completing Mayor for a Day."
+        "Can be given as a reward for completing Mayor for a Day.",
+        "* Can be given as a random reward for cashing in Pleasant Valley Claim Tickets."
       ],
       "effect": "",
       "image": "assets/images/outfits/patched-suit.png",
@@ -10127,7 +7901,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Exterior of Site Alpha, on a locker.",
       "locationNotes": [
         "Exterior of Site Alpha, on a locker.",
-        "Exterior of Site Bravo."
+        "Exterior of Site Bravo.",
+        "* Exterior of Site Alpha, on a locker."
       ],
       "effect": "",
       "image": "assets/images/outfits/patched-three-piece-suit.png",
@@ -10150,7 +7925,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found at the Monongah Police Department.",
       "locationNotes": [
         "One can be found at the Monongah Police Department.",
-        "One can be found at Grafton Dam on the ground near a Cop Car parked outside."
+        "One can be found at Grafton Dam on the ground near a Cop Car parked outside.",
+        "One can be found inside a display area at the Responders base at Morgantown Airport."
       ],
       "effect": "",
       "image": "assets/images/outfits/police-uniform.png",
@@ -10173,7 +7949,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "A pristine version can be found in the R&D section of Garrahan Mining Headquarters.",
       "locationNotes": [
         "A pristine version can be found in the R&D section of Garrahan Mining Headquarters.",
-        "A pristine version can be found in abandoned mine shaft 5."
+        "A pristine version can be found in abandoned mine shaft 5.",
+        "* A pristine version can be found in the R&D section of Garrahan Mining Headquarters."
       ],
       "effect": "",
       "image": "assets/images/outfits/pristine-miner-uniform.png",
@@ -10195,8 +7972,7 @@ window.F76_COLLECTIBLES = {
       "tier": "World Spawn",
       "sourceSummary": "The outfit can be bought from Cunningham at the Whitespring Resort.",
       "locationNotes": [
-        "The outfit can be bought from Cunningham at the Whitespring Resort.",
-        "The outfit consists of a simple shirt and pants made of stitched-together Radstag hide."
+        "The outfit can be bought from Cunningham at the Whitespring Resort."
       ],
       "effect": "",
       "image": "assets/images/outfits/radstag-hide-outfit.png",
@@ -10219,7 +7995,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Chance to be found at Aaronholt Homestead:",
       "locationNotes": [
         "Chance to be found at Aaronholt Homestead:",
-        "On the second level of the red house, on the floor next to the bed."
+        "On the second level of the red house, on the floor next to the bed.",
+        "On the smaller grey house, next to the bed."
       ],
       "effect": "",
       "image": "assets/images/outfits/ratty-skirt.png",
@@ -10242,7 +8019,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Two have a chance to appear at the Whitespring Golf Club, in the kitchen area on top of a table and downstairs in the locker room.",
       "locationNotes": [
         "Two have a chance to appear at the Whitespring Golf Club, in the kitchen area on top of a table and downstairs in the locker room.",
-        "One can be reliably found at Riverside Manor, in the main bedroom."
+        "One can be reliably found at Riverside Manor, in the main bedroom.",
+        "Can be purchased from Tweed at the Whitespring Resort."
       ],
       "effect": "",
       "image": "assets/images/outfits/red-dress.png",
@@ -10266,7 +8044,7 @@ window.F76_COLLECTIBLES = {
       "locationNotes": [
         "One can be found in the secret ritual area under the Mothman Museum. It requires a level two Picklock skill or the bathroom key to access.",
         "One can be found in the basement of a house north of Wilson Brother's Auto Repair, lying against an altar.",
-        "Pairs with Ritual Mask."
+        "One can also be found in the Lucky Hole Mine, found next to a Ritual Mask, in one of the two yellow bins."
       ],
       "effect": "Pairs with Ritual Mask.",
       "image": "assets/images/outfits/ritual-bindings.png",
@@ -10289,7 +8067,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Chance to be found at Aaronholt Homestead:",
       "locationNotes": [
         "Chance to be found at Aaronholt Homestead:",
-        "On the second level of the red house, on the floor next to a nightstand."
+        "On the second level of the red house, on the floor next to a nightstand.",
+        "On the smaller gray house, next to the bed."
       ],
       "effect": "",
       "image": "assets/images/outfits/scavenger-outfit.png",
@@ -10308,11 +8087,10 @@ window.F76_COLLECTIBLES = {
       "category": "Outfits",
       "group": "World Spawns",
       "displayType": "Mannequin",
-      "tier": "Event Chase",
+      "tier": "World Spawn",
       "sourceSummary": "Obtainable as a reward for turning in Technical Data.",
       "locationNotes": [
-        "Obtainable as a reward for turning in Technical Data.",
-        "A light, comfortable garment intended for scribes working in the Brotherhood's laboratories."
+        "Obtainable as a reward for turning in Technical Data."
       ],
       "effect": "",
       "image": "assets/images/outfits/science-scribe-s-uniform.png",
@@ -10335,7 +8113,6 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "The outfit and Sheepsquatch Mascot Head, independent of each other, are possible rewards for completing Encryptid.",
       "locationNotes": [
         "The outfit and Sheepsquatch Mascot Head, independent of each other, are possible rewards for completing Encryptid.",
-        "An outfit in the likeness of a sheepsquatch.",
         "Pairs with Sheepsquatch Mascot Head."
       ],
       "effect": "Pairs with Sheepsquatch Mascot Head.",
@@ -10359,7 +8136,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "The soiled variant of both the suit and head can be obtained by redeeming Mr. Fuzzy Tokens at the Camden Park Company Store, for 150 and 300 tokens respectively.",
       "locationNotes": [
         "The soiled variant of both the suit and head can be obtained by redeeming Mr. Fuzzy Tokens at the Camden Park Company Store, for 150 and 300 tokens respectively.",
-        "The mascot suit costs 150 tokens."
+        "The mascot suit costs 150 tokens.",
+        "The mascot head costs 300 tokens."
       ],
       "effect": "",
       "image": "assets/images/outfits/soiled-mr-fuzzy-mascot-suit.png",
@@ -10382,7 +8160,6 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Two spacesuits can be found in the lockers at the communications area of The Crater.",
       "locationNotes": [
         "Two spacesuits can be found in the lockers at the communications area of The Crater.",
-        "A suit for space travel, it can be worn with a Spacesuit Helmet.",
         "Pairs with Spacesuit Helmet."
       ],
       "effect": "Pairs with Spacesuit Helmet.",
@@ -10406,7 +8183,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Charleston Fire Department",
       "locationNotes": [
         "Charleston Fire Department",
-        "Outfits may spawn on the shelves in the Super Duper mart at Big B's Rest Stop."
+        "Outfits may spawn on the shelves in the Super Duper mart at Big B's Rest Stop.",
+        "* Charleston Fire Department * Outfits may spawn on the shelves in the Super Duper mart at Big B's Rest Stop."
       ],
       "effect": "",
       "image": "assets/images/outfits/steel-worker-uniform.png",
@@ -10429,7 +8207,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "May spawn at Riverside Manor, in the bathroom next to the main bedroom.",
       "locationNotes": [
         "May spawn at Riverside Manor, in the bathroom next to the main bedroom.",
-        "May spawn at Pleasant Valley Ski Resort, inside the main building."
+        "May spawn at Pleasant Valley Ski Resort, inside the main building.",
+        "* May spawn at Riverside Manor, in the bathroom next to the main bedroom."
       ],
       "effect": "",
       "image": "assets/images/outfits/suspenders-and-slacks.png",
@@ -10452,7 +8231,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found sitting in front of a hot tub full of skeletons south of the Super Duper Mart in Morgantown, near an outhouse.",
       "locationNotes": [
         "One can be found sitting in front of a hot tub full of skeletons south of the Super Duper Mart in Morgantown, near an outhouse.",
-        "One can be found on a bureau in the room across from Sam Blackwell's office in the Charleston Capitol Building."
+        "One can be found on a bureau in the room across from Sam Blackwell's office in the Charleston Capitol Building.",
+        "One is located in a clothing shop inside of Sutton. It can spawn either on the floor on the first floor, or on a shelf behind the stairs connected to the shop's second floor."
       ],
       "effect": "",
       "image": "assets/images/outfits/swimsuit.png",
@@ -10475,7 +8255,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Three can be found throughout the Beauty and Spa Salon building in Berkeley Springs.",
       "locationNotes": [
         "Three can be found throughout the Beauty and Spa Salon building in Berkeley Springs.",
-        "One can be found in the laundry area of Riverside Manor."
+        "One can be found in the laundry area of Riverside Manor.",
+        "* Three can be found throughout the Beauty and Spa Salon building in Berkeley Springs."
       ],
       "effect": "",
       "image": "assets/images/outfits/t-shirt-and-slacks.png",
@@ -10498,7 +8279,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Found on the corpses of deceased members of the Order of Mysteries.",
       "locationNotes": [
         "Found on the corpses of deceased members of the Order of Mysteries.",
-        "Found on the corpse of Natasha Hunt at Lewisburg."
+        "Found on the corpse of Natasha Hunt at Lewisburg.",
+        "* Found on the corpses of deceased members of the Order of Mysteries."
       ],
       "effect": "",
       "image": "assets/images/outfits/tattered-dress.png",
@@ -10521,7 +8303,6 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Both the tattered outfit and head can be found at Dolly Sods Wilderness, behind a locked (Picklock 2) door, upstairs in the residential cabin.",
       "locationNotes": [
         "Both the tattered outfit and head can be found at Dolly Sods Wilderness, behind a locked (Picklock 2) door, upstairs in the residential cabin.",
-        "The outfit is made up of a light-blue denim shirt with an orange undershirt and brown knee-length shorts.",
         "Pairs with Tattered Mole Head."
       ],
       "effect": "Pairs with Tattered Mole Head.",
@@ -10545,7 +8326,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "Four are reliably found in Treetops.",
       "locationNotes": [
         "Four are reliably found in Treetops.",
-        "Wavy Willard's Water Park"
+        "Wavy Willard's Water Park",
+        "Clancy Manor"
       ],
       "effect": "",
       "image": "assets/images/outfits/tattered-rags.png",
@@ -10554,6 +8336,62 @@ window.F76_COLLECTIBLES = {
         {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Tattered_rags_(Fallout_76)"
+        }
+      ]
+    },
+    {
+      "id": "outfit-tinkerer-s-overalls",
+      "name": "Tinkerer's Overalls",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "World Spawn",
+      "sourceSummary": "Available for purchase with Stamps.",
+      "locationNotes": [
+        "Available for purchase with Stamps.",
+        "Union Dues reward",
+        "Giuseppe"
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/tinkerer-s-overalls.png",
+      "wikiTitle": "Tinkerer's Overalls",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Tinkerer's_Overalls"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Tinkerer's_Overalls"
+        }
+      ]
+    },
+    {
+      "id": "outfit-trench-runner-s-coat",
+      "name": "Trench Runner's Coat",
+      "categoryId": "outfits",
+      "category": "Outfits",
+      "group": "World Spawns",
+      "displayType": "Mannequin",
+      "tier": "World Spawn",
+      "sourceSummary": "Available for purchase with Stamps.",
+      "locationNotes": [
+        "Available for purchase with Stamps.",
+        "From Ashes to Fire reward",
+        "Giuseppe"
+      ],
+      "effect": "",
+      "image": "assets/images/outfits/trench-runner-s-coat.png",
+      "wikiTitle": "Trench Runner's Coat",
+      "sourceLinks": [
+        {
+          "label": "Item page",
+          "url": "https://fallout.wiki/wiki/Trench_Runner's_Coat"
+        },
+        {
+          "label": "Plan page",
+          "url": "https://fallout.wiki/wiki/Plan:_Trench_Runner's_Coat"
         }
       ]
     },
@@ -10568,7 +8406,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found in a bedroom in Garrahan Estate.",
       "locationNotes": [
         "One can be found in a bedroom in Garrahan Estate.",
-        "Can be found in either accessible fraternity houses at Fraternity Row:"
+        "Can be found in either accessible fraternity houses at Fraternity Row:",
+        "Two can be found inside the Pi House - One on an ironing table inside the basement and another on the second floor inside a bedroom, on an end table."
       ],
       "effect": "",
       "image": "assets/images/outfits/vtu-jacket-and-jeans.png",
@@ -10591,7 +8430,8 @@ window.F76_COLLECTIBLES = {
       "sourceSummary": "One can be found by a female skeleton prepped for burial in a field south of White Powder Winter Sports. It is next to a dog's grave, marked with an improvised \"D\" and \"M\" tombstone.",
       "locationNotes": [
         "One can be found by a female skeleton prepped for burial in a field south of White Powder Winter Sports. It is next to a dog's grave, marked with an improvised \"D\" and \"M\" tombstone.",
-        "One can be found in the bathroom of the Riverside Cottage just north of Camden Park. It is in the inventory of a dead radroach with a bowler hat and Walking Cane."
+        "One can be found in the bathroom of the Riverside Cottage just north of Camden Park. It is in the inventory of a dead radroach with a bowler hat and Walking Cane.",
+        "One can be found on top of Seneca Rocks."
       ],
       "effect": "",
       "image": "assets/images/outfits/wedding-ring.png",
