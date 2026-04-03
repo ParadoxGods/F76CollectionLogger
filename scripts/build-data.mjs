@@ -23,6 +23,54 @@ const sharedSources = [
   }
 ];
 
+const rarityScale = [
+  {
+    label: "Mythic",
+    rank: 1,
+    note: "Extremely low-drop chase items and the rarest collector targets."
+  },
+  {
+    label: "Ultra Rare",
+    rank: 2,
+    note: "Very low-probability rewards, rare vendor rolls, and top-end event drops."
+  },
+  {
+    label: "Rare",
+    rank: 3,
+    note: "Limited-pool event rewards, randomized collectible spawns, and uncommon quest drops."
+  },
+  {
+    label: "Uncommon",
+    rank: 4,
+    note: "Repeatable vendor, plan, token, or collectible unlock paths."
+  },
+  {
+    label: "Common",
+    rank: 5,
+    note: "Reliable world-spawn and always-available world-object items."
+  }
+];
+
+const rarityRankMap = Object.fromEntries(rarityScale.map((entry) => [entry.label, entry.rank]));
+const tierRarityMap = {
+  "Event Chase": "Mythic",
+  "Event Rare": "Ultra Rare",
+  "Daily Ops": "Ultra Rare",
+  "Event Reward": "Rare",
+  "Event Plan": "Rare",
+  "Quest Reward": "Rare",
+  "Random Spawn": "Rare",
+  "Special Variant": "Rare",
+  "Plan Unlock": "Uncommon",
+  "NPC Unlock": "Uncommon",
+  "Token Redemption": "Uncommon",
+  "Collectible Reward": "Uncommon",
+  "Vendor/World": "Uncommon",
+  "World/Utility": "Uncommon",
+  "World Spawn": "Common",
+  "World Object": "Common"
+};
+
 async function main() {
   await mkdir(dataDir, { recursive: true });
   await mkdir(imageRoot, { recursive: true });
@@ -77,7 +125,9 @@ async function main() {
     ...robotModels,
     ...outfits,
     ...fasnachtMasks
-  ].sort((a, b) => {
+  ]
+    .map(annotateItemRarity)
+    .sort((a, b) => {
     if (a.category !== b.category) {
       return a.category.localeCompare(b.category);
     }
@@ -85,7 +135,7 @@ async function main() {
       return a.group.localeCompare(b.group);
     }
     return a.name.localeCompare(b.name);
-  });
+    });
 
   const categories = Array.from(
     items.reduce((map, item) => {
@@ -107,6 +157,7 @@ async function main() {
     title: "Fallout 76 CAMP Collectibles Tracker",
     scope:
       "Distinct displayable collector sets, dedicated junk collectible families, chase apparel, and solo-obtainable outfits for CAMP presentation that still have a legitimate live in-game acquisition path today. Atomic Shop items, paid unlocks, external promo gear, retired rewards, and currently unavailable seasonal event items are excluded.",
+    rarityScale,
     categories,
     sources: [
       ...sharedSources,
@@ -907,25 +958,25 @@ async function buildGiddyupParts() {
       name: "Giddyup Buttercup head",
       key: "Giddyup Buttercup head",
       fallbackPattern: /Giddyup Buttercup head/i,
-      locations: trimBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup head", 4), 3)
+      locations: trimBullets(extractBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup head", 4)), 3)
     },
     {
       name: "Giddyup Buttercup front leg",
       key: "Front leg",
       fallbackPattern: /front leg/i,
-      locations: trimBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup front leg", 4), 3)
+      locations: trimBullets(extractBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup front leg", 4)), 3)
     },
     {
       name: "Giddyup Buttercup back leg",
       key: "Back leg",
       fallbackPattern: /back leg/i,
-      locations: trimBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup back leg", 4), 3)
+      locations: trimBullets(extractBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup back leg", 4)), 3)
     },
     {
       name: "Giddyup Buttercup body",
       key: "Body",
       fallbackPattern: /Giddyup Buttercup body/i,
-      locations: trimBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup body", 4), 3)
+      locations: trimBullets(extractBullets(extractSubheadingSection(wikitext, "Giddyup Buttercup body", 4)), 3)
     }
   ];
 
@@ -1068,6 +1119,9 @@ async function buildOutfits() {
 
         return Promise.all(
           variants.map(async (variant) => {
+            if (isExcludedOutfitName(variant.name)) {
+              return null;
+            }
             const planTitle = resolvePlanTitle(variant.plan) || implicitPlanTitle;
             const planSourceLines = await getCurrentOutfitPlanSourceLines(planTitle);
             const variantContext = {
@@ -2153,6 +2207,60 @@ function classifyOutfitTier(name, context) {
     return "World Spawn";
   }
   return "Collectible Reward";
+}
+
+function isExcludedOutfitName(name) {
+  return /^Clown Outfit$/i.test(name);
+}
+
+function annotateItemRarity(item) {
+  const rarity = classifyItemRarity(item);
+  return {
+    ...item,
+    rarity,
+    rarityRank: rarityRankMap[rarity] || 99
+  };
+}
+
+function classifyItemRarity(item) {
+  const combined = [
+    item.name,
+    item.category,
+    item.group,
+    item.displayType,
+    item.tier,
+    item.sourceSummary,
+    ...(item.locationNotes || []),
+    item.effect
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  if (/\b0\.\d+%|\bextremely rare\b|\bultra[- ]rare\b|\bsuper rare\b/i.test(combined)) {
+    return "Mythic";
+  }
+
+  if (/\brare reward\b|\bvery rare\b|\bpossible vendor listing\b|\brandom vendor listing\b|\btechnical data\b|\bclaim ticket\b/i.test(combined)) {
+    return "Ultra Rare";
+  }
+
+  if (tierRarityMap[item.tier]) {
+    return tierRarityMap[item.tier];
+  }
+
+  if (/\brandom spawn\b|\brandomized\b|\brandomly\b/i.test(combined)) {
+    return "Rare";
+  }
+
+  if (/\bsold by\b|\bvendor\b|\bmerchant\b|\bredeem\b|\bcraft(?:ed|ing)?\b/i.test(combined)) {
+    return "Uncommon";
+  }
+
+  if (/\bworld spawn\b|\bworld object\b|\bcan be found\b|\bfound in\b|\bfound at\b/i.test(combined)) {
+    return "Common";
+  }
+
+  return "Rare";
 }
 
 function summarizeOutfit(name, context) {

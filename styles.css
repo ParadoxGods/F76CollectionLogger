@@ -263,6 +263,11 @@ h2 {
   gap: 10px;
 }
 
+.profile-actions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
 .log-status {
   min-height: 42px;
 }
@@ -589,6 +594,11 @@ h2 {
   color: #ddc2a1;
 }
 
+.badge.rarity {
+  border-color: rgba(129, 178, 164, 0.45);
+  color: #c6e3d9;
+}
+
 .badge.effect {
   border-color: rgba(127, 156, 183, 0.45);
   color: var(--accent-strong);
@@ -775,7 +785,8 @@ h2 {
 
   .hero-stats,
   .filters-grid,
-  .detail-actions {
+  .detail-actions,
+  .profile-actions {
     grid-template-columns: 1fr;
   }
 

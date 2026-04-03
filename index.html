@@ -44,12 +44,31 @@
 
         <section class="panel-section">
           <div class="section-head">
+            <h2>Profiles</h2>
+          </div>
+          <label class="control-block">
+            <span>Active Profile</span>
+            <select id="profileSelect"></select>
+          </label>
+          <label class="control-block profile-name-block">
+            <span>Profile Name</span>
+            <input id="profileNameInput" type="text" maxlength="40" placeholder="Main">
+          </label>
+          <div class="action-grid profile-actions">
+            <button class="action-button" id="createProfileButton" type="button">New Profile</button>
+            <button class="action-button" id="renameProfileButton" type="button">Rename</button>
+            <button class="action-button danger" id="deleteProfileButton" type="button">Delete</button>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-head">
             <h2>Log Files</h2>
           </div>
           <div class="action-grid">
             <button class="action-button" id="exportButton" type="button">Save Log</button>
             <button class="action-button" id="importButton" type="button">Load Log</button>
-            <button class="action-button danger" id="resetButton" type="button">New Log</button>
+            <button class="action-button danger" id="resetButton" type="button">Reset Profile</button>
           </div>
           <p class="panel-copy log-status" id="logStatus" aria-live="polite"></p>
           <input id="importInput" type="file" accept="application/json" hidden>
@@ -105,6 +124,11 @@
             <label class="control-block">
               <span>Tier</span>
               <select id="tierSelect"></select>
+            </label>
+
+            <label class="control-block">
+              <span>Rarity</span>
+              <select id="raritySelect"></select>
             </label>
 
             <label class="control-block">

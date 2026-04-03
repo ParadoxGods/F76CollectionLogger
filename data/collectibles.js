@@ -1,7 +1,34 @@
 window.F76_COLLECTIBLES = {
-  "generatedAt": "2026-04-03T00:11:41.280Z",
+  "generatedAt": "2026-04-03T00:59:41.880Z",
   "title": "Fallout 76 CAMP Collectibles Tracker",
   "scope": "Distinct displayable collector sets, dedicated junk collectible families, chase apparel, and solo-obtainable outfits for CAMP presentation that still have a legitimate live in-game acquisition path today. Atomic Shop items, paid unlocks, external promo gear, retired rewards, and currently unavailable seasonal event items are excluded.",
+  "rarityScale": [
+    {
+      "label": "Mythic",
+      "rank": 1,
+      "note": "Extremely low-drop chase items and the rarest collector targets."
+    },
+    {
+      "label": "Ultra Rare",
+      "rank": 2,
+      "note": "Very low-probability rewards, rare vendor rolls, and top-end event drops."
+    },
+    {
+      "label": "Rare",
+      "rank": 3,
+      "note": "Limited-pool event rewards, randomized collectible spawns, and uncommon quest drops."
+    },
+    {
+      "label": "Uncommon",
+      "rank": 4,
+      "note": "Repeatable vendor, plan, token, or collectible unlock paths."
+    },
+    {
+      "label": "Common",
+      "rank": 5,
+      "note": "Reliable world-spawn and always-available world-object items."
+    }
+  ],
   "categories": [
     {
       "id": "beer-steins",
@@ -61,7 +88,7 @@ window.F76_COLLECTIBLES = {
       "id": "outfits",
       "label": "Outfits",
       "displayType": "Mannequin",
-      "count": 141
+      "count": 140
     },
     {
       "id": "robot-models",
@@ -213,7 +240,9 @@ window.F76_COLLECTIBLES = {
           "label": "Set overview",
           "url": "https://fallout.wiki/wiki/Stein"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "beer-stein-wooden-beer-stein",
@@ -241,7 +270,9 @@ window.F76_COLLECTIBLES = {
           "label": "Set overview",
           "url": "https://fallout.wiki/wiki/Stein"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "bobblehead-agility-bobblehead-glowing",
@@ -269,7 +300,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Agility_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-agility",
@@ -297,7 +330,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-charisma",
@@ -325,7 +360,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-endurance",
@@ -353,7 +390,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-intelligence",
@@ -381,7 +420,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-luck",
@@ -409,7 +450,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-perception",
@@ -437,7 +480,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-strength",
@@ -465,7 +510,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-charisma-bobblehead-glowing",
@@ -493,7 +540,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Charisma_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-endurance-bobblehead-glowing",
@@ -521,7 +570,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Endurance_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-intelligence-bobblehead-glowing",
@@ -549,7 +600,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Intelligence_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-luck-bobblehead-glowing",
@@ -577,7 +630,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Luck_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-perception-bobblehead-glowing",
@@ -605,7 +660,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Perception_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-strength-bobblehead-glowing",
@@ -633,7 +690,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Strength_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-barter-bobblehead-glowing",
@@ -661,7 +720,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Barter_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-caps",
@@ -689,7 +750,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-leader",
@@ -717,7 +780,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-lock-picking",
@@ -745,7 +810,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-medicine",
@@ -773,7 +840,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-repair",
@@ -801,7 +870,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-science",
@@ -829,7 +900,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-sneak",
@@ -857,7 +930,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-lockpicking-bobblehead-glowing",
@@ -885,7 +960,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Lockpicking_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-medicine-bobblehead-glowing",
@@ -913,7 +990,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Medicine_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-repair-bobblehead-glowing",
@@ -941,7 +1020,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Repair_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-sneak-bobblehead-glowing",
@@ -969,7 +1050,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Sneak_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-speech-bobblehead-glowing",
@@ -997,7 +1080,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Speech_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-big-guns-bobblehead-glowing",
@@ -1025,7 +1110,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Big_Guns_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-big-guns",
@@ -1053,7 +1140,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-energy-weapons",
@@ -1081,7 +1170,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-explosive",
@@ -1109,7 +1200,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-melee",
@@ -1137,7 +1230,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-small-guns",
@@ -1165,7 +1260,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-bobblehead-unarmed",
@@ -1193,7 +1290,9 @@ window.F76_COLLECTIBLES = {
           "label": "Spawn route",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_bobblehead_locations"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-energy-weapons-bobblehead-glowing",
@@ -1221,7 +1320,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Energy_Weapons_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-explosive-bobblehead-glowing",
@@ -1249,7 +1350,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Explosive_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-melee-bobblehead-glowing",
@@ -1277,7 +1380,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Melee_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-science-bobblehead-glowing",
@@ -1305,7 +1410,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Science_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-small-guns-bobblehead-glowing",
@@ -1333,7 +1440,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Small_Guns_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "bobblehead-unarmed-bobblehead-glowing",
@@ -1361,7 +1470,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Unarmed_Bobblehead_(Glowing)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-flatwoods-monster-card",
@@ -1389,7 +1500,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Flatwoods_monster_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-grafton-monster-card",
@@ -1417,7 +1530,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Grafton_Monster_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-mothman-card",
@@ -1445,7 +1560,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Mothman_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-ogua-card",
@@ -1473,7 +1590,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Ogua_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-beast-of-beckley-card",
@@ -1501,7 +1620,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Beast_of_Beckley_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-blue-devil-card",
@@ -1529,7 +1650,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Blue_Devil_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-jersey-devil-card",
@@ -1557,7 +1680,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Jersey_Devil_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "cryptid-card-sheepsquatch-card",
@@ -1585,7 +1710,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Sheepsquatch_card"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "fasnacht-fasnacht-blue-man-mask",
@@ -1616,7 +1743,9 @@ window.F76_COLLECTIBLES = {
           "label": "Category page",
           "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "fasnacht-fasnacht-man-mask",
@@ -1647,7 +1776,9 @@ window.F76_COLLECTIBLES = {
           "label": "Category page",
           "url": "https://fallout.wiki/wiki/Category:Fasnacht_Masks"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "giddyup-part-giddyup-buttercup-back-leg",
@@ -1658,7 +1789,11 @@ window.F76_COLLECTIBLES = {
       "displayType": "Display Case",
       "tier": "World Spawn",
       "sourceSummary": "Giddyup Buttercup parts are split across separate world spawns, with Gorge Junkyard and the road trailer near Watoga covering most of the set.",
-      "locationNotes": "* O",
+      "locationNotes": [
+        "One can be found at the Gorge Junkyard.",
+        "One can be found on a trailer near the road, northwest of the Watoga Civic Center and east of Appalachian Antiques.",
+        "One can be found inside the Morgantown Airport terminal."
+      ],
       "effect": "",
       "image": "assets/images/giddyup-parts/giddyup-buttercup-back-leg.png",
       "wikiTitle": "Giddyup Buttercup parts (Fallout 76)",
@@ -1667,7 +1802,9 @@ window.F76_COLLECTIBLES = {
           "label": "Part locations",
           "url": "https://fallout.fandom.com/wiki/Giddyup_Buttercup_parts_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "giddyup-part-giddyup-buttercup-body",
@@ -1678,7 +1815,10 @@ window.F76_COLLECTIBLES = {
       "displayType": "Display Case",
       "tier": "World Spawn",
       "sourceSummary": "Giddyup Buttercup parts are split across separate world spawns, with Gorge Junkyard and the road trailer near Watoga covering most of the set.",
-      "locationNotes": "* O",
+      "locationNotes": [
+        "One can be found at the Gorge Junkyard.",
+        "One can be found on a trailer near the road, northwest of the Watoga Civic Center and east of Appalachian Antiques."
+      ],
       "effect": "",
       "image": "assets/images/giddyup-parts/giddyup-buttercup-body.png",
       "wikiTitle": "Giddyup Buttercup parts (Fallout 76)",
@@ -1687,7 +1827,9 @@ window.F76_COLLECTIBLES = {
           "label": "Part locations",
           "url": "https://fallout.fandom.com/wiki/Giddyup_Buttercup_parts_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "giddyup-part-giddyup-buttercup-front-leg",
@@ -1698,7 +1840,10 @@ window.F76_COLLECTIBLES = {
       "displayType": "Display Case",
       "tier": "World Spawn",
       "sourceSummary": "Giddyup Buttercup parts are split across separate world spawns, with Gorge Junkyard and the road trailer near Watoga covering most of the set.",
-      "locationNotes": "* T",
+      "locationNotes": [
+        "Two can be found on a trailer near the road, northwest of the Watoga Civic Center and east of Appalachian Antiques.",
+        "One can be found at the Gorge Junkyard."
+      ],
       "effect": "",
       "image": "assets/images/giddyup-parts/giddyup-buttercup-front-leg.png",
       "wikiTitle": "Giddyup Buttercup parts (Fallout 76)",
@@ -1707,7 +1852,9 @@ window.F76_COLLECTIBLES = {
           "label": "Part locations",
           "url": "https://fallout.fandom.com/wiki/Giddyup_Buttercup_parts_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "giddyup-part-giddyup-buttercup-head",
@@ -1718,7 +1865,11 @@ window.F76_COLLECTIBLES = {
       "displayType": "Display Case",
       "tier": "World Spawn",
       "sourceSummary": "Giddyup Buttercup parts are split across separate world spawns, with Gorge Junkyard and the road trailer near Watoga covering most of the set.",
-      "locationNotes": "* T",
+      "locationNotes": [
+        "Two can be found in different TNT domes at the Black Mountain Ordnance Works.",
+        "One can be found at the Gorge Junkyard.",
+        "One can be found in Helvetia."
+      ],
       "effect": "",
       "image": "assets/images/giddyup-parts/giddyup-buttercup-head.png",
       "wikiTitle": "Giddyup Buttercup parts (Fallout 76)",
@@ -1727,7 +1878,9 @@ window.F76_COLLECTIBLES = {
           "label": "Part locations",
           "url": "https://fallout.fandom.com/wiki/Giddyup_Buttercup_parts_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "magazine-astoundingly-awesome-tales-1-attack-of-the-fishmen",
@@ -1751,7 +1904,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-10-the-starlet-sniper",
@@ -1775,7 +1930,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-11-curse-of-the-burned",
@@ -1799,7 +1956,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-12-giant-insects-invade",
@@ -1823,7 +1982,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-13-rise-of-the-radiated",
@@ -1847,7 +2008,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-2-drive-in-love-interrupted-rise-of-the-mutants",
@@ -1871,7 +2034,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-3-deep-sea-terror",
@@ -1895,7 +2060,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-4-invasion-of-the-zetans",
@@ -1919,7 +2086,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-5-when-apes-go-bananas-a-gorilla-ate-my-patrol-car",
@@ -1943,7 +2112,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-6-my-brain-and-i",
@@ -1967,7 +2138,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "magazine-astoundingly-awesome-tales-7-the-man-who-could-stop-time",
@@ -1991,7 +2164,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-8-attack-of-the-metal-men",
@@ -2015,7 +2190,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-astoundingly-awesome-tales-9-have-dog-will-travel",
@@ -2039,7 +2216,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-1-get-off-my-lawn",
@@ -2063,7 +2242,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-10-nightmare-in-the-garden",
@@ -2087,7 +2268,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-2-down-home-cookin",
@@ -2111,7 +2294,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-3-homesteading-horror",
@@ -2135,7 +2320,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-4-hardy-as-a-sasquatch",
@@ -2159,7 +2346,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-5-carnivorous-rabbits-of-appalachia",
@@ -2183,7 +2372,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-6-the-appalachia-squirrel-massacre",
@@ -2207,7 +2398,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-7-art-of-the-tomahawk",
@@ -2231,7 +2424,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-8-the-gunsmith-of-harper-s-ferry",
@@ -2255,7 +2450,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-backwoodsman-9-the-ohio-river-hermit",
@@ -2279,7 +2476,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-1-blood-on-the-harp",
@@ -2303,7 +2502,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-10-what-sorcery-this",
@@ -2327,7 +2528,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-2-cometh-the-trickster",
@@ -2351,7 +2554,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-3-jungle-of-the-bat-babies",
@@ -2375,7 +2580,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-4-in-the-bosom-of-the-corsair-queen",
@@ -2399,7 +2606,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-5-demon-slaves-demon-sands",
@@ -2423,7 +2632,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-6-enter-maula-war-maiden-of-mars",
@@ -2447,7 +2658,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-7-fatherless-cur",
@@ -2471,7 +2684,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-8-lost-in-the-snows-of-lust",
@@ -2495,7 +2710,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-barbarian-9-the-lair-of-the-virgin-eaters",
@@ -2519,7 +2736,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-grognak-the-ruby-ruins",
@@ -2543,7 +2762,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-1-the-future-of-hunting",
@@ -2567,7 +2788,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-10-guide-to-hunting-commies",
@@ -2591,7 +2814,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-2-lasers-hunting-acceptable-overkill",
@@ -2615,7 +2840,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-3-little-guns-for-little-ladies",
@@ -2639,7 +2866,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-4-street-guns-of-detroit",
@@ -2663,7 +2892,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-5-avoid-those-pesky-gun-laws",
@@ -2687,7 +2918,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-6-the-moon-a-communist-doomsday-device",
@@ -2711,7 +2944,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-7-take-aim-army-style",
@@ -2735,7 +2970,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-8-bear-proofing-your-campsite-don-t-get-caught",
@@ -2759,7 +2996,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-guns-and-bullets-9-plasma-the-weapon-of-tomorrow",
@@ -2783,7 +3022,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-1-life-long-best-friends",
@@ -2807,7 +3048,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-2-nuke-the-man",
@@ -2831,7 +3074,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-3-trim-the-fat",
@@ -2855,7 +3100,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-4-the-secretary-charmer",
@@ -2879,7 +3126,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-5-talk-yourself-sober",
@@ -2903,7 +3152,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-6-advice-from-married-men",
@@ -2927,7 +3178,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-7-beware-the-man-handler",
@@ -2951,7 +3204,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-8-an-experience-to-remember",
@@ -2975,7 +3230,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-live-love-9-i-married-a-robot",
@@ -2999,7 +3256,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-atomic-command",
@@ -3023,7 +3282,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-automatron",
@@ -3047,7 +3308,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-nuka-tapper",
@@ -3071,7 +3334,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-pipfall",
@@ -3095,7 +3360,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-red-menace",
@@ -3119,7 +3386,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-wastelad",
@@ -3143,7 +3412,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-robco-fun-zeta-invaders",
@@ -3167,7 +3438,9 @@ window.F76_COLLECTIBLES = {
           "label": "Magazine list and holotape section",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-1-purifying-the-wilderness",
@@ -3191,7 +3464,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-10-maintaining-your-gear",
@@ -3215,7 +3490,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-2-natural-mosquito-repellants",
@@ -3239,7 +3516,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-3-packing-for-the-trail",
@@ -3263,7 +3542,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-4-hang-in-there",
@@ -3287,7 +3568,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-5-identifying-rabies-and-other-diseases",
@@ -3311,7 +3594,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-6-healthy-hiking-endurance",
@@ -3335,7 +3620,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-7-the-animal-whisperer",
@@ -3359,7 +3646,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-8-long-haul-sprinter",
@@ -3383,7 +3672,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-scouts-life-9-campfire-special-edition",
@@ -3407,7 +3698,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tales-from-the-west-virginia-hills-1-curse-of-the-wendigo",
@@ -3431,7 +3724,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tales-from-the-west-virginia-hills-2-the-mothman-cometh",
@@ -3455,7 +3750,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tales-from-the-west-virginia-hills-3-the-beast-of-grafton",
@@ -3479,7 +3776,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tales-from-the-west-virginia-hills-4-sideshow-snallygaster",
@@ -3503,7 +3802,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tales-from-the-west-virginia-hills-5-who-goes-there-the-strange-encounter-in-flatwoods",
@@ -3527,7 +3828,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-1-will-robots-rule-the-world",
@@ -3551,7 +3854,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-2-what-is-plasma-anyway",
@@ -3575,7 +3880,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-3-rocket-science-for-toddlers",
@@ -3599,7 +3906,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-4-blast-off-to-adventure",
@@ -3623,7 +3932,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-5-giant-super-weapons",
@@ -3647,7 +3958,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-6-geckos-and-gamma-radiation-the-key-to-prolonged-life",
@@ -3671,7 +3984,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-7-u-s-army-goes-to-space",
@@ -3695,7 +4010,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-8-10-number-1-hits",
@@ -3719,7 +4036,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tesla-science-magazine-9-future-of-warfare",
@@ -3743,7 +4062,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tumblers-today-1-bobby-pins-more-effective-than-lockpicks",
@@ -3767,7 +4088,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tumblers-today-2-confessions-of-a-housebreaker",
@@ -3791,7 +4114,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tumblers-today-3-open-any-lock-in-5-seconds-flat",
@@ -3815,7 +4140,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tumblers-today-4-locksmith-certification-special-pass-with-flying-colors",
@@ -3839,7 +4166,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-tumblers-today-5-mysteries-of-the-master-key-exposed",
@@ -3863,7 +4192,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-1-whistling-in-the-dark",
@@ -3887,7 +4218,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-10-tiptoe-through-the-tulips",
@@ -3911,7 +4244,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-2-urban-camouflage",
@@ -3935,7 +4270,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-3-facepaint-fundamentals",
@@ -3959,7 +4296,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-4-not-the-soldiers-you-re-looking-for",
@@ -3983,7 +4322,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-5-who-goes-there",
@@ -4007,7 +4348,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-6-squeaky-floorboard-sudden-death",
@@ -4031,7 +4374,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-7-getting-the-drop-on-the-communists",
@@ -4055,7 +4400,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-8-bushes-boxes-and-beehives-camouflage-special",
@@ -4079,7 +4426,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-u-s-covert-operations-manual-9-look-better-in-black",
@@ -4103,7 +4452,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-unstoppables-1-de-capitalists",
@@ -4127,7 +4478,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-unstoppables-2-who-can-stop-the-unstoppable-grog-na-rok",
@@ -4151,7 +4504,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-unstoppables-3-commie-kazi-vs-manta-man",
@@ -4175,7 +4530,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-unstoppables-4-trapped-in-the-dimension-of-the-pterror-dactyls",
@@ -4199,7 +4556,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "magazine-unstoppables-5-visit-the-ux-ron-galaxy",
@@ -4223,7 +4582,9 @@ window.F76_COLLECTIBLES = {
           "label": "Issue list and location notes",
           "url": "https://fallout.fandom.com/wiki/Fallout_76_magazines"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "mr-fuzzy-pencil-mr-fuzzy-pencil",
@@ -4247,7 +4608,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant page",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy_pencil"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-pencil-spooky-mr-fuzzy-pencil",
@@ -4271,7 +4634,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant page",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy_pencil"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-pencil-yellow-mr-fuzzy-pencil",
@@ -4295,7 +4660,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant page",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy_pencil"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-candy-fan-mr-fuzzy",
@@ -4319,7 +4686,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-checker-tie-mr-fuzzy",
@@ -4343,7 +4712,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-emerald-tie-mr-fuzzy",
@@ -4367,7 +4738,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-gold-tie-mr-fuzzy",
@@ -4391,7 +4764,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-jumbo-candy-fan-mr-fuzzy",
@@ -4415,7 +4790,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-jumbo-checker-tie-mr-fuzzy",
@@ -4439,7 +4816,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-jumbo-gold-tie-mr-fuzzy",
@@ -4463,7 +4842,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-jumbo-silver-tie-mr-fuzzy",
@@ -4487,7 +4868,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "mr-fuzzy-orange-tie-mr-fuzzy",
@@ -4511,7 +4894,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-purple-tie-mr-fuzzy",
@@ -4535,7 +4920,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-red-tie-mr-fuzzy",
@@ -4559,7 +4946,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-ruby-tie-mr-fuzzy",
@@ -4583,7 +4972,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-silver-tie-mr-fuzzy",
@@ -4607,7 +4998,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "mr-fuzzy-spooky-time-mr-fuzzy",
@@ -4631,7 +5024,9 @@ window.F76_COLLECTIBLES = {
           "label": "Variant list and locations",
           "url": "https://fallout.fandom.com/wiki/Mr._Fuzzy"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "nuka-nuka-cherry",
@@ -4659,7 +5054,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cherry_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "nuka-nuka-cola",
@@ -4687,7 +5084,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "nuka-nuka-cola-cranberry",
@@ -4715,7 +5114,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_Cranberry"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "nuka-nuka-cola-dark",
@@ -4742,7 +5143,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_Dark_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "nuka-nuka-cola-my-blood-s-in-it",
@@ -4768,7 +5171,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_My_Blood's_In_It"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "nuka-nuka-cola-orange",
@@ -4796,7 +5201,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_Orange_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "nuka-nuka-cola-quantum",
@@ -4825,7 +5232,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_Quantum_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "nuka-nuka-cola-scorched",
@@ -4851,7 +5260,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_My_Blood's_In_It"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "nuka-nuka-cola-twist",
@@ -4878,7 +5289,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_Twist"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "nuka-nuka-cola-vaccinated",
@@ -4904,7 +5317,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_My_Blood's_In_It"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "nuka-nuka-cola-wild",
@@ -4932,7 +5347,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Cola_Wild_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "nuka-nuka-grape",
@@ -4960,7 +5377,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Nuka-Grape_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-asylum-worker-uniform",
@@ -4984,7 +5403,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-asylum-worker-uniform-blue",
@@ -5008,7 +5429,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Blue"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-asylum-worker-uniform-brown",
@@ -5032,7 +5455,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Brown"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-asylum-worker-uniform-forest",
@@ -5056,7 +5481,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Forest"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-asylum-worker-uniform-green",
@@ -5080,7 +5507,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Green"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-asylum-worker-uniform-pink",
@@ -5104,7 +5533,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Pink"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-asylum-worker-uniform-red",
@@ -5128,7 +5559,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Red"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-asylum-worker-uniform-weathered",
@@ -5152,7 +5585,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Weathered"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-asylum-worker-uniform-white",
@@ -5176,7 +5611,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_White"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-asylum-worker-uniform-white-dirty",
@@ -5200,7 +5637,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_White_Dirty"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-asylum-worker-uniform-yellow",
@@ -5224,7 +5663,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Asylum_Worker_Uniform_Yellow"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-nuka-world-on-tour-shirt",
@@ -5252,7 +5693,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|displayable_="
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-redcoat-outfit",
@@ -5278,7 +5721,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Redcoat_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-arktos-lab-coat",
@@ -5300,7 +5745,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Arktos_Lab_Coat"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-blue-ridge-caravan-outfit",
@@ -5323,7 +5770,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Blue_Ridge_Caravan_Outfit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-brotherhood-special-ops-suit",
@@ -5347,7 +5796,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Brotherhood_Special_Ops_Suit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-burnt-vault-chemist-coat",
@@ -5375,7 +5826,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Burnt_Vault_Chemist_Coat"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-burnt-vault-lab-coat",
@@ -5403,7 +5856,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Burnt_Vault_Lab_Coat"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-cappy-jacket-jeans",
@@ -5427,31 +5882,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Cappy_Jacket_&_Jeans_(Fallout_76)"
         }
-      ]
-    },
-    {
-      "id": "outfit-clown-outfit",
-      "name": "Clown Outfit",
-      "categoryId": "outfits",
-      "category": "Outfits",
-      "group": "Event Rewards",
-      "displayType": "Mannequin",
-      "tier": "Event Reward",
-      "sourceSummary": "The outfit can be found at Tyler County Fairgrounds at the lockers or on a shelf in the Hole in One stand on the central west area.",
-      "locationNotes": [
-        "The outfit can be found at Tyler County Fairgrounds at the lockers or on a shelf in the Hole in One stand on the central west area.",
-        "The outfit can also be found at Lakeside Cabins, on a black chair, in a cabin northeast of the largest cabin.",
-        "The hat can be found at Sunnytop Ski Lanes at the chimney."
       ],
-      "effect": "Pairs with Clown Hat.",
-      "image": "assets/images/outfits/clown-outfit.png",
-      "wikiTitle": "Clown Outfit",
-      "sourceLinks": [
-        {
-          "label": "Item page",
-          "url": "https://fallout.wiki/wiki/Clown_Outfit"
-        }
-      ]
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-nuka-world-cowboy-duster",
@@ -5479,7 +5912,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Nuka-World_Cowboy_Duster"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-responder-fireman-uniform",
@@ -5503,7 +5938,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Responder_Fireman_Uniform"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-shenandoah-t-shirt-and-slacks",
@@ -5531,7 +5968,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Shenandoah_T-Shirt_and_Slacks"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-v63-recon-outfit-burnt",
@@ -5559,7 +5998,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_V63_Recon_Outfit_Burnt"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-v63-riot-control-outfit-burnt",
@@ -5587,7 +6028,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_V63_Riot_Control_Outfit_Burnt"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-v63-security-outfit-burnt",
@@ -5615,7 +6058,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_V63_Security_Outfit_Burnt"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-bos-jumpsuit",
@@ -5638,7 +6083,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/BOS_Jumpsuit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-forest-camo-jumpsuit",
@@ -5661,7 +6108,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Forest_Camo_Jumpsuit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-mechanic-jumpsuit",
@@ -5684,7 +6133,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Mechanic_Jumpsuit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-nuka-cade-jumpsuit",
@@ -5712,7 +6163,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|displayable_="
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-white-powder-jumpsuit",
@@ -5735,7 +6188,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/White_Powder_Jumpsuit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-apocalyptic-farmer-outfit",
@@ -5763,7 +6218,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Apocalyptic_Farmer_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-confederate-uniform",
@@ -5791,7 +6248,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Confederate_Uniform"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-cultist-monarch-outfit",
@@ -5819,7 +6278,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Cultist_Monarch_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-deathclaw-skin-outfit",
@@ -5842,7 +6303,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Deathclaw_Skin_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-enforcer-s-outfit",
@@ -5870,7 +6333,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Enforcer's_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-flower-suit",
@@ -5892,7 +6357,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Flower_Suit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-flower-printed-sundress",
@@ -5914,7 +6381,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Flower-Printed_Sundress"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-garb-of-mysteries",
@@ -5942,7 +6411,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|mods_="
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-gulper-skin-outfit",
@@ -5965,7 +6436,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Gulper_Skin_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-hunter-s-hanbok-outfit",
@@ -5988,7 +6461,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Hunter's_Hanbok_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-lederhosen-outfit",
@@ -6011,7 +6486,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Lederhosen_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-mercenary-outfit",
@@ -6039,7 +6516,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Mercenary_outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-responders-padded-jacket",
@@ -6067,7 +6546,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Responders'_Padded_Jacket"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-seasoned-survivor-outfit",
@@ -6095,7 +6576,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Seasoned_Survivor_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-snake-wrangler-outfit",
@@ -6123,7 +6606,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Snake_Wrangler_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-sunburst-sequin-dress",
@@ -6151,7 +6636,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Sunburst_Sequin_Dress"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-union-uniform",
@@ -6179,7 +6666,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Union_uniform"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-v63-recon-outfit",
@@ -6207,7 +6696,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_V63_Recon_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-v63-riot-control-outfit",
@@ -6235,7 +6726,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_V63_Riot_Control_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-v63-security-outfit",
@@ -6263,7 +6756,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_V63_Security_Outfit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-vault-63-burnt-jumpsuit",
@@ -6291,7 +6786,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Vault_63_Burnt_Jumpsuit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-vault-63-hazmat-suit",
@@ -6319,7 +6816,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Vault_63_Hazmat_Suit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-vault-tec-jumpsuit",
@@ -6347,7 +6846,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Vault-Tec_jumpsuit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-wasteland-florist-apron",
@@ -6369,7 +6870,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Wasteland_Florist_Apron"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-amusement-park-worker-outfit",
@@ -6393,7 +6896,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Amusement_Park_Worker_Outfit"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-army-fatigues",
@@ -6417,7 +6922,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Army_Fatigues_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-bomber-jacket",
@@ -6439,7 +6946,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Bomber_Jacket_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-brotherhood-civvies",
@@ -6467,7 +6976,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Brotherhood_civvies"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-brotherhood-scribe-outfit",
@@ -6491,7 +7002,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Brotherhood_Scribe_Outfit"
         }
-      ]
+      ],
+      "rarity": "Ultra Rare",
+      "rarityRank": 2
     },
     {
       "id": "outfit-camden-park-uniform",
@@ -6514,7 +7027,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Camden_Park_Uniform"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-dirty-army-fatigues",
@@ -6538,7 +7053,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Dirty_Army_Fatigues_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-enclave-officer-uniform",
@@ -6562,7 +7079,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Enclave_Officer_Uniform_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-engineer-s-uniform",
@@ -6584,7 +7103,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Engineer's_Uniform"
         }
-      ]
+      ],
+      "rarity": "Ultra Rare",
+      "rarityRank": 2
     },
     {
       "id": "outfit-field-scribe-s-uniform",
@@ -6606,7 +7127,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Field_Scribe's_Uniform"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-fire-breather-uniform",
@@ -6629,7 +7152,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Fire_Breather_Uniform"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-leather-coat",
@@ -6653,7 +7178,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Leather_coat_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-radiation-quack-outfit",
@@ -6676,7 +7203,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Radiation_Quack_Outfit"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-responder-police-uniform",
@@ -6700,7 +7229,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Responder_Police_Uniform"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-responders-paramedic-jumpsuit",
@@ -6724,7 +7255,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Responders_Paramedic_Jumpsuit"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "outfit-tattered-field-jacket",
@@ -6748,7 +7281,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Tattered_Field_Jacket_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-traveling-leather-coat",
@@ -6772,7 +7307,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Leather_coat_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-western-outfit",
@@ -6796,7 +7333,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Western_outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-western-outfit-chaps",
@@ -6820,7 +7359,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Western_outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-baseball-uniform",
@@ -6844,7 +7385,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Baseball_Uniform_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-bathrobe",
@@ -6866,7 +7409,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Bathrobe_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-bottle-and-cappy-jacket-and-jeans",
@@ -6894,7 +7439,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|displayable_="
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-brown-fisherman-s-overalls",
@@ -6918,7 +7465,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Brown_Fisherman's_Overalls"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-clean-spacesuit",
@@ -6942,7 +7491,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Clean_Spacesuit"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-clean-steel-worker-uniform",
@@ -6966,7 +7517,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Clean_Steel_Worker_Uniform"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-dirty-tan-suit",
@@ -6990,7 +7543,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Dirty_Tan_Suit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-fireman-uniform",
@@ -7014,7 +7569,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Fireman_Uniform"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-grey-fisherman-s-overalls",
@@ -7037,7 +7594,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Grey_Fisherman's_Overalls"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-hooded-rags",
@@ -7061,7 +7620,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Hooded_Rags_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-hunter-s-long-coat",
@@ -7085,7 +7646,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Hunter's_Long_Coat_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Ultra Rare",
+      "rarityRank": 2
     },
     {
       "id": "outfit-longshoreman-outfit",
@@ -7108,7 +7671,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Longshoreman_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-nuka-cola-jacket-and-jeans",
@@ -7136,7 +7701,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|displayable_="
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-nuka-world-jacket-and-jeans",
@@ -7164,7 +7731,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|displayable_="
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-ranger-outfit-clean",
@@ -7188,7 +7757,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Ranger_Outfit_Clean"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-straight-jacket",
@@ -7212,7 +7783,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Straight_jacket"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-surveyor-outfit",
@@ -7236,7 +7809,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Surveyor_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "outfit-bottle-and-cappy-orange-jacket-jeans",
@@ -7258,7 +7833,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Bottle_and_Cappy_Orange_Jacket_&_Jeans_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-bottle-and-cappy-red-jacket-jeans",
@@ -7280,7 +7857,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Bottle_and_Cappy_Red_Jacket_&_Jeans"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-brotherhood-lab-coat",
@@ -7304,7 +7883,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Brotherhood_Lab_Coat_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-casual-outfit",
@@ -7328,7 +7909,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Casual_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-civil-war-era-dress",
@@ -7356,7 +7939,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Civil_War_Era_Dress"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-civil-war-era-suit",
@@ -7384,7 +7969,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Civil_War_Era_Suit"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-communist-commander-outfit",
@@ -7408,7 +7995,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Communist_Commander_Outfit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-drifter-outfit",
@@ -7432,7 +8021,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Drifter_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-explorer-outfit",
@@ -7456,7 +8047,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Explorer_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-farmhand-clothes",
@@ -7480,7 +8073,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Farmhand_Clothes_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-fisherman-s-outfit",
@@ -7504,7 +8099,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Fisherman's_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-golf-outfit",
@@ -7528,7 +8125,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Golf_Outfit"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-golf-skirt",
@@ -7551,7 +8150,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Golf_Skirt"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-green-shirt-and-combat-boots",
@@ -7573,7 +8174,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Green_Shirt_and_Combat_Boots_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-halloween-costume-witch",
@@ -7601,7 +8204,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Witch_Costume"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-imposter-sheepsquatch-outfit",
@@ -7628,7 +8233,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/|plan2_="
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-jaguar-short-suit",
@@ -7652,7 +8259,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Jaguar_Short_Suit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-jaguar-suit",
@@ -7676,7 +8285,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Jaguar_Suit"
         }
-      ]
+      ],
+      "rarity": "Mythic",
+      "rarityRank": 1
     },
     {
       "id": "outfit-lab-coat",
@@ -7700,7 +8311,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Lab_coat_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-miner-uniform",
@@ -7724,7 +8337,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Miner_Uniform"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-mr-fuzzy-mascot-suit",
@@ -7748,7 +8363,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Mr._Fuzzy_Mascot_Suit"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-nuka-world-geyser-jacket-jeans",
@@ -7770,7 +8387,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Nuka-World_jacket_&_jeans_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-nuka-world-jacket-jeans",
@@ -7792,7 +8411,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Nuka-World_jacket_&_jeans_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-padded-blue-jacket",
@@ -7816,7 +8437,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Padded_Blue_Jacket_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-park-ranger-uniform",
@@ -7840,7 +8463,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Park_Ranger_Uniform"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-pastor-s-vestments",
@@ -7864,7 +8489,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Pastor's_Vestments_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-patched-suit",
@@ -7888,7 +8515,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Patched_Suit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-patched-three-piece-suit",
@@ -7912,7 +8541,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Patched_Three-Piece_Suit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-police-uniform",
@@ -7936,7 +8567,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Police_Uniform"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-pristine-miner-uniform",
@@ -7960,7 +8593,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Pristine_Miner_Uniform"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-radstag-hide-outfit",
@@ -7982,7 +8617,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Radstag_hide_outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-ratty-skirt",
@@ -8006,7 +8643,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Ratty_Skirt_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-red-dress",
@@ -8030,7 +8669,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Red_dress_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-ritual-bindings",
@@ -8054,7 +8695,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Ritual_Bindings"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-scavenger-outfit",
@@ -8078,7 +8721,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Scavenger_Outfit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-science-scribe-s-uniform",
@@ -8100,7 +8745,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Science_scribe's_uniform"
         }
-      ]
+      ],
+      "rarity": "Ultra Rare",
+      "rarityRank": 2
     },
     {
       "id": "outfit-sheepsquatch-mascot-outfit",
@@ -8123,7 +8770,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Sheepsquatch_Mascot_Outfit"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-soiled-mr-fuzzy-mascot-suit",
@@ -8147,7 +8796,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Soiled_Mr._Fuzzy_Mascot_Suit"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-spacesuit",
@@ -8170,7 +8821,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Spacesuit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-steel-worker-uniform",
@@ -8194,7 +8847,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Steel_worker_uniform"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-suspenders-and-slacks",
@@ -8218,7 +8873,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Suspenders_and_slacks_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-swimsuit",
@@ -8242,7 +8899,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Swimsuit_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-t-shirt-and-slacks",
@@ -8266,7 +8925,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/T-shirt_and_slacks_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-tattered-dress",
@@ -8290,7 +8951,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Tattered_dress"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-tattered-mole-outfit",
@@ -8313,7 +8976,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Tattered_Mole_Outfit"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-tattered-rags",
@@ -8337,7 +9002,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Tattered_rags_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-tinkerer-s-overalls",
@@ -8365,7 +9032,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Tinkerer's_Overalls"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-trench-runner-s-coat",
@@ -8393,7 +9062,9 @@ window.F76_COLLECTIBLES = {
           "label": "Plan page",
           "url": "https://fallout.wiki/wiki/Plan:_Trench_Runner's_Coat"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-vtu-jacket-and-jeans",
@@ -8417,7 +9088,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/VTU_jacket_and_jeans"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "outfit-wedding-ring",
@@ -8441,7 +9114,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Wedding_Ring_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-eyebot-model-fallout-76",
@@ -8465,7 +9140,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Eyebot_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-mr-gutsy-model-fallout-76",
@@ -8488,7 +9165,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Mr._Gutsy_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-mr-handy-model-fallout-76",
@@ -8512,7 +9191,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Mr._Handy_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-protectron-model-fallout-76",
@@ -8536,7 +9217,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Protectron_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-robot-parts-model-a",
@@ -8560,7 +9243,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Robot_parts_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-robot-parts-model-b",
@@ -8584,7 +9269,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Robot_parts_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-robot-parts-model-c",
@@ -8608,7 +9295,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Robot_parts_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "robot-model-sentry-bot-model-fallout-76",
@@ -8632,7 +9321,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Sentry_bot_model_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "snow-globe-axel-s-snow-globe",
@@ -8659,7 +9350,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Axel's_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-big-meadows-gas-well-snow-globe",
@@ -8685,7 +9378,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Big_Meadows_Gas_Well_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-camp-liberty-snow-globe",
@@ -8712,7 +9407,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Camp_Liberty_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-dark-hollow-manor-snow-globe",
@@ -8739,7 +9436,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Dark_Hollow_Manor_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-high-knob-lookout-snow-globe",
@@ -8766,7 +9465,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/High_Knob_Lookout_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-ineke-s-snow-globe",
@@ -8794,7 +9495,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Ineke's_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-josie-s-snow-globe",
@@ -8822,7 +9525,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Josie's_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-marley-s-snow-globe",
@@ -8850,7 +9555,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Marley's_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-most-wanted-snow-globe",
@@ -8886,7 +9593,9 @@ window.F76_COLLECTIBLES = {
           "label": "Event page",
           "url": "https://fallout.fandom.com/wiki/Most_Wanted_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "snow-globe-nuka-launcher-snowglobe",
@@ -8922,7 +9631,9 @@ window.F76_COLLECTIBLES = {
           "label": "Event page",
           "url": "https://fallout.fandom.com/wiki/Seismic_Activity"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "snow-globe-nuka-cade-snowglobe",
@@ -8958,7 +9669,9 @@ window.F76_COLLECTIBLES = {
           "label": "Prize terminal",
           "url": "https://fallout.wiki/wiki/Cappy's_Nuka-Cade"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "snow-globe-shenandoah-visitor-center-snow-globe",
@@ -8985,7 +9698,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Shenandoah_Visitor_Center_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-slumber-mill-motel-snow-globe",
@@ -9012,7 +9727,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Slumber_Mill_Motel_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-spin-the-wheel-snow-globe",
@@ -9048,7 +9765,9 @@ window.F76_COLLECTIBLES = {
           "label": "Event page",
           "url": "https://fallout.fandom.com/wiki/Spin_the_Wheel"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "snow-globe-theodore-s-snow-globe",
@@ -9076,7 +9795,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Theodore's_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "snow-globe-tunnel-of-love-snow-globe",
@@ -9112,7 +9833,9 @@ window.F76_COLLECTIBLES = {
           "label": "Event page",
           "url": "https://fallout.fandom.com/wiki/Tunnel_of_Love"
         }
-      ]
+      ],
+      "rarity": "Rare",
+      "rarityRank": 3
     },
     {
       "id": "snow-globe-windy-s-snow-globe",
@@ -9139,7 +9862,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.wiki/wiki/Windy's_Snow_Globe"
         }
-      ]
+      ],
+      "rarity": "Uncommon",
+      "rarityRank": 4
     },
     {
       "id": "souvenir-souvenir-coffee-cup-fallout-76",
@@ -9163,7 +9888,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_coffee_cup_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "souvenir-souvenir-drinking-glass-fallout-76",
@@ -9186,7 +9913,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_drinking_glass_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "souvenir-souvenir-magnet-cow-fallout-76",
@@ -9210,7 +9939,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_magnet_cow_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "souvenir-souvenir-plastic-bowl-fallout-76",
@@ -9234,7 +9965,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_plastic_bowl_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "souvenir-souvenir-sloth-toy-fallout-76",
@@ -9258,7 +9991,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_sloth_toy_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "souvenir-souvenir-teddy-bear-fallout-76",
@@ -9282,7 +10017,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_teddy_bear_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "souvenir-souvenir-toy-car-fallout-76",
@@ -9306,7 +10043,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Souvenir_toy_car_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "board-game-autopsy-board-game",
@@ -9330,7 +10069,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Autopsy_board_game"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "board-game-blast-radius-board-game-fallout-76",
@@ -9354,7 +10095,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Blast_Radius_board_game_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "board-game-catch-the-commie-board-game",
@@ -9378,7 +10121,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Catch_the_Commie_board_game"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "board-game-rad-poker-board-game",
@@ -9402,7 +10147,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Rad_Poker_board_game"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "board-game-unstoppables-board-game",
@@ -9426,7 +10173,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Unstoppables!_board_game"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "game-board-chessboard-fallout-76",
@@ -9450,7 +10199,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Chessboard_(Fallout_76)"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-bubblegum-bear",
@@ -9478,7 +10229,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Bubblegum_bear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-bumblebear",
@@ -9506,7 +10259,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Bumblebear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-comrade-chubs",
@@ -9534,7 +10289,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Comrade_Chubs"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-dirty-old-teddy-bear",
@@ -9562,7 +10319,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Dirty_old_teddy_bear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-imported-chinese-panda",
@@ -9590,7 +10349,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Imported_Chinese_panda"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-lil-ginger-snuggles",
@@ -9618,7 +10379,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Lil'_Ginger_Snuggles"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-pristine-teddy-bear",
@@ -9646,7 +10409,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Pristine_teddy_bear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-quantum-bear",
@@ -9674,7 +10439,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Quantum_bear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-radbear",
@@ -9702,7 +10469,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Radbear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-stuffed-grizzly",
@@ -9730,7 +10499,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Stuffed_grizzly"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-stuffed-polar-bear",
@@ -9758,7 +10529,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Stuffed_polar_bear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     },
     {
       "id": "teddy-teddy-fear",
@@ -9786,7 +10559,9 @@ window.F76_COLLECTIBLES = {
           "label": "Item page",
           "url": "https://fallout.fandom.com/wiki/Teddy_Fear"
         }
-      ]
+      ],
+      "rarity": "Common",
+      "rarityRank": 5
     }
   ]
 };

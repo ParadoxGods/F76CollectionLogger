@@ -5,7 +5,11 @@
   const OUTFIT_DISPLAY_TYPE = "Mannequin";
   const AUTO_SAVE_DB_NAME = "f76-collection-logger";
   const AUTO_SAVE_STORE = "logs";
-  const AUTO_SAVE_KEY = "current-log";
+  const LEGACY_AUTO_SAVE_KEY = "current-log";
+  const AUTO_SAVE_INDEX_KEY = "profiles:index";
+  const AUTO_SAVE_ACTIVE_PROFILE_KEY = "profiles:active";
+  const AUTO_SAVE_PROFILE_PREFIX = "profile:";
+  const DEFAULT_PROFILE_NAME = "Main";
   const sessionState = {
     fileHandle: null,
     fileName: "",
@@ -15,8 +19,21 @@
     autoSaveError: "",
     autoSavePending: false,
     autoSaveDbPromise: null,
-    autoSavePromise: Promise.resolve()
+    autoSavePromise: Promise.resolve(),
+    profiles: [],
+    activeProfileId: "",
+    profilesLoaded: false
   };
+
+  const fallbackRarityScale = [
+    { label: "Mythic", rank: 1 },
+    { label: "Ultra Rare", rank: 2 },
+    { label: "Rare", rank: 3 },
+    { label: "Uncommon", rank: 4 },
+    { label: "Common", rank: 5 }
+  ];
+  const rarityScale = Array.isArray(data.rarityScale) && data.rarityScale.length ? data.rarityScale : fallbackRarityScale;
+  const rarityOrder = Object.fromEntries(rarityScale.map((entry) => [entry.label, entry.rank]));
 
   const tierOrder = {
     "Event Chase": 1,
@@ -43,6 +60,7 @@
     category: "all",
     displayType: "all",
     tier: "all",
+    rarity: "all",
     status: "all",
     sort: "category",
     selectedId: FALLBACK_SELECTION,
@@ -64,6 +82,7 @@
     categorySelect: document.getElementById("categorySelect"),
     displaySelect: document.getElementById("displaySelect"),
     tierSelect: document.getElementById("tierSelect"),
+    raritySelect: document.getElementById("raritySelect"),
     statusSelect: document.getElementById("statusSelect"),
     sortSelect: document.getElementById("sortSelect"),
     activeFilters: document.getElementById("activeFilters"),
@@ -74,6 +93,11 @@
     reviewOutfitsButton: document.getElementById("reviewOutfitsButton"),
     reviewMissingOutfitsButton: document.getElementById("reviewMissingOutfitsButton"),
     nextMissingButton: document.getElementById("nextMissingButton"),
+    profileSelect: document.getElementById("profileSelect"),
+    profileNameInput: document.getElementById("profileNameInput"),
+    createProfileButton: document.getElementById("createProfileButton"),
+    renameProfileButton: document.getElementById("renameProfileButton"),
+    deleteProfileButton: document.getElementById("deleteProfileButton"),
     exportButton: document.getElementById("exportButton"),
     importButton: document.getElementById("importButton"),
     resetButton: document.getElementById("resetButton"),
@@ -90,7 +114,9 @@
     populateSelect(refs.categorySelect, "All Categories", data.categories.map((entry) => entry.label));
     populateSelect(refs.displaySelect, "All Display Types", uniqueValues(data.items.map((item) => item.displayType)));
     populateSelect(refs.tierSelect, "All Tiers", uniqueValues(data.items.map((item) => item.tier)).sort(compareTierLabels));
+    populateSelect(refs.raritySelect, "All Rarity", rarityScale.map((entry) => entry.label));
     renderSources();
+    renderProfiles();
     renderLogStatus();
     bindEvents();
     render();
@@ -116,6 +142,11 @@
 
     refs.tierSelect.addEventListener("change", (event) => {
       state.tier = event.target.value;
+      render();
+    });
+
+    refs.raritySelect.addEventListener("change", (event) => {
+      state.rarity = event.target.value;
       render();
     });
 
@@ -173,6 +204,7 @@
       state.category = "all";
       state.displayType = "all";
       state.tier = "all";
+      state.rarity = "all";
       state.status = "all";
       state.sort = "category";
       syncControls();
@@ -182,6 +214,16 @@
     refs.reviewOutfitsButton.addEventListener("click", () => applyOutfitReviewMode({ missingOnly: false }));
     refs.reviewMissingOutfitsButton.addEventListener("click", () => applyOutfitReviewMode({ missingOnly: true }));
     refs.nextMissingButton.addEventListener("click", jumpToNextMissingVisible);
+    refs.profileSelect.addEventListener("change", (event) => switchProfile(event.target.value));
+    refs.profileNameInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        renameActiveProfile();
+      }
+    });
+    refs.createProfileButton.addEventListener("click", createProfile);
+    refs.renameProfileButton.addEventListener("click", renameActiveProfile);
+    refs.deleteProfileButton.addEventListener("click", deleteActiveProfile);
     refs.exportButton.addEventListener("click", exportProgress);
     refs.importButton.addEventListener("click", () => refs.importInput.click());
     refs.importInput.addEventListener("change", importProgress);
@@ -337,6 +379,9 @@
     if (state.tier !== "all") {
       chips.push({ label: "Tier", value: state.tier });
     }
+    if (state.rarity !== "all") {
+      chips.push({ label: "Rarity", value: state.rarity });
+    }
     if (state.status !== "all") {
       chips.push({ label: "Status", value: refs.statusSelect.selectedOptions[0].textContent });
     }
@@ -388,6 +433,7 @@
             <h3 class="card-title">${escapeHtml(item.name)}</h3>
             <p class="card-copy">${escapeHtml(summary)}</p>
             <div class="badge-row">
+              <span class="badge rarity">${escapeHtml(item.rarity || "Rare")}</span>
               <span class="badge tier">${escapeHtml(item.tier)}</span>
               <span class="badge">${escapeHtml(item.category)}</span>
               ${item.effect ? '<span class="badge effect">Effect</span>' : ""}
@@ -439,6 +485,7 @@
       <div class="detail-block">
         <h2>${escapeHtml(item.name)}</h2>
         <div class="badge-row">
+          <span class="badge rarity">${escapeHtml(item.rarity || "Rare")}</span>
           <span class="badge tier">${escapeHtml(item.tier)}</span>
           <span class="badge">${escapeHtml(item.displayType)}</span>
           ${item.effect ? '<span class="badge effect">Effect Item</span>' : ""}
@@ -517,6 +564,9 @@
         if (state.tier !== "all" && item.tier !== state.tier) {
           return false;
         }
+        if (state.rarity !== "all" && item.rarity !== state.rarity) {
+          return false;
+        }
         if (state.status === "collected" && !state.collected[item.id]) {
           return false;
         }
@@ -531,6 +581,7 @@
               item.group,
               item.displayType,
               item.tier,
+              item.rarity,
               item.effect,
               item.sourceSummary,
               ...(item.locationNotes || [])
@@ -552,7 +603,11 @@
       case "tier":
         return left.tier.localeCompare(right.tier) || left.name.localeCompare(right.name);
       case "rarity":
-        return compareTierLabels(left.tier, right.tier) || left.name.localeCompare(right.name);
+        return (
+          compareRarityLabels(left.rarity, right.rarity) ||
+          compareTierLabels(left.tier, right.tier) ||
+          left.name.localeCompare(right.name)
+        );
       case "display":
         return left.displayType.localeCompare(right.displayType) || left.name.localeCompare(right.name);
       case "category":
@@ -572,6 +627,15 @@
       return leftWeight - rightWeight;
     }
     return left.localeCompare(right);
+  }
+
+  function compareRarityLabels(left, right) {
+    const leftWeight = rarityOrder[left] || 99;
+    const rightWeight = rarityOrder[right] || 99;
+    if (leftWeight !== rightWeight) {
+      return leftWeight - rightWeight;
+    }
+    return String(left || "").localeCompare(String(right || ""));
   }
 
   function toggleCollected(id) {
@@ -624,6 +688,7 @@
     state.category = OUTFIT_CATEGORY;
     state.displayType = OUTFIT_DISPLAY_TYPE;
     state.tier = "all";
+    state.rarity = "all";
     state.status = missingOnly ? "missing" : "all";
     state.sort = "rarity";
     syncControls();
@@ -635,6 +700,7 @@
     refs.categorySelect.value = state.category;
     refs.displaySelect.value = state.displayType;
     refs.tierSelect.value = state.tier;
+    refs.raritySelect.value = state.rarity;
     refs.statusSelect.value = state.status;
     refs.sortSelect.value = state.sort;
   }
@@ -666,16 +732,25 @@
   }
 
   function loadProgress() {
-    return Object.fromEntries(data.items.map((item) => [item.id, false]));
+    return createBlankCollectedMap();
   }
 
   function saveProgress() {
     persistAutoSave();
+    renderProfiles();
     renderLogStatus();
   }
 
   function countCollected(items) {
     return items.reduce((total, item) => total + (state.collected[item.id] ? 1 : 0), 0);
+  }
+
+  function countCollectedFromMap(collected) {
+    return data.items.reduce((total, item) => total + (collected?.[item.id] ? 1 : 0), 0);
+  }
+
+  function createBlankCollectedMap() {
+    return Object.fromEntries(data.items.map((item) => [item.id, false]));
   }
 
   function supportsAutoSave() {
@@ -689,16 +764,25 @@
     navigator.storage.persist().catch(() => {});
   }
 
-  function buildProgressSnapshot() {
+  function buildProgressSnapshot(overrides = {}) {
+    const activeProfile = getActiveProfileSummary();
+    const hasSavedAtOverride = Object.prototype.hasOwnProperty.call(overrides, "savedAt");
+    const savedAt = hasSavedAtOverride ? overrides.savedAt : new Date().toISOString();
+    const createdAt =
+      overrides.createdAt || activeProfile?.createdAt || savedAt || new Date().toISOString();
     return {
-      savedAt: new Date().toISOString(),
+      id: overrides.id || activeProfile?.id || makeProfileId(),
+      name: overrides.name || activeProfile?.name || DEFAULT_PROFILE_NAME,
+      createdAt,
+      savedAt,
       title: data.title,
-      collected: { ...state.collected }
+      version: 2,
+      collected: mergeCollected(overrides.collected || state.collected)
     };
   }
 
   function mergeCollected(incoming) {
-    const nextCollected = Object.fromEntries(data.items.map((item) => [item.id, false]));
+    const nextCollected = createBlankCollectedMap();
     for (const item of data.items) {
       if (typeof incoming?.[item.id] === "boolean") {
         nextCollected[item.id] = incoming[item.id];
@@ -707,43 +791,248 @@
     return nextCollected;
   }
 
+  function buildProfileSummary(profile) {
+    return {
+      id: profile.id,
+      name: profile.name,
+      createdAt: profile.createdAt || "",
+      savedAt: profile.savedAt || "",
+      collectedCount: profile.collected ? countCollectedFromMap(profile.collected) : Number(profile.collectedCount) || 0
+    };
+  }
+
+  function normalizeProfileSummaries(profiles) {
+    return Array.isArray(profiles)
+      ? profiles
+          .filter((profile) => profile && typeof profile.id === "string")
+          .map((profile) => ({
+            id: profile.id,
+            name: normalizeProfileName(profile.name) || DEFAULT_PROFILE_NAME,
+            createdAt: profile.createdAt || "",
+            savedAt: profile.savedAt || "",
+            collectedCount: Number(profile.collectedCount) || 0
+          }))
+      : [];
+  }
+
+  function replaceProfileSummary(summary) {
+    return replaceProfileSummaryInList(sessionState.profiles, summary);
+  }
+
+  function replaceProfileSummaryInList(profiles, summary) {
+    const found = profiles.some((profile) => profile.id === summary.id);
+    return found
+      ? profiles.map((profile) => (profile.id === summary.id ? summary : profile))
+      : [...profiles, summary];
+  }
+
+  function getActiveProfileSummary() {
+    return sessionState.profiles.find((profile) => profile.id === sessionState.activeProfileId) || null;
+  }
+
+  function getProfileStorageKey(profileId) {
+    return `${AUTO_SAVE_PROFILE_PREFIX}${profileId}`;
+  }
+
+  function makeProfileId() {
+    return window.crypto?.randomUUID?.() || `profile-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+  }
+
+  function normalizeProfileName(value) {
+    return String(value || "")
+      .trim()
+      .replace(/\s+/g, " ")
+      .slice(0, 40);
+  }
+
+  function makeUniqueProfileName(value, excludeId = "") {
+    const baseName = normalizeProfileName(value) || DEFAULT_PROFILE_NAME;
+    let candidate = baseName;
+    let suffix = 2;
+    while (
+      sessionState.profiles.some(
+        (profile) => profile.id !== excludeId && profile.name.toLowerCase() === candidate.toLowerCase()
+      )
+    ) {
+      candidate = `${baseName} ${suffix}`;
+      suffix += 1;
+    }
+    return candidate;
+  }
+
+  function buildNextProfileName() {
+    return makeUniqueProfileName("Profile");
+  }
+
+  function buildProfileOptionLabel(profile) {
+    return `${profile.name} (${profile.collectedCount}/${data.items.length})`;
+  }
+
+  function renderProfiles() {
+    if (!refs.profileSelect || !refs.profileNameInput) {
+      return;
+    }
+
+    if (!sessionState.profilesLoaded) {
+      refs.profileSelect.innerHTML = '<option value="">Loading local profiles...</option>';
+      refs.profileSelect.disabled = true;
+      refs.profileNameInput.value = "";
+      refs.profileNameInput.disabled = true;
+      refs.createProfileButton.disabled = true;
+      refs.renameProfileButton.disabled = true;
+      refs.deleteProfileButton.disabled = true;
+      return;
+    }
+
+    if (!sessionState.profiles.length) {
+      refs.profileSelect.innerHTML = `<option value="">${escapeHtml(DEFAULT_PROFILE_NAME)}</option>`;
+      refs.profileSelect.disabled = true;
+      refs.profileNameInput.value = DEFAULT_PROFILE_NAME;
+      refs.profileNameInput.disabled = true;
+      refs.createProfileButton.disabled = true;
+      refs.renameProfileButton.disabled = true;
+      refs.deleteProfileButton.disabled = true;
+      return;
+    }
+
+    refs.profileSelect.innerHTML = sessionState.profiles
+      .map(
+        (profile) =>
+          `<option value="${escapeHtml(profile.id)}">${escapeHtml(buildProfileOptionLabel(profile))}</option>`
+      )
+      .join("");
+    refs.profileSelect.value = sessionState.activeProfileId;
+    refs.profileSelect.disabled = !supportsAutoSave();
+
+    const activeProfile = getActiveProfileSummary();
+    const currentInputProfileId = refs.profileNameInput.dataset.profileId || "";
+    if (activeProfile) {
+      if (document.activeElement !== refs.profileNameInput || currentInputProfileId !== activeProfile.id) {
+        refs.profileNameInput.value = activeProfile.name;
+      }
+      refs.profileNameInput.dataset.profileId = activeProfile.id;
+    } else {
+      refs.profileNameInput.value = "";
+      refs.profileNameInput.dataset.profileId = "";
+    }
+
+    refs.profileNameInput.disabled = !supportsAutoSave() || !activeProfile;
+    refs.createProfileButton.disabled = !supportsAutoSave();
+    refs.renameProfileButton.disabled = !supportsAutoSave() || !activeProfile;
+    refs.deleteProfileButton.disabled = !supportsAutoSave() || !activeProfile;
+  }
+
   async function restoreAutoSave() {
     if (!supportsAutoSave()) {
+      const fallbackProfile = buildProgressSnapshot({
+        id: "browser-session",
+        name: DEFAULT_PROFILE_NAME,
+        createdAt: new Date().toISOString(),
+        savedAt: "",
+        collected: createBlankCollectedMap()
+      });
+      sessionState.profiles = [buildProfileSummary(fallbackProfile)];
+      sessionState.activeProfileId = fallbackProfile.id;
+      sessionState.profilesLoaded = true;
+      state.collected = mergeCollected(fallbackProfile.collected);
+      renderProfiles();
       renderLogStatus();
       return;
     }
 
     try {
-      const snapshot = await readAutoSave();
-      if (!snapshot?.collected) {
-        renderLogStatus();
-        return;
+      let profiles = normalizeProfileSummaries(await readAutoSaveKey(AUTO_SAVE_INDEX_KEY));
+      let activeProfileId = await readAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY);
+      let activeProfile = null;
+
+      if (!profiles.length) {
+        const legacySnapshot = await readAutoSaveKey(LEGACY_AUTO_SAVE_KEY);
+        activeProfile = buildProgressSnapshot({
+          id: makeProfileId(),
+          name: DEFAULT_PROFILE_NAME,
+          createdAt: legacySnapshot?.savedAt || legacySnapshot?.exportedAt || new Date().toISOString(),
+          savedAt: legacySnapshot?.savedAt || legacySnapshot?.exportedAt || "",
+          collected: legacySnapshot?.collected || createBlankCollectedMap()
+        });
+        profiles = [buildProfileSummary(activeProfile)];
+        activeProfileId = activeProfile.id;
+        await writeAutoSaveKey(getProfileStorageKey(activeProfile.id), activeProfile);
+        await writeAutoSaveKey(AUTO_SAVE_INDEX_KEY, profiles);
+        await writeAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY, activeProfileId);
+      } else {
+        if (!profiles.some((profile) => profile.id === activeProfileId)) {
+          activeProfileId = profiles[0].id;
+        }
+
+        const activeSummary = profiles.find((profile) => profile.id === activeProfileId) || profiles[0];
+        activeProfile = await readStoredProfile(activeSummary);
+        profiles = replaceProfileSummaryInList(profiles, buildProfileSummary(activeProfile));
+        await writeAutoSaveKey(getProfileStorageKey(activeProfile.id), activeProfile);
+        await writeAutoSaveKey(AUTO_SAVE_INDEX_KEY, profiles);
+        await writeAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY, activeProfileId);
       }
-      state.collected = mergeCollected(snapshot.collected);
-      sessionState.autoSaveAt = snapshot.savedAt || snapshot.exportedAt || "";
+
+      sessionState.profiles = profiles;
+      sessionState.activeProfileId = activeProfileId;
+      sessionState.profilesLoaded = true;
+      state.collected = mergeCollected(activeProfile.collected);
+      sessionState.autoSaveAt = activeProfile.savedAt || activeProfile.exportedAt || "";
+      renderProfiles();
       renderLogStatus();
       render();
     } catch (error) {
       sessionState.autoSaveError = "Local auto-load failed. Use Load Log to import a saved JSON backup.";
+      const fallbackProfile = buildProgressSnapshot({
+        id: makeProfileId(),
+        name: DEFAULT_PROFILE_NAME,
+        createdAt: new Date().toISOString(),
+        savedAt: "",
+        collected: createBlankCollectedMap()
+      });
+      sessionState.profiles = [buildProfileSummary(fallbackProfile)];
+      sessionState.activeProfileId = fallbackProfile.id;
+      state.collected = mergeCollected(fallbackProfile.collected);
+      sessionState.profilesLoaded = true;
+      renderProfiles();
       renderLogStatus();
+      render();
     }
   }
 
   function persistAutoSave() {
-    if (!supportsAutoSave()) {
+    if (!supportsAutoSave() || !sessionState.profilesLoaded) {
       return;
     }
 
-    const snapshot = buildProgressSnapshot();
+    const activeProfile = getActiveProfileSummary();
+    if (!activeProfile) {
+      return;
+    }
+
+    const snapshot = buildProgressSnapshot({
+      id: activeProfile.id,
+      name: activeProfile.name,
+      createdAt: activeProfile.createdAt,
+      collected: state.collected
+    });
+    const nextProfiles = replaceProfileSummary(buildProfileSummary(snapshot));
+    sessionState.profiles = nextProfiles;
     sessionState.autoSavePending = true;
     sessionState.autoSaveError = "";
+    renderProfiles();
+    renderLogStatus();
 
-    sessionState.autoSavePromise = sessionState.autoSavePromise
-      .catch(() => {})
-      .then(() => writeAutoSave(snapshot))
+    queueStorageTask(async () => {
+      await writeAutoSaveKey(getProfileStorageKey(snapshot.id), snapshot);
+      await writeAutoSaveKey(AUTO_SAVE_INDEX_KEY, nextProfiles);
+      await writeAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY, snapshot.id);
+    })
       .then(() => {
         sessionState.autoSavePending = false;
-        sessionState.autoSaveAt = snapshot.savedAt;
+        if (sessionState.activeProfileId === snapshot.id) {
+          sessionState.autoSaveAt = snapshot.savedAt;
+        }
+        renderProfiles();
         renderLogStatus();
       })
       .catch(() => {
@@ -777,6 +1066,11 @@
     return sessionState.autoSaveDbPromise;
   }
 
+  function queueStorageTask(task) {
+    sessionState.autoSavePromise = sessionState.autoSavePromise.catch(() => {}).then(task);
+    return sessionState.autoSavePromise;
+  }
+
   async function runAutoSaveRequest(mode, handler) {
     const db = await openAutoSaveDb();
     return new Promise((resolve, reject) => {
@@ -790,22 +1084,249 @@
     });
   }
 
-  function readAutoSave() {
-    return runAutoSaveRequest("readonly", (store) => store.get(AUTO_SAVE_KEY));
+  function readAutoSaveKey(key) {
+    return runAutoSaveRequest("readonly", (store) => store.get(key));
   }
 
-  function writeAutoSave(snapshot) {
-    return runAutoSaveRequest("readwrite", (store) => store.put(snapshot, AUTO_SAVE_KEY));
+  function writeAutoSaveKey(key, value) {
+    return runAutoSaveRequest("readwrite", (store) => store.put(value, key));
+  }
+
+  function deleteAutoSaveKey(key) {
+    return runAutoSaveRequest("readwrite", (store) => store.delete(key));
+  }
+
+  async function readStoredProfile(profileSummary) {
+    const storedProfile = await readAutoSaveKey(getProfileStorageKey(profileSummary.id));
+    if (!storedProfile?.collected) {
+      return buildProgressSnapshot({
+        id: profileSummary.id,
+        name: profileSummary.name,
+        createdAt: profileSummary.createdAt || new Date().toISOString(),
+        savedAt: profileSummary.savedAt || "",
+        collected: createBlankCollectedMap()
+      });
+    }
+
+    return buildProgressSnapshot({
+      id: profileSummary.id,
+      name: profileSummary.name || storedProfile.name || DEFAULT_PROFILE_NAME,
+      createdAt: storedProfile.createdAt || profileSummary.createdAt || storedProfile.savedAt || new Date().toISOString(),
+      savedAt: storedProfile.savedAt || profileSummary.savedAt || "",
+      collected: storedProfile.collected
+    });
+  }
+
+  async function switchProfile(profileId) {
+    if (!supportsAutoSave() || !profileId || profileId === sessionState.activeProfileId) {
+      return;
+    }
+
+    const summary = sessionState.profiles.find((profile) => profile.id === profileId);
+    if (!summary) {
+      return;
+    }
+
+    sessionState.autoSavePending = true;
+    sessionState.autoSaveError = "";
+    renderLogStatus();
+
+    try {
+      const profile = await queueStorageTask(async () => {
+        const loadedProfile = await readStoredProfile(summary);
+        await writeAutoSaveKey(getProfileStorageKey(summary.id), loadedProfile);
+        await writeAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY, summary.id);
+        return loadedProfile;
+      });
+
+      sessionState.activeProfileId = summary.id;
+      sessionState.profiles = replaceProfileSummary(buildProfileSummary(profile));
+      state.collected = mergeCollected(profile.collected);
+      sessionState.autoSaveAt = profile.savedAt || "";
+      sessionState.autoSavePending = false;
+      renderProfiles();
+      renderLogStatus();
+      render();
+    } catch (error) {
+      sessionState.autoSavePending = false;
+      sessionState.autoSaveError = "Local profile switch failed. Your current profile is still loaded.";
+      renderLogStatus();
+    }
+  }
+
+  async function createProfile() {
+    if (!supportsAutoSave() || !sessionState.profilesLoaded) {
+      return;
+    }
+
+    const createdAt = new Date().toISOString();
+    const name = makeUniqueProfileName(refs.profileNameInput.value || buildNextProfileName());
+    const profile = buildProgressSnapshot({
+      id: makeProfileId(),
+      name,
+      createdAt,
+      savedAt: createdAt,
+      collected: createBlankCollectedMap()
+    });
+    const nextProfiles = [...sessionState.profiles, buildProfileSummary(profile)];
+
+    sessionState.autoSavePending = true;
+    sessionState.autoSaveError = "";
+    renderLogStatus();
+
+    try {
+      await queueStorageTask(async () => {
+        await writeAutoSaveKey(getProfileStorageKey(profile.id), profile);
+        await writeAutoSaveKey(AUTO_SAVE_INDEX_KEY, nextProfiles);
+        await writeAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY, profile.id);
+      });
+
+      sessionState.profiles = nextProfiles;
+      sessionState.activeProfileId = profile.id;
+      sessionState.autoSaveAt = profile.savedAt || "";
+      sessionState.autoSavePending = false;
+      state.collected = mergeCollected(profile.collected);
+      refs.profileNameInput.value = profile.name;
+      refs.profileNameInput.dataset.profileId = profile.id;
+      renderProfiles();
+      renderLogStatus();
+      render();
+    } catch (error) {
+      sessionState.autoSavePending = false;
+      sessionState.autoSaveError = "Creating a new local profile failed.";
+      renderLogStatus();
+    }
+  }
+
+  async function renameActiveProfile() {
+    if (!supportsAutoSave()) {
+      return;
+    }
+
+    const activeProfile = getActiveProfileSummary();
+    if (!activeProfile) {
+      return;
+    }
+
+    const nextName = makeUniqueProfileName(refs.profileNameInput.value || activeProfile.name, activeProfile.id);
+    if (nextName === activeProfile.name) {
+      refs.profileNameInput.value = activeProfile.name;
+      return;
+    }
+
+    const renamedProfile = buildProgressSnapshot({
+      id: activeProfile.id,
+      name: nextName,
+      createdAt: activeProfile.createdAt,
+      collected: state.collected
+    });
+    const nextProfiles = replaceProfileSummaryInList(sessionState.profiles, buildProfileSummary(renamedProfile));
+
+    sessionState.autoSavePending = true;
+    sessionState.autoSaveError = "";
+    renderLogStatus();
+
+    try {
+      await queueStorageTask(async () => {
+        await writeAutoSaveKey(getProfileStorageKey(renamedProfile.id), renamedProfile);
+        await writeAutoSaveKey(AUTO_SAVE_INDEX_KEY, nextProfiles);
+      });
+
+      sessionState.profiles = nextProfiles;
+      sessionState.autoSaveAt = renamedProfile.savedAt || "";
+      sessionState.autoSavePending = false;
+      refs.profileNameInput.value = nextName;
+      refs.profileNameInput.dataset.profileId = renamedProfile.id;
+      renderProfiles();
+      renderLogStatus();
+      render();
+    } catch (error) {
+      sessionState.autoSavePending = false;
+      sessionState.autoSaveError = "Renaming the local profile failed.";
+      renderLogStatus();
+    }
+  }
+
+  async function deleteActiveProfile() {
+    if (!supportsAutoSave()) {
+      return;
+    }
+
+    const activeProfile = getActiveProfileSummary();
+    if (!activeProfile) {
+      return;
+    }
+
+    const confirmMessage =
+      sessionState.profiles.length > 1
+        ? `Delete the profile "${activeProfile.name}" from this browser?`
+        : `Delete the profile "${activeProfile.name}" and replace it with a new blank ${DEFAULT_PROFILE_NAME} profile?`;
+    if (!window.confirm(confirmMessage)) {
+      return;
+    }
+
+    sessionState.autoSavePending = true;
+    sessionState.autoSaveError = "";
+    renderLogStatus();
+
+    try {
+      const result = await queueStorageTask(async () => {
+        await deleteAutoSaveKey(getProfileStorageKey(activeProfile.id));
+
+        let nextProfiles = sessionState.profiles.filter((profile) => profile.id !== activeProfile.id);
+        let nextActiveProfile;
+
+        if (!nextProfiles.length) {
+          const createdAt = new Date().toISOString();
+          nextActiveProfile = buildProgressSnapshot({
+            id: makeProfileId(),
+            name: DEFAULT_PROFILE_NAME,
+            createdAt,
+            savedAt: createdAt,
+            collected: createBlankCollectedMap()
+          });
+          nextProfiles = [buildProfileSummary(nextActiveProfile)];
+          await writeAutoSaveKey(getProfileStorageKey(nextActiveProfile.id), nextActiveProfile);
+        } else {
+          const nextSummary = nextProfiles[0];
+          nextActiveProfile = await readStoredProfile(nextSummary);
+          await writeAutoSaveKey(getProfileStorageKey(nextActiveProfile.id), nextActiveProfile);
+        }
+
+        await writeAutoSaveKey(AUTO_SAVE_INDEX_KEY, nextProfiles);
+        await writeAutoSaveKey(AUTO_SAVE_ACTIVE_PROFILE_KEY, nextActiveProfile.id);
+        return { nextProfiles, nextActiveProfile };
+      });
+
+      sessionState.profiles = result.nextProfiles;
+      sessionState.activeProfileId = result.nextActiveProfile.id;
+      sessionState.autoSaveAt = result.nextActiveProfile.savedAt || "";
+      sessionState.autoSavePending = false;
+      state.collected = mergeCollected(result.nextActiveProfile.collected);
+      refs.profileNameInput.value = result.nextActiveProfile.name;
+      refs.profileNameInput.dataset.profileId = result.nextActiveProfile.id;
+      renderProfiles();
+      renderLogStatus();
+      render();
+    } catch (error) {
+      sessionState.autoSavePending = false;
+      sessionState.autoSaveError = "Deleting the local profile failed.";
+      renderLogStatus();
+    }
   }
 
   async function exportProgress() {
+    const activeProfile = getActiveProfileSummary();
     const payload = {
       exportedAt: new Date().toISOString(),
       title: data.title,
+      version: 2,
+      profileName: activeProfile?.name || DEFAULT_PROFILE_NAME,
       collected: state.collected
     };
     const content = JSON.stringify(payload, null, 2);
-    const suggestedName = sessionState.fileName || "f76-collection-log.json";
+    const baseName = normalize(activeProfile?.name || DEFAULT_PROFILE_NAME).replace(/\s+/g, "-") || "main";
+    const suggestedName = sessionState.fileName || `f76-collection-log-${baseName}.json`;
 
     try {
       if ("showSaveFilePicker" in window) {
@@ -854,13 +1375,7 @@
     try {
       const parsed = JSON.parse(await file.text());
       const incoming = parsed.collected || parsed;
-      const nextCollected = Object.fromEntries(data.items.map((item) => [item.id, false]));
-      for (const item of data.items) {
-        if (typeof incoming[item.id] === "boolean") {
-          nextCollected[item.id] = incoming[item.id];
-        }
-      }
-      state.collected = nextCollected;
+      state.collected = mergeCollected(incoming);
       sessionState.fileHandle = null;
       markFileAction("loaded", file.name);
       saveProgress();
@@ -873,10 +1388,12 @@
   }
 
   function resetProgress() {
-    if (!window.confirm("Start a new blank log and clear the current collected flags?")) {
+    const activeProfile = getActiveProfileSummary();
+    const profileLabel = activeProfile?.name || DEFAULT_PROFILE_NAME;
+    if (!window.confirm(`Reset "${profileLabel}" to a blank log and clear its collected flags?`)) {
       return;
     }
-    state.collected = Object.fromEntries(data.items.map((item) => [item.id, false]));
+    state.collected = createBlankCollectedMap();
     sessionState.fileHandle = null;
     sessionState.fileName = "";
     sessionState.fileAction = "";
@@ -903,21 +1420,30 @@
       return;
     }
 
+    if (!sessionState.profilesLoaded) {
+      refs.logStatus.textContent = "Loading local profiles from this device.";
+      refs.logStatus.dataset.state = "saving";
+      return;
+    }
+
     if (sessionState.autoSaveError) {
       refs.logStatus.textContent = sessionState.autoSaveError;
       refs.logStatus.dataset.state = "warning";
       return;
     }
 
+    const activeProfile = getActiveProfileSummary();
+    const profileLabel = activeProfile?.name || DEFAULT_PROFILE_NAME;
+
     if (sessionState.autoSavePending) {
-      refs.logStatus.textContent = "Saving locally on this device. Save Log still exports a backup JSON file.";
+      refs.logStatus.textContent = `Saving profile "${profileLabel}" locally on this device. Save Log still exports a backup JSON file.`;
       refs.logStatus.dataset.state = "saving";
       return;
     }
 
     const baseMessage = sessionState.autoSaveAt
-      ? `Auto-saved locally ${formatTimestamp(sessionState.autoSaveAt)}. This browser will load that log automatically next time.`
-      : "Progress auto-saves locally with IndexedDB, not cookies or cache. This browser will load that log automatically next time.";
+      ? `Profile "${profileLabel}" auto-saved locally ${formatTimestamp(sessionState.autoSaveAt)}. This browser will load it automatically next time.`
+      : `Profile "${profileLabel}" auto-saves locally with IndexedDB, not cookies or cache. This browser will load it automatically next time.`;
 
     const fileMessage =
       sessionState.fileName && sessionState.fileAction
